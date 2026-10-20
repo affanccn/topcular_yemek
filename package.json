@@ -1,0 +1,15 @@
+{
+  "name": "topcular-yemek",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Topçular Yemek – Gebze toplu yemek, tabldot ve fabrika yemek servisi web sitesi (statik, SEO odaklı)",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "serve": "node build/serve.mjs",
+    "dev": "node build/build.mjs && node build/serve.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
