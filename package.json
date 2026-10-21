@@ -9,7 +9,7 @@
     "serve": "node build/serve.mjs",
     "dev": "node build/build.mjs && node build/serve.mjs"
   },
-  "devDependencies": {
+  "dependencies": {
     "sharp": "^0.33.5"
   }
 }
