@@ -209,13 +209,15 @@ const certsSection = () => `
 
 const menuTabs = (week, idPrefix = 'gun') => `
   <div class="menu-tabs" data-tabs>
-    <div class="tab-list" role="tablist" aria-label="${esc(week.title)} günleri">
-      ${week.days
-        .map(
-          (d, i) =>
-            `<button role="tab" id="${idPrefix}-tab-${i}" aria-controls="${idPrefix}-panel-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-day="${i}">${esc(d.day)}</button>`
-        )
-        .join('')}
+    <div class="tab-list-wrap">
+      <div class="tab-list" role="tablist" aria-label="${esc(week.title)} günleri">
+        ${week.days
+          .map(
+            (d, i) =>
+              `<button role="tab" id="${idPrefix}-tab-${i}" aria-controls="${idPrefix}-panel-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-day="${i}">${esc(d.day)}</button>`
+          )
+          .join('')}
+      </div>
     </div>
     ${week.days
       .map(

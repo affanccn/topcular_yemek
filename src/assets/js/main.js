@@ -108,6 +108,9 @@
         $('#' + t.getAttribute('aria-controls')).hidden = !on;
       });
       if (focus) tabs[i].focus();
+      try {
+        tabs[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      } catch (_) {}
     };
     tabs.forEach((t, i) => {
       t.addEventListener('click', () => select(i));
