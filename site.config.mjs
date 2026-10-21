@@ -13,32 +13,35 @@
  */
 export const site = {
   name: 'Topçular Yemek',
-  legalName: 'Topçular Yemek', // TODO: Ticari unvan (örn. "Topçular Yemek Gıda San. Tic. Ltd. Şti.")
-  slogan: 'Gebze’nin Toplu Yemek Mutfağı',
+  legalName: 'Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta Sanayi ve Ticaret Limited Şirketi',
+  slogan: 'Her Gün Taze, Her Gün Lezzetli – Gebze’nin Toplu Yemek Mutfağı',
 
   /** Canlı domain (sonunda / olmadan). Canonical, sitemap ve OG için kullanılır. */
-  url: 'https://www.topcularyemek.com', // TODO: gerçek domain
+  url: 'https://www.topcularyemek.com',
 
   /** Telefon: görünen format + tel: linki için uluslararası format */
-  phone: '0 (5XX) XXX XX XX', // TODO
-  phoneIntl: '+905000000000', // TODO
+  phone: '0 (532) 499 92 41',
+  phoneIntl: '+905324999241',
+  altPhone: '0 (533) 719 69 11',
+  altPhoneIntl: '+905337196911',
   /** WhatsApp numarası: başında + olmadan, ülke koduyla */
-  whatsapp: '905000000000', // TODO
-  email: 'info@topcularyemek.com', // TODO
+  whatsapp: '905324999241',
+  email: 'iletisim@topcularyemek.com',
 
   address: {
-    street: 'TODO Mahallesi, TODO Sokak No: X', // TODO: Google Haritalar’daki adresin aynısı
+    street: 'Sultan Orhan Mahallesi, 1141. Sokak No: 10',
     district: 'Gebze',
     city: 'Kocaeli',
-    postalCode: '41400', // TODO: kontrol edin
+    postalCode: '41400',
     country: 'TR',
   },
 
-  /** Haritadaki konum (Google Maps’te pine sağ tık → koordinatı kopyala) */
-  geo: { lat: 40.8028, lng: 29.4307 }, // TODO: işletmenin gerçek koordinatı
+  /** Haritadaki kesin konum (Google Maps koordinatları) */
+  geo: { lat: 40.8016053, lng: 29.4473255 },
 
-  /** Google Haritalar kısa linki */
+  /** Google Haritalar kısa linki ve İşletme Paylaşım bağlantısı */
   mapsUrl: 'https://maps.app.goo.gl/14qpTCyjTi3kZgk49',
+  googleShareUrl: 'https://share.google/JlrYk5VACr8a8jMdX',
 
   /** Çalışma saatleri (Schema.org için İngilizce gün adları) */
   hours: [
@@ -47,27 +50,27 @@ export const site = {
       days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       opens: '07:00',
       closes: '19:00',
-    }, // TODO: gerçek saatler
+    },
   ],
 
   /** Minimum sipariş (kişi). null yaparsanız sitede gösterilmez. */
-  minOrder: 20, // TODO
+  minOrder: 20,
 
-  /** Ana sayfadaki rakamlar. Boş dizi [] bırakırsanız bölüm gizlenir. */
+  /** Ana sayfadaki rakamlar */
   stats: [
-    { value: '10+', label: 'Yıllık tecrübe' }, // TODO: gerçek değerler
-    { value: '2.000+', label: 'Günlük porsiyon' },
-    { value: '50+', label: 'Kurumsal müşteri' },
-    { value: '%100', label: 'Günlük taze üretim' },
+    { value: '10+', label: 'Yıllık Sektör Tecrübesi' },
+    { value: '2.500+', label: 'Günlük Sıcak Porsiyon' },
+    { value: '60+', label: 'Fabrika & Kurumsal Firma' },
+    { value: '%100', label: 'Günlük Taze Pişirme' },
   ],
 
-  /** Sosyal medya linkleri (boş olanlar gösterilmez, sameAs’a eklenmez) */
+  /** Sosyal medya linkleri */
   social: {
-    instagram: '', // TODO: https://instagram.com/...
+    instagram: '',
     facebook: '',
     linkedin: '',
   },
 
   /** Google Search Console doğrulama kodu (meta etiketi içeriği) */
-  googleSiteVerification: '', // TODO
+  googleSiteVerification: '',
 };

@@ -96,22 +96,25 @@ export const BUSINESS_ID = `${site.url}/#isletme`;
 export function businessSchema(areaNames = []) {
   const sameAs = Object.values(site.social).filter(Boolean);
   if (site.mapsUrl) sameAs.push(site.mapsUrl);
+  if (site.googleShareUrl) sameAs.push(site.googleShareUrl);
   return {
     '@context': 'https://schema.org',
-    '@type': ['FoodEstablishment', 'LocalBusiness'],
+    '@type': ['FoodEstablishment', 'LocalBusiness', 'CateringService'],
     '@id': BUSINESS_ID,
     name: site.name,
     legalName: site.legalName,
     slogan: site.slogan,
     description:
-      'Topçular Yemek, Gebze merkezli toplu yemek firmasıdır. Fabrika, ofis, şantiye ve organizasyonlara tabldot, kazan (taşımalı) yemek ve fabrika yemeği servisi yapar.',
+      'Topçular Yemek, Gebze merkezli toplu yemek ve tabldot firmasıdır. Fabrikalara, organize sanayi bölgelerine (GOSB, TOSB, Dilovası İMES, GEPOSB), ofis ve şantiyelere günlük taze tabldot, kazan yemek ve kurumsal catering servisi sunar.',
     url: site.url + '/',
     image: imgUrl('hero', 1600),
     logo: abs('/assets/logo.png'),
     telephone: site.phoneIntl,
     email: site.email,
     priceRange: '₺₺',
-    servesCuisine: ['Türk Mutfağı', 'Ev Yemekleri'],
+    currenciesAccepted: 'TRY',
+    paymentAccepted: 'Nakit, Havale/EFT, Kurumsal Fatura',
+    servesCuisine: ['Türk Mutfağı', 'Ev Yemekleri', 'Tabldot Yemek', 'Toplu Yemek', 'Catering'],
     acceptsReservations: false,
     address: {
       '@type': 'PostalAddress',

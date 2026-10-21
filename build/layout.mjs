@@ -158,19 +158,33 @@ function footer() {
       <address class="footer-contact">
         <a href="${esc(site.mapsUrl)}" target="_blank" rel="noopener">${icon('pin')}<span>${esc(fullAddress())}</span></a>
         <a href="${telHref}">${icon('phone')}<span>${esc(site.phone)}</span></a>
+        ${site.altPhone ? `<a href="tel:${site.altPhoneIntl}">${icon('phone')}<span>${esc(site.altPhone)} (2. Hat)</span></a>` : ''}
         <a href="mailto:${esc(site.email)}">${icon('mail')}<span>${esc(site.email)}</span></a>
         ${site.hours.map((h) => `<span>${icon('clock')}<span>${esc(h.label)}: ${h.opens} – ${h.closes}</span></span>`).join('')}
       </address>
+      <div class="footer-google-card">
+        <a href="${esc(site.mapsUrl)}" target="_blank" rel="noopener" class="google-badge-link">
+          <span class="stars">★★★★★</span>
+          <strong>Google Haritalar İşletme Kaydı</strong>
+          <small>Yol tarifi al &amp; Haritada aç ${icon('arrow')}</small>
+        </a>
+      </div>
     </div>
   </div>
   <div class="container footer-bottom">
     <p>© ${year} ${esc(site.legalName)}. Tüm hakları saklıdır.</p>
-    <p>Gebze toplu yemek · Gebze tabldot yemek · Gebze fabrika yemeği</p>
+    <p>Gebze toplu yemek · Gebze tabldot yemek · Gebze fabrika yemeği · GOSB &amp; TOSB Catering</p>
   </div>
 </footer>
 <div class="float-actions" aria-label="Hızlı iletişim">
-  <a class="float-btn float-call" href="${telHref}" aria-label="Telefonla ara">${icon('phone')}</a>
-  <a class="float-btn float-wa" href="${waHref()}" target="_blank" rel="noopener" aria-label="WhatsApp’tan yazın">${waIcon()}</a>
+  <a class="float-btn float-call" href="${telHref}" aria-label="Telefonla ara">
+    ${icon('phone')}
+    <span class="float-tooltip">Ara: ${esc(site.phone)}</span>
+  </a>
+  <a class="float-btn float-wa" href="${waHref()}" target="_blank" rel="noopener" aria-label="WhatsApp’tan yazın">
+    ${waIcon()}
+    <span class="float-tooltip">WhatsApp Teklif Al</span>
+  </a>
 </div>`;
 }
 

@@ -70,6 +70,101 @@ const heroButtons = () => `
     <a class="btn btn-wa btn-lg" href="${waHref()}" target="_blank" rel="noopener">${waIcon()} WhatsApp</a>
   </div>`;
 
+const clientsBand = () => `
+  <section class="section-clients" aria-label="Çalıştığımız Kurumlar ve Referanslarımız">
+    <div class="container">
+      <div class="clients-head">
+        <span class="clients-label">Gebze &amp; OSB Sanayisinde Güvenle Hizmet Verdiğimiz Sektör Öncüleri</span>
+      </div>
+      <div class="clients-grid">
+        <div class="client-badge reveal">
+          <span class="client-name">Aslan Otomotiv</span>
+          <span class="client-sector">Otomotiv Yan Sanayi</span>
+        </div>
+        <div class="client-badge reveal">
+          <span class="client-name">CRN Boya</span>
+          <span class="client-sector">Endüstriyel Kaplama &amp; Kimya</span>
+        </div>
+        <div class="client-badge reveal">
+          <span class="client-name">Mikroteknik</span>
+          <span class="client-sector">Hassas İmalat &amp; Makine</span>
+        </div>
+        <div class="client-badge reveal">
+          <span class="client-name">Teknik Fren</span>
+          <span class="client-sector">Ağır Vasıta Fren Sistemleri</span>
+        </div>
+        <div class="client-badge reveal">
+          <span class="client-name">Tümpa Elektrik</span>
+          <span class="client-sector">Endüstriyel Elektrik Tesisleri</span>
+        </div>
+        <div class="client-badge reveal">
+          <span class="client-name">Özel Eğitim Kurumları</span>
+          <span class="client-sector">Kolej &amp; Kampüs Yemekleri</span>
+        </div>
+        <div class="client-badge reveal">
+          <span class="client-name">İnşaat &amp; Altyapı Şantiyeleri</span>
+          <span class="client-sector">Öğle &amp; Akşam Vardiyaları</span>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+const certsSection = () => `
+  <section class="section section-certs" id="sertifikalar" aria-labelledby="certs-baslik">
+    <div class="container">
+      <header class="section-head reveal center">
+        <span class="eyebrow">Resmi Kalite &amp; Gıda Güvenliği Belgelerimiz</span>
+        <h2 id="certs-baslik">Uluslararası Akredite <em>ISO Sertifikalarımız</em></h2>
+        <p>Topçular Yemek; gıda güvenliği, iş sağlığı ve kurumsal yönetimde uluslararası standartlara sahiptir. Belgelerimizi doğrudan PDF olarak inceleyebilirsiniz.</p>
+      </header>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-badge-top">Gıda Güvenliği</div>
+          <div class="cert-icon">${icon('shield')}</div>
+          <h3>ISO 22000:2018</h3>
+          <p class="cert-desc">Gıda Güvenliği Yönetim Sistemi. Hammadde kabulünden hijyenik pişirme ve termobox sıcak sevkiyata kadar sıfır risk prensibi.</p>
+          <div class="cert-meta">
+            <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
+          </div>
+          <a href="/belgeler/topcular-yemek-iso-22000-2018.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+            Orijinal Sertifikayı Görüntüle (PDF) ${icon('arrow')}
+          </a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge-top">Kalite Standardı</div>
+          <div class="cert-icon">${icon('check')}</div>
+          <h3>ISO 9001:2015</h3>
+          <p class="cert-desc">Kalite Yönetim Sistemi. Müşteri memnuniyeti, standartlaştırılmış reçeteler ve disiplinli kurumsal yemek servisi.</p>
+          <div class="cert-meta">
+            <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
+          </div>
+          <a href="/belgeler/topcular-yemek-iso-9001-2015.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+            Orijinal Sertifikayı Görüntüle (PDF) ${icon('arrow')}
+          </a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge-top">İş Sağlığı &amp; Güvenliği</div>
+          <div class="cert-icon">${icon('users')}</div>
+          <h3>ISO 45001:2018</h3>
+          <p class="cert-desc">İş Sağlığı ve Güvenliği Yönetim Sistemi. Güvenli mutfak donanımları, personel iş güvenliği ve emniyetli lojistik operasyonu.</p>
+          <div class="cert-meta">
+            <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
+          </div>
+          <a href="/belgeler/topcular-yemek-iso-45001-2018.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+            Orijinal Sertifikayı Görüntüle (PDF) ${icon('arrow')}
+          </a>
+        </div>
+      </div>
+      <div class="certs-trust-banner reveal">
+        <div class="trust-pill">${icon('shield')} T.C. Tarım ve Orman Bakanlığı Standartlarında Üretim</div>
+        <div class="trust-pill">${icon('leaf')} Düzenli Mikrobiyolojik Numune &amp; Laboratuvar Takibi</div>
+        <div class="trust-pill">${icon('truck')} 70°C+ Sıcaklığı Koruyan Termobox Taşıma Garantisi</div>
+      </div>
+    </div>
+  </section>`;
+
 const menuTabs = (week, idPrefix = 'gun') => `
   <div class="menu-tabs" data-tabs>
     <div class="tab-list" role="tablist" aria-label="${esc(week.title)} günleri">
@@ -138,9 +233,9 @@ export function buildPages(version) {
   add(
     {
       path: '/',
-      title: 'Gebze Toplu Yemek Siparişi | Tabldot & Fabrika Yemeği – Topçular Yemek',
+      title: 'Gebze Toplu Yemek & Tabldot Servisi | Fabrika Yemek Şirketi – Topçular Yemek',
       description:
-        'Gebze toplu yemek siparişi için Topçular Yemek: fabrika, ofis ve şantiyelere her gün taze pişen tabldot ve kazan yemek servisi. Darıca, Çayırova, Dilovası ve OSB’lere teslimat. Hemen teklif alın.',
+        'Gebze toplu yemek ve tabldot siparişi için Topçular Yemek: fabrikalara, organize sanayi bölgelerine (GOSB, TOSB, Dilovası OSB) ve şantiyelere her gün 4 çeşit taze, sıcak ev yemeği servisi. Sultan Orhan Mah. mutfağımızdan dakik teslimat. Hemen teklif alın.',
       bodyClass: 'home',
       schema: [
         {
@@ -161,17 +256,17 @@ export function buildPages(version) {
     <div class="container hero-grid">
       <div class="hero-copy">
         <div class="live-status"><span class="live-dot" aria-hidden="true"></span><span>Bugün Gebze &amp; OSB bölgelerine sevkiyat aktif</span></div>
-        <span class="eyebrow eyebrow-pill">${icon('pin')} Gebze · Darıca · Çayırova · Dilovası</span>
+        <span class="eyebrow eyebrow-pill">${icon('pin')} Sultan Orhan Mah. · Gebze · GOSB · TOSB · Darıca</span>
         <h1>
-          <span class="h1-kicker">Gebze Toplu Yemek &amp; Tabldot Siparişi</span>
-          Her gün taze, <em>ev lezzetinde</em> yemek işyerinize geliyor.
+          <span class="h1-kicker">Gebze Toplu Yemek &amp; Tabldot Mutfağı</span>
+          Her gün taze, <em>ev lezzetinde</em> yemek fabrikanıza geliyor.
         </h1>
-        <p class="lead">Fabrikalara, ofislere ve şantiyelere kazanda pişen, tabakla servis edilen doyurucu tabldot yemekler. Mutfağımız Gebze’de; yemeğiniz sıcak ve tam zamanında.</p>
+        <p class="lead">Gebze’deki fabrikalara, sanayi sitelerine, atölyelere ve şantiyelere kazanda pişen, tabldot veya yemekhane servisi yapılan 4 çeşit doyurucu yemek. Mutfağımız Sultan Orhan Mahallesi'nde; yemeğiniz sıcacık ve tam vardiya saatinde.</p>
         ${heroButtons()}
         <ul class="hero-trust">
           <li>${icon('leaf')} Günlük taze üretim</li>
-          <li>${icon('shield')} Hijyenik mutfak</li>
-          <li>${icon('truck')} Zamanında teslimat</li>
+          <li>${icon('shield')} ISO 22000 &amp; HACCP hijyen</li>
+          <li>${icon('truck')} Termobox sıcak sevkiyat</li>
         </ul>
       </div>
       <div class="hero-visual">
@@ -252,10 +347,65 @@ export function buildPages(version) {
     </div>
   </div>
 
+  ${clientsBand()}
+
   <section class="section" id="hizmetler" aria-labelledby="hizmetler-baslik">
     <div class="container">
       ${sectionHead('Hizmetlerimiz', 'İşletmenize uygun <em>toplu yemek</em> çözümü', 'İster 20 kişilik bir atölye, ister yüzlerce çalışanı olan bir fabrika olsun; ihtiyacınıza göre servis modeli kuruyoruz.', 'hizmetler-baslik')}
       ${serviceCards()}
+    </div>
+  </section>
+
+  <!-- CANLI TEKLİF VE SİPARİŞ HESAPLAYICI -->
+  <section class="section section-calculator" id="hizli-teklif" aria-labelledby="calc-title">
+    <div class="container">
+      <div class="calc-card reveal">
+        <div class="calc-header">
+          <span class="eyebrow">${icon('calculator')} Canlı Fiyat &amp; Teklif Aracı</span>
+          <h2 id="calc-title">İşletmeniz İçin <em>30 Saniyede</em> Teklif Alın</h2>
+          <p>Kişi sayınızı ve hizmet türünü seçin, anında WhatsApp üzerinden firmanıza özel fiyat ve menü teklifini iletelim.</p>
+        </div>
+        <div class="calc-body">
+          <div class="calc-step">
+            <span class="calc-label">1. Günlük Kişi Sayısı Seçin:</span>
+            <div class="calc-options" data-group="kisi">
+              <button type="button" class="calc-chip active" data-val="20-50 Kişi">20 – 50 Kişi</button>
+              <button type="button" class="calc-chip" data-val="50-100 Kişi">50 – 100 Kişi</button>
+              <button type="button" class="calc-chip" data-val="100-250 Kişi">100 – 250 Kişi</button>
+              <button type="button" class="calc-chip" data-val="250+ Kişi">250+ Kişi (Büyük Fabrika)</button>
+            </div>
+          </div>
+          <div class="calc-step">
+            <span class="calc-label">2. İhtiyacınız Olan Hizmet Türü:</span>
+            <div class="calc-options" data-group="hizmet">
+              <button type="button" class="calc-chip active" data-val="4 Çeşit Tabldot">🍱 4 Çeşit Tabldot Yemek</button>
+              <button type="button" class="calc-chip" data-val="Taşımalı Kazan Yemek">🍲 Kazan Yemek (Taşımalı)</button>
+              <button type="button" class="calc-chip" data-val="Fabrika Yerinde Yemekhane Servisi">🏭 Fabrika Yemekhane Servisi</button>
+              <button type="button" class="calc-chip" data-val="Davet &amp; Organizasyon Yemeği">🎉 Davet &amp; Organizasyon</button>
+            </div>
+          </div>
+          <div class="calc-step">
+            <span class="calc-label">3. Teslimat Lokasyonu:</span>
+            <div class="calc-options" data-group="bolge">
+              <button type="button" class="calc-chip active" data-val="Gebze Merkez">📍 Gebze Merkez</button>
+              <button type="button" class="calc-chip" data-val="GOSB / Organize Sanayi">🏭 GOSB / Güzeller OSB</button>
+              <button type="button" class="calc-chip" data-val="TOSB Otomotiv OSB">🚗 TOSB OSB</button>
+              <button type="button" class="calc-chip" data-val="Dilovası / İMES OSB">🏗️ Dilovası / İMES</button>
+              <button type="button" class="calc-chip" data-val="Çayırova / Darıca">🏢 Çayırova / Darıca</button>
+              <button type="button" class="calc-chip" data-val="Tuzla / Kocaeli">🚚 Tuzla / Kocaeli</button>
+            </div>
+          </div>
+          <div class="calc-footer">
+            <div class="calc-summary">
+              <span class="calc-summary-label">Seçilen Hizmet Özeti:</span>
+              <strong id="calc-summary-text">20-50 Kişi · 4 Çeşit Tabldot · Gebze Merkez</strong>
+            </div>
+            <a id="calc-wa-btn" class="btn btn-wa btn-lg" href="${waHref('Merhaba Topçular Yemek, 20-50 Kişi için 4 Çeşit Tabldot yemek teklifi almak istiyoruz. Bölge: Gebze Merkez.')}" target="_blank" rel="noopener">
+              ${waIcon()} WhatsApp ile Özel Fiyat Al
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -276,6 +426,9 @@ export function buildPages(version) {
       </div>
     </div>
   </section>
+
+  <!-- RESMİ KALİTE BELGELERİ VE ISO SERTİFİKALARI -->
+  ${certsSection()}
 
   <section class="section" aria-labelledby="menu-baslik">
     <div class="container menu-section">
@@ -301,7 +454,7 @@ export function buildPages(version) {
 
   <section class="section" aria-labelledby="bolge-baslik">
     <div class="container regions-block">
-      ${sectionHead('Hizmet Bölgelerimiz', 'Gebze ve çevresine <em>her gün</em> servis', 'Mutfağımız Gebze’de. Kısa mesafe = sıcak yemek, dakik teslimat.', 'bolge-baslik')}
+      ${sectionHead('Hizmet Bölgelerimiz', 'Gebze ve çevresine <em>her gün</em> servis', 'Mutfağımız Gebze Sultan Orhan Mahallesinde. Kısa mesafe = sıcak yemek, dakik teslimat.', 'bolge-baslik')}
       <div class="reveal">${regionChips()}</div>
     </div>
   </section>
@@ -309,9 +462,9 @@ export function buildPages(version) {
   <section class="section section-cream" aria-labelledby="seo-baslik">
     <div class="container prose-wrap">
       <div class="prose reveal">
-        <h2 id="seo-baslik">Gebze’de güvenilir bir toplu yemek firması arıyorsanız</h2>
-        <p><strong>Gebze toplu yemek</strong> denince akla gelen en önemli şey; yemeğin her gün aynı kalitede, doyurucu ve zamanında gelmesidir. Topçular Yemek olarak Gebze merkezli mutfağımızda her sabah taze malzemeyle pişirdiğimiz yemekleri fabrikalara, ofislere, okullara ve şantiyelere ulaştırıyoruz.</p>
-        <p><a href="/hizmetler/tabldot-yemek/">Tabldot yemek</a>, <a href="/hizmetler/kazan-yemek-servisi/">kazan (taşımalı) yemek</a>, <a href="/hizmetler/fabrika-yemek/">fabrika ve kurumsal yemek</a> ile <a href="/hizmetler/organizasyon-yemek/">organizasyon yemeği</a> hizmetlerimizle; <a href="/bolgeler/gebze-toplu-yemek/">Gebze</a>, <a href="/bolgeler/darica-toplu-yemek/">Darıca</a>, <a href="/bolgeler/cayirova-toplu-yemek/">Çayırova</a>, <a href="/bolgeler/dilovasi-toplu-yemek/">Dilovası</a> ve <a href="/bolgeler/gebze-osb-yemek/">organize sanayi bölgelerindeki</a> işletmelerin toplu yemek siparişlerini karşılıyoruz. Dükkânımızda yerinde yemek servisi bulunmaz; tüm gücümüzü toplu yemek üretimine ve servisine veriyoruz.</p>
+        <h2 id="seo-baslik">Gebze’de Güvenilir Bir Toplu Yemek &amp; Tabldot Firması Arıyorsanız</h2>
+        <p><strong>Gebze toplu yemek</strong> ve <strong>tabldot yemek servisi</strong> denince sanayi kuruluşlarının aradığı en temel gereksinim; yemeğin her gün aynı yüksek lezzette, bol porsiyonlu ve mola düdüğü çaldığında masada hazır olmasıdır. Topçular Yemek olarak, Sultan Orhan Mahallesi 1141. Sokak’taki merkez mutfağımızda her sabah erken saatlerde üretime başlıyor, Gebze ve tüm organize sanayi bölgelerine (GOSB, TOSB, Dilovası İMES, GEPOSB) sıcak zinciri koruyarak ulaşıyoruz.</p>
+        <p><a href="/hizmetler/tabldot-yemek/">Gebze tabldot yemek</a>, <a href="/hizmetler/kazan-yemek-servisi/">kazan yemek servisi</a>, <a href="/hizmetler/fabrika-yemek/">fabrika yemek servisi</a> ve <a href="/hizmetler/organizasyon-yemek/">düğün/mevlit/davet yemeği</a> çözümlerimizle; <a href="/bolgeler/gebze-toplu-yemek/">Gebze</a>, <a href="/bolgeler/darica-toplu-yemek/">Darıca</a>, <a href="/bolgeler/cayirova-toplu-yemek/">Çayırova</a>, <a href="/bolgeler/dilovasi-toplu-yemek/">Dilovası</a> ve <a href="/bolgeler/tuzla-toplu-yemek/">Tuzla</a> sanayicilerinin 1 numaralı tercihiyiz. Dükkânımızda oturmalı lokanta düzeni bulunmaz; tüm kapasitemiz fabrikalara eksiksiz toplu yemek sağlamaya odaklıdır.</p>
       </div>
     </div>
   </section>
@@ -634,6 +787,8 @@ export function buildPages(version) {
       ${quoteCard()}
     </div>
   </section>
+  ${certsSection()}
+  ${clientsBand()}
   ${ctaBand()}
   `
   );
@@ -692,44 +847,74 @@ export function buildPages(version) {
   <section class="section">
     <div class="container contact-grid">
       <div class="contact-info">
-        <a class="contact-card reveal" href="${telHref}">${icon('phone')}<span><small>Telefon</small><strong>${esc(site.phone)}</strong></span></a>
-        <a class="contact-card reveal" href="${waHref()}" target="_blank" rel="noopener">${waIcon()}<span><small>WhatsApp</small><strong>Hemen yazın</strong></span></a>
-        <a class="contact-card reveal" href="mailto:${esc(site.email)}">${icon('mail')}<span><small>E-posta</small><strong>${esc(site.email)}</strong></span></a>
-        <a class="contact-card reveal" href="${esc(site.mapsUrl)}" target="_blank" rel="noopener">${icon('pin')}<span><small>Adres</small><strong>${esc(fullAddress())}</strong></span></a>
-        <div class="contact-card reveal">${icon('clock')}<span><small>Çalışma saatleri</small>${site.hours.map((h) => `<strong>${esc(h.label)}: ${h.opens} – ${h.closes}</strong>`).join('')}</span></div>
-        <p class="note">Not: Dükkânımızda yerinde yemek servisi yoktur; yalnızca toplu yemek siparişi ve servis hizmeti veriyoruz.</p>
+        <a class="contact-card reveal" href="${telHref}">
+          ${icon('phone')}
+          <span><small>1. Telefon Hattı (Sipariş &amp; Bilgi)</small><strong>${esc(site.phone)}</strong></span>
+        </a>
+        ${site.altPhone ? `
+        <a class="contact-card reveal" href="tel:${site.altPhoneIntl}">
+          ${icon('phone')}
+          <span><small>2. Telefon Hattı (Sevkiyat &amp; Lojistik)</small><strong>${esc(site.altPhone)}</strong></span>
+        </a>` : ''}
+        <a class="contact-card reveal" href="${waHref()}" target="_blank" rel="noopener">
+          ${waIcon()}
+          <span><small>WhatsApp Canlı Destek</small><strong>Anında Mesaj Yazın (7/24)</strong></span>
+        </a>
+        <a class="contact-card reveal" href="mailto:${esc(site.email)}">
+          ${icon('mail')}
+          <span><small>Kurumsal E-posta</small><strong>${esc(site.email)}</strong></span>
+        </a>
+        <a class="contact-card reveal" href="${esc(site.mapsUrl)}" target="_blank" rel="noopener">
+          ${icon('pin')}
+          <span><small>Merkez Mutfak Adresi</small><strong>${esc(fullAddress())}</strong><small class="link-sub">Google Haritalar'da Aç &amp; Yol Tarifi Al ➔</small></span>
+        </a>
+        <div class="contact-card reveal">
+          ${icon('clock')}
+          <span><small>Üretim &amp; Sevkiyat Saatleri</small>${site.hours.map((h) => `<strong>${esc(h.label)}: ${h.opens} – ${h.closes}</strong>`).join('')}</span>
+        </div>
+        <p class="note">⚠️ <strong>Önemli Bilgilendirme:</strong> İşletmemiz endüstriyel toplu yemek mutfağıdır; oturmalı restoran/lokanta servisi bulunmamaktadır. Tüm üretimimiz Gebze ve OSB fabrikalarına, ofislere ve şantiyelere özel ısı yalıtımlı termobox araçlarımızla teslim edilmektedir.</p>
       </div>
       <form class="quote-form reveal" id="teklif" novalidate>
-        <h2>Ücretsiz teklif formu</h2>
+        <h2>Ücretsiz Teklif Formu</h2>
         <div class="form-row">
-          <label for="f-ad">Ad Soyad *<input id="f-ad" name="ad" required autocomplete="name"></label>
-          <label for="f-firma">Firma Adı<input id="f-firma" name="firma" autocomplete="organization"></label>
+          <label for="f-ad">Ad Soyad *<input id="f-ad" name="ad" required autocomplete="name" placeholder="Adınız ve Soyadınız"></label>
+          <label for="f-firma">Firma Adı<input id="f-firma" name="firma" autocomplete="organization" placeholder="Fabrika / Şirket Adı"></label>
         </div>
         <div class="form-row">
-          <label for="f-tel">Telefon *<input id="f-tel" name="tel" type="tel" required autocomplete="tel" inputmode="tel"></label>
-          <label for="f-kisi">Günlük kişi sayısı *<input id="f-kisi" name="kisi" type="number" min="1" required inputmode="numeric"></label>
+          <label for="f-tel">Telefon *<input id="f-tel" name="tel" type="tel" required autocomplete="tel" inputmode="tel" placeholder="0 (5XX) XXX XX XX"></label>
+          <label for="f-kisi">Günlük Kişi Sayısı *<input id="f-kisi" name="kisi" type="number" min="1" required inputmode="numeric" placeholder="Örn: 50"></label>
         </div>
         <div class="form-row">
-          <label for="f-hizmet">Hizmet türü
+          <label for="f-hizmet">Hizmet Türü
             <select id="f-hizmet" name="hizmet">
               ${services.map((s) => `<option>${esc(s.navTitle)}</option>`).join('')}
               <option>Henüz karar vermedim</option>
             </select>
           </label>
-          <label for="f-bolge">Bölge
+          <label for="f-bolge">Teslimat Bölgesi
             <select id="f-bolge" name="bolge">
               ${regions.map((r) => `<option>${esc(r.name)}</option>`).join('')}
               <option>Diğer</option>
             </select>
           </label>
         </div>
-        <label for="f-mesaj">Mesajınız<textarea id="f-mesaj" name="mesaj" rows="4" placeholder="Teslimat saati, vardiya bilgisi, özel istekler…"></textarea></label>
+        <label for="f-mesaj">Özel Notlarınız<textarea id="f-mesaj" name="mesaj" rows="4" placeholder="Teslimat saati, vardiya mola saatleri, özel menü istekleri…"></textarea></label>
         <button class="btn btn-primary btn-lg btn-block" type="submit" id="f-gonder">${waIcon()} WhatsApp ile Teklif İste</button>
         <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
   <section class="map-section" aria-label="Topçular Yemek konumu">
+    <div class="map-overlay-card reveal">
+      <div class="map-overlay-content">
+        <div class="map-pin-icon">${icon('pin')}</div>
+        <div>
+          <strong>Topçular Yemek Mutfak Merkezi</strong>
+          <p>Sultan Orhan Mah. 1141. Sokak No: 10, Gebze / Kocaeli</p>
+          <a href="${esc(site.mapsUrl)}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Google Haritada Aç ${icon('arrow')}</a>
+        </div>
+      </div>
+    </div>
     <iframe title="Topçular Yemek Gebze konum haritası" src="${mapSrc}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
   </section>
   `

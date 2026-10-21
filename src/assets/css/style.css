@@ -560,8 +560,321 @@ a.contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow); }
 .review-meta strong { display: block; font-size: 0.95rem; color: var(--ink); }
 .review-meta span { display: block; font-size: 0.8rem; color: var(--ink-3); font-weight: 600; }
 
+/* ---------------- Canlı Teklif Hesaplayıcı & WhatsApp Aracı ---------------- */
+.section-calculator {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.calc-card {
+  background: var(--paper);
+  border: 1px solid rgba(181, 64, 27, 0.14);
+  border-radius: var(--radius-l);
+  box-shadow: 0 24px 60px -15px rgba(60, 25, 10, 0.12);
+  padding: clamp(1.8rem, 4vw, 3.2rem);
+  position: relative;
+}
+.calc-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.2rem;
+}
+.calc-header h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  margin-bottom: 0.6rem;
+}
+.calc-header p {
+  color: var(--ink-2);
+  font-size: 1.05rem;
+}
+.calc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.calc-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.calc-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.calc-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+.calc-chip {
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--cream-3);
+  background: var(--cream);
+  color: var(--ink-2);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.calc-chip:hover {
+  border-color: var(--paprika);
+  color: var(--paprika);
+  background: #fff;
+  transform: translateY(-2px);
+}
+.calc-chip.active {
+  background: linear-gradient(135deg, var(--paprika-2), var(--paprika));
+  color: #fff;
+  border-color: var(--paprika);
+  box-shadow: 0 8px 20px -6px rgba(181, 64, 27, 0.65);
+  transform: translateY(-2px);
+}
+.calc-footer {
+  margin-top: 0.5rem;
+  padding-top: 1.8rem;
+  border-top: 1px dashed var(--cream-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: rgba(251, 246, 238, 0.6);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+.calc-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.calc-summary-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+#calc-summary-text {
+  font-size: 1.15rem;
+  color: var(--paprika-dark);
+  font-weight: 800;
+}
+
+/* ---------------- Çalıştığımız Kurumlar / Referanslar Bandı ---------------- */
+.section-clients {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: 2.4rem 0 2rem;
+}
+.clients-head {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.clients-label {
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.clients-label::before,
+.clients-label::after {
+  content: '';
+  width: 32px;
+  height: 1.5px;
+  background: var(--cream-3);
+}
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem 1.2rem;
+}
+.client-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--cream);
+  border: 1px solid var(--cream-3);
+  border-radius: var(--radius-s);
+  padding: 0.8rem 1.4rem;
+  transition: all 0.25s var(--ease);
+  cursor: default;
+}
+.client-badge:hover {
+  background: #fff;
+  border-color: var(--paprika);
+  box-shadow: 0 8px 20px rgba(181, 64, 27, 0.12);
+  transform: translateY(-2px);
+}
+.client-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.client-sector {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--paprika);
+  margin-top: 0.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------------- Gıda Güvenliği & Resmi ISO Sertifikaları ---------------- */
+.section-certs {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(3rem, 5vw, 5rem) 0;
+}
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2.2rem;
+}
+.cert-card {
+  background: var(--cream);
+  border: 1px solid rgba(43, 29, 22, 0.08);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.8rem;
+  transition: all 0.3s var(--ease);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.cert-card:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-color: rgba(181, 64, 27, 0.3);
+}
+.cert-badge-top {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  background: var(--saffron-soft);
+  color: var(--paprika-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cert-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--saffron-soft), #fff);
+  color: var(--paprika-dark);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 12px rgba(233, 165, 59, 0.2);
+}
+.cert-icon .icon {
+  width: 28px;
+  height: 28px;
+}
+.cert-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.cert-desc {
+  font-size: 0.94rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+  flex: 1;
+}
+.cert-meta {
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 1.3rem;
+  line-height: 1.4;
+  border: 1px solid var(--line);
+}
+.certs-trust-banner {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #fff;
+  border: 1px solid var(--cream-3);
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-2);
+  box-shadow: var(--shadow-s);
+}
+.trust-pill .icon {
+  color: var(--paprika);
+}
+
+/* ---------------- Footer Google Harita Kartı ---------------- */
+.footer-google-card {
+  margin-top: 1.2rem;
+}
+.google-badge-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  color: #fff;
+  transition: all 0.25s var(--ease);
+}
+.google-badge-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--saffron);
+  transform: translateY(-2px);
+}
+.google-badge-link .stars {
+  color: #fbbf24;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+.google-badge-link strong {
+  font-size: 0.95rem;
+}
+.google-badge-link small {
+  font-size: 0.82rem;
+  color: var(--saffron-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 /* Yüzen butonlar */
-.float-actions { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 90; display: flex; flex-direction: column; gap: 0.7rem; }
+.float-actions { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 90; display: flex; flex-direction: column; gap: 0.75rem; }
 .float-btn { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; color: #fff; box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4); transition: transform 0.3s var(--ease); position: relative; }
 .float-btn:hover { transform: scale(1.08); }
 .float-btn .icon { width: 28px; height: 28px; }
@@ -570,7 +883,95 @@ a.contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow); }
   content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #1fa855;
   animation: radarPing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite; pointer-events: none;
 }
-.float-call { background: var(--paprika); display: none; }
+.float-call { background: var(--paprika); }
+.float-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s var(--ease);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+.float-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--ink);
+}
+.float-btn:hover .float-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: calc(100% + 14px);
+}
+
+/* ---------------- İletişim Harita Kartı Overlay ---------------- */
+.map-section {
+  position: relative;
+}
+.map-overlay-card {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  max-width: 380px;
+  background: var(--paper);
+  border: 1px solid var(--cream-3);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem;
+  z-index: 10;
+}
+.map-overlay-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.map-pin-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--paprika);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.map-pin-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+.map-overlay-content strong {
+  display: block;
+  font-size: 1.02rem;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.map-overlay-content p {
+  font-size: 0.86rem;
+  color: var(--ink-2);
+  margin-bottom: 0.8rem;
+  line-height: 1.45;
+}
+.link-sub {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--paprika);
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
 
 /* ---------------- Scroll animasyonu ---------------- */
 .reveal {

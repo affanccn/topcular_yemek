@@ -166,4 +166,39 @@
       window.open(`https://wa.me/${window.SITE.wa}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
   }
+
+  /* Canlı Hızlı Teklif Hesaplayıcı */
+  const calcCard = $('.calc-card');
+  if (calcCard) {
+    const summaryText = $('#calc-summary-text');
+    const waBtn = $('#calc-wa-btn');
+    const chips = $$('.calc-chip', calcCard);
+
+    const state = {
+      kisi: '20-50 Kişi',
+      hizmet: '4 Çeşit Tabldot',
+      bolge: 'Gebze Merkez',
+    };
+
+    const updateCalc = () => {
+      if (summaryText) summaryText.textContent = `${state.kisi} · ${state.hizmet} · ${state.bolge}`;
+      if (waBtn) {
+        const msg = `Merhaba Topçular Yemek, ${state.kisi} için ${state.hizmet} toplu yemek teklifi almak istiyoruz. Bölge: ${state.bolge}. Bilgi ve fiyat alabilir miyiz?`;
+        waBtn.href = `https://wa.me/${window.SITE.wa}?text=${encodeURIComponent(msg)}`;
+      }
+    };
+
+    chips.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const groupEl = btn.closest('[data-group]');
+        if (!groupEl) return;
+        const group = groupEl.dataset.group;
+        $$('.calc-chip', groupEl).forEach((s) => s.classList.remove('active'));
+        btn.classList.add('active');
+        state[group] = btn.dataset.val;
+        updateCalc();
+      });
+    });
+  }
 })();
+
