@@ -151,4 +151,79 @@ export const regions = [
       },
     ],
   },
+  {
+    slug: 'gosb-toplu-yemek',
+    name: 'GOSB (Gebze OSB)',
+    featured: true,
+    metaTitle: 'GOSB Toplu Yemek Siparişi | Gebze OSB Fabrika Yemeği – Topçular Yemek',
+    metaDesc: 'GOSB (Gebze Organize Sanayi Bölgesi) fabrikalarına günlük 4 çeşit sıcak tabldot ve kazan yemek servisi. ISO 22000 belgeli, vardiyalı dakik teslimat. Teklif alın.',
+    h1: 'GOSB Toplu Yemek & Fabrika Yemeği Servisi',
+    lead: 'Gebze Organize Sanayi Bölgesi’ndeki (GOSB) ulusal ve uluslararası fabrikalara her gün dakik, hijyenik ve sıcak kurumsal yemek servisi sunuyoruz.',
+    body: [
+      'GOSB (Gebze Organize Sanayi Bölgesi), Türkiye’nin en gelişmiş sanayi kümelenmelerinden biridir. Yüksek teknoloji, otomotiv yan sanayi, kimya, elektronik ve makine sektörlerinde faaliyet gösteren GOSB fabrikalarının yemek ihtiyaçlarını kurumsal standartlarda karşılıyoruz.',
+      'Sultan Orhan Mahallesi’ndeki mutfağımız GOSB’a yalnızca 8-10 dakika mesafededir. Bu coğrafi yakınlık, yemeklerin pişirildikten hemen sonra ısı kaybı yaşamadan, termobox kaplarla 70°C+ servis sıcaklığında fabrikaya ulaşmasını garanti eder.',
+      'GOSB’da 3 vardiya çalışan tesisler için kahvaltı, öğle ve akşam yemeği planlaması yapıyoruz. ISO 22000 Gıda Güvenliği ve ISO 9001 Kalite standartlarımızla, fabrika denetimlerinde tam uyumlu kurumsal yemek ortağınızız.',
+    ],
+    places: ['GOSB 1000. Cadde', 'GOSB İhsan Dede Caddesi', 'GOSB Teknopark', 'Güzeller OSB Bağlantı Yolu', 'Tembelova Sanayi', 'Kirazpınar Sanayi Hattı'],
+    faq: [
+      {
+        q: 'GOSB’daki fabrikamıza yemekler saat kaçta teslim edilir?',
+        a: 'Fabrikanızın yemek mola saatine göre özel rota oluşturulur. Genellikle mola saatinden 20-30 dakika önce yalıtımlı termobox kaplarla yemekhanenize teslim edilir.',
+      },
+      {
+        q: 'GOSB için numune ve deneme yemeği alabilir miyiz?',
+        a: 'Evet. Teklif sürecinde firmanızın yönetim ve çalışan temsilcilerinin lezzetimizi test etmesi için ücretsiz deneme yemeği organize ediyoruz.',
+      },
+    ],
+  },
+  {
+    slug: 'tosb-toplu-yemek',
+    name: 'TOSB (Otomotiv OSB)',
+    featured: true,
+    metaTitle: 'TOSB Toplu Yemek & Tabldot Servisi | Şekerpınar Yemek Firması – Topçular Yemek',
+    metaDesc: 'TOSB (Otomotiv Tedarik Sanayi İhtisas OSB) ve Şekerpınar fabrikalarına günlük taze tabldot yemek servisi. Otomotiv yan sanayi işletmelerine özel menüler. Teklif alın.',
+    h1: 'TOSB Otomotiv OSB Toplu Yemek Servisi',
+    lead: 'TOSB ve Şekerpınar üretim hatlarında çalışan personel için yüksek enerjili, doyurucu ve vardiyalı saatlere dakik sıcak yemek servisi.',
+    body: [
+      'TOSB (Otomotiv Tedarik Sanayi İhtisas Organize Sanayi Bölgesi) ve Şekerpınar aksındaki fabrikalar, yüksek tempolu ve titiz üretim süreçlerine sahiptir. Çalışanların motivasyonu ve iş verimliliği doğrudan doğruya öğle yemeğinin kalitesine bağlıdır.',
+      'Topçular Yemek olarak, otomotiv yan sanayisi ve lojistik merkezlerinde çalışan teknik personelin kalori ve protein ihtiyacını karşılayan 4 kap zengin tabldot menüleri hazırlıyoruz. Etli ana yemekler, taze mevsim sebzeleri ve dengeli garnitürlerle zenginleştirilmiş menüler sunuyoruz.',
+      'Şekerpınar ve TOSB bölgesine her gün düzenli servis araçlarımızla kesintisiz ulaşıyor; hem tabldot hem de yemekhanenizde porsiyonlanacak kazan servisi çözümleri sağlıyoruz.',
+    ],
+    places: ['TOSB 1. Cadde', 'TOSB 2. Cadde', 'Şekerpınar Sanayi Bölgesi', 'Çayırova Lojistik Tesisleri', 'Marmara Geri Dönüşümcüler Sanayi'],
+    faq: [
+      {
+        q: 'TOSB bölgesine minimum kaç kişilik servis yapıyorsunuz?',
+        a: 'TOSB ve Şekerpınar bölgesindeki işletmeler için 20 kişiden itibaren tabldot ve kazan yemek servisi sağlıyoruz.',
+      },
+      {
+        q: 'Gece vardiyasında çalışan personele yemek veriyor musunuz?',
+        a: 'Evet. Fabrikanızın çalışma takvimine göre 2. ve 3. vardiya (akşam ve gece) yemek ihtiyaçlarını planlıyoruz.',
+      },
+    ],
+  },
+  {
+    slug: 'dilovasi-imes-yemek',
+    name: 'İMES OSB',
+    featured: true,
+    metaTitle: 'Dilovası İMES OSB Toplu Yemek & Fabrika Tabldot Servisi | Topçular Yemek',
+    metaDesc: 'Dilovası İMES Makine İhtisas OSB ve KOBİ OSB fabrikalarına toplu yemek servisi. Ağır sanayi personeline doyurucu, sıcacık termobox taşımalı yemek. Teklif alın.',
+    h1: 'Dilovası İMES Makineciler OSB Toplu Yemek Servisi',
+    lead: 'İMES OSB ve Dilovası sanayi bölgesindeki makine, döküm ve imalat fabrikaları için 4 kap dengeli, doyurucu günlük tabldot yemek.',
+    body: [
+      'Dilovası İMES Organize Sanayi Bölgesi, makine imalatı ve ağır sanayi alanında faaliyet gösteren dev fabrikalara ev sahipliği yapar. Bu tesislerde çalışan emektar iş gücünün en büyük beklentisi doyurucu, lezzetli ve taze yemektir.',
+      'Topçular Yemek, ağır sanayi çalışanlarının ihtiyaç duyduğu besin değerlerini ve porsiyon büyüklüklerini çok iyi bilir. Menülerimizde bol proteinli et yemekleri, bakliyatlar, taze salatalar ve geleneksel Türk mutfağı tatlıları yer alır.',
+      'Yemeklerimiz Gebze merkez mutfağımızda pişer, endüstriyel termobox kaplarla İMES OSB’deki fabrikanıza taşınır. Taşıma sırasında yemek ısısı korunur, ilk piştiği tazelikle personelinize sunulur.',
+    ],
+    places: ['İMES OSB 1. Cadde', 'İMES OSB 5. Cadde', 'Makineciler OSB', 'Kömürcüler OSB', 'Mermerciler Sanayi Sitesi', 'Dilovası D-100 Sanayi Aksı'],
+    faq: [
+      {
+        q: 'İMES OSB’deki yemek teslimatında gecikme yaşanır mı?',
+        a: 'Kesinlikle hayır. Servis güzergahlarımız D-100 ve Kuzey Marmara Otoyolu bağlantıları kullanılarak trafiğe göre optimize edilir; yemeğiniz tam mola düdüğünde hazır olur.',
+      },
+      {
+        q: 'Gıda güvenliği belgeleriniz var mı?',
+        a: 'Evet. Topçular Yemek ISO 22000 Gıda Güvenliği, ISO 9001 Kalite ve ISO 45001 İSG belgelerine sahiptir. Belgelerimizi sitemizden doğrudan inceleyebilirsiniz.',
+      },
+    ],
+  },
 ];

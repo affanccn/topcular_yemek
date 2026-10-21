@@ -6,7 +6,7 @@ import {
   businessSchema, breadcrumbSchema, imgUrl,
 } from './lib.mjs';
 
-const areaNames = ['Gebze', 'Darıca', 'Çayırova', 'Dilovası', 'Tuzla', 'Kocaeli'];
+const areaNames = ['Gebze', 'GOSB', 'TOSB', 'Dilovası', 'İMES OSB', 'Çayırova', 'Darıca', 'Tuzla', 'Kocaeli'];
 
 /* ---------------- HEAD ---------------- */
 function head(page) {
@@ -18,6 +18,7 @@ function head(page) {
 <script>document.documentElement.classList.add('js')</script>
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
+<meta name="keywords" content="${esc(page.keywords || 'gebze toplu yemek, gebze tabldot yemek, gebze catering, gebze fabrika yemek servisi, gebze yemek şirketleri, gebze yemek firmaları, gosb toplu yemek, tosb yemek, dilovası imes yemek, gebze taşıma yemek, sultan orhan tabldot')}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="${page.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 <meta name="theme-color" content="#B5401B">

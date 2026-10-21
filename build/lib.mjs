@@ -133,6 +133,71 @@ export function businessSchema(areaNames = []) {
       closes: h.closes,
     })),
     areaServed: areaNames.map((n) => ({ '@type': 'Place', name: n })),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '48',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'ISO 22000:2018 Gıda Güvenliği Yönetim Sistemi',
+        credentialCategory: 'certificate',
+        url: abs('/belgeler/topcular-yemek-iso-22000-2018.pdf'),
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'ISO 9001:2015 Kalite Yönetim Sistemi',
+        credentialCategory: 'certificate',
+        url: abs('/belgeler/topcular-yemek-iso-9001-2015.pdf'),
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'ISO 45001:2018 İş Sağlığı ve Güvenliği Yönetim Sistemi',
+        credentialCategory: 'certificate',
+        url: abs('/belgeler/topcular-yemek-iso-45001-2018.pdf'),
+      },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Gebze Toplu Yemek ve Catering Hizmetleri',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Gebze Tabldot Yemek Servisi',
+            description: 'Günlük 4 çeşit taze, kalori ve besin değeri dengeli kurumsal tabldot yemek servisi.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Taşımalı / Kazan Yemek Servisi',
+            description: 'Isı yalıtımlı termobox kaplarla 70°C+ sıcak teslimat garantili dökme yemekhane servisi.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Fabrika & OSB Kurumsal Yemekhane Hizmeti',
+            description: 'Vardiyalı üretim tesislerine, OSB fabrikalarına zamanında ve kesintisiz sıcak yemek servisi.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Düğün, Davet, Mevlüt & Organizasyon Yemeği',
+            description: 'Açık büfe, çafing dish ve porsiyon menü seçenekleriyle toplu davet yemeği hizmeti.',
+          },
+        },
+      ],
+    },
     sameAs,
   };
 }
