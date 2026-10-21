@@ -297,7 +297,7 @@ export function buildPages(version) {
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="live-status"><span class="live-dot" aria-hidden="true"></span><span>Bugün Gebze &amp; OSB bölgelerine sevkiyat aktif</span></div>
+        <div class="live-status"><span class="live-dot" aria-hidden="true"></span><span>Bugün tüm bölgelere sevkiyat aktif</span></div>
         <span class="eyebrow eyebrow-pill">${icon('pin')} Sultan Orhan Mah. · Gebze · GOSB · TOSB · Darıca</span>
         <h1>
           <span class="h1-kicker">Gebze Toplu Yemek &amp; Tabldot Mutfağı</span>
