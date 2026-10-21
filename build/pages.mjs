@@ -115,46 +115,88 @@ const certsSection = () => `
       <header class="section-head reveal center">
         <span class="eyebrow">Resmi Kalite &amp; Gıda Güvenliği Belgelerimiz</span>
         <h2 id="certs-baslik">Uluslararası Akredite <em>ISO Sertifikalarımız</em></h2>
-        <p>Topçular Yemek; gıda güvenliği, iş sağlığı ve kurumsal yönetimde uluslararası standartlara sahiptir. Belgelerimizi doğrudan PDF olarak inceleyebilirsiniz.</p>
+        <p>Topçular Yemek; gıda güvenliği, iş sağlığı ve kurumsal yönetimde uluslararası standartlara sahiptir. Aşağıdaki sertifika görsellerine veya butonlara tıklayarak resmi PDF belgelerimizi yüksek çözünürlükte inceleyebilirsiniz.</p>
       </header>
       <div class="certs-grid">
         <div class="cert-card reveal">
-          <div class="cert-badge-top">Gıda Güvenliği</div>
-          <div class="cert-icon">${icon('shield')}</div>
-          <h3>ISO 22000:2018</h3>
-          <p class="cert-desc">Gıda Güvenliği Yönetim Sistemi. Hammadde kabulünden hijyenik pişirme ve termobox sıcak sevkiyata kadar sıfır risk prensibi.</p>
-          <div class="cert-meta">
-            <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
-          </div>
-          <a href="/belgeler/topcular-yemek-iso-22000-2018.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
-            Orijinal Sertifikayı Görüntüle (PDF) ${icon('arrow')}
+          <a href="/belgeler/topcular-yemek-iso-22000-2018.pdf" target="_blank" rel="noopener" class="cert-doc-preview" aria-label="ISO 22000:2018 Resmi Sertifika PDF Belgesini İncele">
+            <div class="cert-doc-frame">
+              ${img('certIso22000', 'Topçular Yemek ISO 22000:2018 Gıda Güvenliği Yönetim Sistemi Resmi Sertifikası', { sizes: '(max-width: 768px) 100vw, 380px' })}
+              <div class="cert-doc-overlay">
+                <span class="cert-overlay-btn">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  PDF Olarak Büyüt
+                </span>
+              </div>
+            </div>
+            <span class="cert-doc-badge">Gıda Güvenliği</span>
           </a>
+          <div class="cert-card-body">
+            <div class="cert-code-tag">ISO 22000:2018</div>
+            <h3>Gıda Güvenliği Yönetim Sistemi</h3>
+            <p class="cert-desc">Hammadde kabulünden hijyenik pişirme ve termobox sıcak sevkiyata kadar her aşamada uluslararası standartlarda sıfır risk gıda güvenliği güvencesi.</p>
+            <div class="cert-meta">
+              <span class="meta-label">Tescilli Firma:</span>
+              <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
+            </div>
+            <a href="/belgeler/topcular-yemek-iso-22000-2018.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+              Orijinal Sertifikayı İncele (PDF) ${icon('arrow')}
+            </a>
+          </div>
         </div>
 
         <div class="cert-card reveal">
-          <div class="cert-badge-top">Kalite Standardı</div>
-          <div class="cert-icon">${icon('check')}</div>
-          <h3>ISO 9001:2015</h3>
-          <p class="cert-desc">Kalite Yönetim Sistemi. Müşteri memnuniyeti, standartlaştırılmış reçeteler ve disiplinli kurumsal yemek servisi.</p>
-          <div class="cert-meta">
-            <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
-          </div>
-          <a href="/belgeler/topcular-yemek-iso-9001-2015.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
-            Orijinal Sertifikayı Görüntüle (PDF) ${icon('arrow')}
+          <a href="/belgeler/topcular-yemek-iso-9001-2015.pdf" target="_blank" rel="noopener" class="cert-doc-preview" aria-label="ISO 9001:2015 Resmi Sertifika PDF Belgesini İncele">
+            <div class="cert-doc-frame">
+              ${img('certIso9001', 'Topçular Yemek ISO 9001:2015 Kalite Yönetim Sistemi Resmi Sertifikası', { sizes: '(max-width: 768px) 100vw, 380px' })}
+              <div class="cert-doc-overlay">
+                <span class="cert-overlay-btn">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  PDF Olarak Büyüt
+                </span>
+              </div>
+            </div>
+            <span class="cert-doc-badge">Kalite Standardı</span>
           </a>
+          <div class="cert-card-body">
+            <div class="cert-code-tag">ISO 9001:2015</div>
+            <h3>Kalite Yönetim Sistemi</h3>
+            <p class="cert-desc">Müşteri memnuniyeti, reçete standardizasyonu, kurumsal süreç disiplini ve kesintisiz zamanında teslimat kalitesi güvencesi.</p>
+            <div class="cert-meta">
+              <span class="meta-label">Tescilli Firma:</span>
+              <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
+            </div>
+            <a href="/belgeler/topcular-yemek-iso-9001-2015.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+              Orijinal Sertifikayı İncele (PDF) ${icon('arrow')}
+            </a>
+          </div>
         </div>
 
         <div class="cert-card reveal">
-          <div class="cert-badge-top">İş Sağlığı &amp; Güvenliği</div>
-          <div class="cert-icon">${icon('users')}</div>
-          <h3>ISO 45001:2018</h3>
-          <p class="cert-desc">İş Sağlığı ve Güvenliği Yönetim Sistemi. Güvenli mutfak donanımları, personel iş güvenliği ve emniyetli lojistik operasyonu.</p>
-          <div class="cert-meta">
-            <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
-          </div>
-          <a href="/belgeler/topcular-yemek-iso-45001-2018.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
-            Orijinal Sertifikayı Görüntüle (PDF) ${icon('arrow')}
+          <a href="/belgeler/topcular-yemek-iso-45001-2018.pdf" target="_blank" rel="noopener" class="cert-doc-preview" aria-label="ISO 45001:2018 Resmi Sertifika PDF Belgesini İncele">
+            <div class="cert-doc-frame">
+              ${img('certIso45001', 'Topçular Yemek ISO 45001:2018 İş Sağlığı ve Güvenliği Yönetim Sistemi Resmi Sertifikası', { sizes: '(max-width: 768px) 100vw, 380px' })}
+              <div class="cert-doc-overlay">
+                <span class="cert-overlay-btn">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  PDF Olarak Büyüt
+                </span>
+              </div>
+            </div>
+            <span class="cert-doc-badge">İş Sağlığı &amp; Güvenliği</span>
           </a>
+          <div class="cert-card-body">
+            <div class="cert-code-tag">ISO 45001:2018</div>
+            <h3>İş Sağlığı ve Güvenliği</h3>
+            <p class="cert-desc">Endüstriyel mutfak güvenliği, çalışan sağlığı koruma protokolleri, emniyetli ekipmanlar ve kusursuz lojistik operasyonu.</p>
+            <div class="cert-meta">
+              <span class="meta-label">Tescilli Firma:</span>
+              <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
+            </div>
+            <a href="/belgeler/topcular-yemek-iso-45001-2018.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-block">
+              Orijinal Sertifikayı İncele (PDF) ${icon('arrow')}
+            </a>
+          </div>
         </div>
       </div>
       <div class="certs-trust-banner reveal">
