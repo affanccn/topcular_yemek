@@ -53,7 +53,7 @@ export const weeklyMenus = [
 export const menuTypes = [
   {
     title: 'Standart Fabrika Tabldot',
-    text: 'Çorba + etli/tavuklu ana yemek + yardımcı yemek (pilav/makarna) + salata, tatlı ya da yoğurt. Fabrikaların en çok tercih ettiği 4 çeşit dengeli menü.',
+    text: 'Çorba + etli/tavuklu ana yemek + yardımcı yemek (pilav/makarna) + salata, tatlı ya da içecek. Fabrikaların en çok tercih ettiği 4 çeşit dengeli menü.',
   },
   {
     title: 'Ağır Sanayi & Şantiye Menüsü',

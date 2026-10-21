@@ -10,13 +10,13 @@ export const services = [
     imageAlt: 'Gebze tabldot yemek servisi: Profesyonel aşçı 5 gözlü paslanmaz tabldot tepsisine sıcak yemek servisi yapıyor',
     navTitle: 'Tabldot Yemek',
     cardTitle: 'Tabldot Yemek',
-    cardText: 'Çorba, ana yemek, yardımcı yemek ve tatlı/salatadan oluşan dengeli tabldot menüler; tabak ya da tepside servis.',
+    cardText: 'Çorba, ana yemek, yardımcı yemek ve salata/tatlı/içecekten oluşan dengeli tabldot menüler; tabak ya da tepside servis.',
     metaTitle: 'Gebze Tabldot Yemek Siparişi | Günlük Taze Tabldot – Topçular Yemek',
     metaDesc: 'Gebze tabldot yemek siparişi için Topçular Yemek: her gün taze pişen, 4 çeşit dengeli tabldot menü. Fabrika, ofis ve şantiyelere zamanında servis. Hemen teklif alın.',
     h1: 'Gebze Tabldot Yemek Servisi',
     lead: 'Her gün sabah erken saatlerde mutfağımızda taze pişen, ev lezzetinde 4 çeşit tabldot menüyü işletmenize sıcak sıcak ulaştırıyoruz.',
     body: [
-      'Tabldot yemek; çorba, ana yemek, yardımcı yemek (pilav, makarna, börek) ve salata, tatlı ya da meyveden oluşan, besin değeri dengelenmiş günlük menüdür. Topçular Yemek olarak Gebze ve çevresindeki fabrika, atölye, ofis, okul ve şantiyelere tabldot yemek servisi yapıyoruz.',
+      'Tabldot yemek; çorba, ana yemek, yardımcı yemek (pilav, makarna, börek) ve salata, tatlı ya da içecekten oluşan, besin değeri dengelenmiş günlük menüdür. Topçular Yemek olarak Gebze ve çevresindeki fabrika, atölye, ofis, okul ve şantiyelere tabldot yemek servisi yapıyoruz.',
       'Menülerimizi aylık olarak planlıyor, mevsiminde ve taze malzeme kullanıyoruz. Etli, tavuklu, zeytinyağlı ve bakliyat yemeklerini dengeli bir şekilde dağıtarak çalışanlarınızın her gün farklı ve doyurucu bir öğün yemesini sağlıyoruz.',
       'Yemekler, porsiyonlanmış şekilde tabak/tepside ya da sizin yemekhanenizde servis edilmek üzere ısı yalıtımlı kaplarla teslim edilir. Kişi sayısına, vardiya saatlerinize ve bütçenize göre size özel tabldot teklifi hazırlıyoruz.',
     ],
@@ -31,7 +31,7 @@ export const services = [
     faq: [
       {
         q: 'Tabldot menüde kaç çeşit yemek oluyor?',
-        a: 'Standart tabldot menümüz 4 çeşittir: çorba, ana yemek, yardımcı yemek ve salata/tatlı/meyve. İsteğe göre 3 veya 5 çeşitlik menü de hazırlanabilir.',
+        a: 'Standart tabldot menümüz 4 çeşittir: çorba, ana yemek, yardımcı yemek ve salata/tatlı/içecek. İsteğe göre 3 veya 5 çeşitlik menü de hazırlanabilir.',
       },
       {
         q: 'Tabldot yemek fiyatları neye göre belirleniyor?',

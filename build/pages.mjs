@@ -225,7 +225,7 @@ const menuTabs = (week, idPrefix = 'gun') => `
         ${d.items
           .map(
             (it, j) =>
-              `<li><span class="course-no">0${j + 1}</span><span class="course-name">${esc(it)}</span><span class="course-type">${['Çorba', 'Ana Yemek', 'Yardımcı', 'Salata / Tatlı'][j] || ''}</span></li>`
+              `<li><span class="course-no">0${j + 1}</span><span class="course-name">${esc(it)}</span><span class="course-type">${['Çorba', 'Ana Yemek', 'Yardımcı', 'Salata / Tatlı / İçecek'][j] || ''}</span></li>`
           )
           .join('')}
       </ol>
@@ -742,7 +742,7 @@ export function buildPages(version) {
       path: '/menu/',
       title: 'Örnek Haftalık Tabldot Menüsü | Gebze Toplu Yemek – Topçular Yemek',
       description:
-        'Topçular Yemek örnek haftalık tabldot menüsü: çorba, ana yemek, yardımcı yemek ve tatlı/salatadan oluşan dengeli toplu yemek menüleri. Gebze’de fabrika ve ofislere servis.',
+        'Topçular Yemek örnek haftalık tabldot menüsü: çorba, ana yemek, yardımcı yemek ve salata / tatlı / içecekten oluşan dengeli toplu yemek menüleri. Gebze’de fabrika ve ofislere servis.',
       breadcrumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Menü', path: '/menu/' }],
       schema: [
         {
@@ -763,7 +763,7 @@ export function buildPages(version) {
     crumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Menü', path: '/menu/' }],
     kicker: 'Menülerimiz',
     h1: 'Örnek Haftalık Tabldot Menüsü',
-    lead: 'Her gün 4 çeşit: çorba, ana yemek, yardımcı yemek ve salata/tatlı. Menüler aylık planlanır, firmanızın isteğine göre şekillenir.',
+    lead: 'Her gün 4 çeşit: çorba, ana yemek, yardımcı yemek ve salata / tatlı / içecek. Menüler aylık planlanır, firmanızın isteğine göre şekillenir.',
     image: 'bufe',
     imageAlt: 'Topçular Yemek sıcak büfesinde etli ana yemekler, pilav ve garnitürler',
   })}
