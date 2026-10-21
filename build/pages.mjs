@@ -255,58 +255,57 @@ const menuTabs = (week, idPrefix = 'gun') => {
   </div>`;
 };
 
-/* ---------------- SEKTÖRDE BİR İLK: NUMUNE TADIM SEFERİ ---------------- */
-const sampleTestSection = () => `
-  <section class="section section-sample" id="tadim-seferi" aria-labelledby="sample-baslik">
+/* ---------------- GÜNLÜK MUTFAK VE SEVKİYAT BÜLTENİ ---------------- */
+const dailyShowcaseSection = () => `
+  <section class="section section-showcase" id="gunluk-bulten" aria-labelledby="showcase-baslik">
     <div class="container">
-      <div class="sample-card reveal">
-        <div class="sample-top-badge">
-          <span class="badge-glimmer"></span>
-          ${icon('award')} <strong>SEKTÖRDE BİR İLK: KURUMSAL TADIM DENEYİMİ</strong>
-        </div>
-        <div class="sample-grid">
-          <div class="sample-info">
-            <span class="eyebrow eyebrow-ember">Karar Vermeden Önce Fabrikanızda Test Edin</span>
-            <h2 id="sample-baslik">1 Günlük <em>Ücretsiz Sıcak Numune</em> Seferi</h2>
-            <p class="sample-lead">20 kişi ve üzeri çalışanınız varsa; sözleşme yapmadan önce mutfağımızın lezzetini, porsiyon doyuruculuğunu ve servis sıcaklığını kendi yemekhanenizde bizzat deneyimleyin. 4 çeşit sıcak tabldot numunemizi firmanıza özel ısı yalıtımlı termobox ile ücretsiz ulaştıralım.</p>
-            <ul class="sample-perks">
-              <li>${icon('check')} <span><strong>Hiçbir Taahhüt Yoktur:</strong> Tamamen ücretsizdir, sözleşme veya alım şartı aranmaz.</span></li>
-              <li>${icon('check')} <span><strong>75°C Termobox ile Canlı Teslim:</strong> Yemeğin fabrikanıza nasıl dumanı üstünde ulaştığını görün.</span></li>
-              <li>${icon('check')} <span><strong>Kararı Çalışanlarınız Versin:</strong> Ekibinize ve idari kadronuza tattırın, memnuniyeti yerinde ölçün.</span></li>
-            </ul>
+      <header class="section-head reveal center">
+        <span class="eyebrow">${icon('sparkles')} Canlı Mutfak &amp; Sevkiyat Günlüğü</span>
+        <h2 id="showcase-baslik">Bugün Mutfağımızdan: <em>Taze Lezzet &amp; Termobox</em> Güvencesi</h2>
+        <p>Her sabah Sultan Orhan Mahallesindeki merkez mutfağımızda pişen sıcak menüler ve fabrikalara ulaştırılan termobox sevkiyatından gerçek kareler.</p>
+      </header>
+      <div class="showcase-grid">
+        <article class="showcase-card reveal" style="--d:0ms">
+          <div class="showcase-media">
+            ${img('dailyMenu', 'Günün 4 Kap Sıcak Menüsü: Süzme mercimek çorbası, sebzeli dana tas kebabı, şehriyeli pirinç pilavı, taze cacık ve somun ekmek', { sizes: '(max-width: 900px) 100vw, 50vw' })}
+            <span class="showcase-badge badge-flavor">${icon('fire')} 1. Lezzet &amp; Doyuruculuk Odaklı</span>
           </div>
-          <div class="sample-action-box">
-            <div class="sample-box-head">
-              <h3>Numune Tadım Talebi Oluşturun</h3>
-              <p>Bilgilerinizi iletin, aşçıbaşımız sizinle görüşüp tadım menüsünü fabrikanıza ulaştırsın.</p>
+          <div class="showcase-body">
+            <span class="showcase-label">Görsel 1: Günün 4 Kap Sıcak Menüsü</span>
+            <h3>Öğle Vardiyası Enerji Menüsü</h3>
+            <p class="showcase-desc">Taze süzme mercimek çorbası, sebzeli dana tas kebabı, tereyağlı şehriyeli pirinç pilavı, taze cacık ve çıtır somun ekmek sunumu.</p>
+            <div class="showcase-quote">
+              <span class="quote-icon">${icon('chat')}</span>
+              <blockquote>“Bugün Topçular Yemek mutfağından fabrikalarınıza ev sıcaklığı taşıyoruz! Usta ellerden çıkan sıcacık mercimek çorbamız, lokum kıvamında tas kebabımız ve dengeli menümüz vardiyanıza enerji katmaya hazır. Afiyet olsun!”</blockquote>
             </div>
-            <form class="sample-form" id="sample-form" novalidate>
-              <div class="sample-field">
-                <label for="s-firma">Firma / Fabrika Adı *</label>
-                <input type="text" id="s-firma" name="firma" required placeholder="Örn: Aslan Otomotiv Ltd.">
-              </div>
-              <div class="sample-field">
-                <label for="s-yetkili">Yetkili Adı ve Telefon *</label>
-                <input type="text" id="s-yetkili" name="yetkili" required placeholder="Ad Soyad · 0 (5XX) XXX XX XX">
-              </div>
-              <div class="sample-field">
-                <label for="s-bolge">İşletme Lokasyonu / OSB *</label>
-                <select id="s-bolge" name="bolge">
-                  <option>GOSB (Gebze Organize Sanayi)</option>
-                  <option>TOSB Otomotiv İhtisas OSB</option>
-                  <option>Dilovası İMES OSB</option>
-                  <option>Güzeller OSB</option>
-                  <option>Gebze Merkez / Sultan Orhan</option>
-                  <option>Çayırova &amp; Darıca Sanayi</option>
-                  <option>Tuzla / Kocaeli</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-sample btn-lg btn-block" id="s-submit">
-                ${waIcon()} Ücretsiz Sıcak Numune Menü İste
-              </button>
-              <p class="sample-note" id="sample-note">🔒 Bilgileriniz yalnızca tadım koordinasyonu için aşçıbaşımıza iletilir.</p>
-            </form>
           </div>
+        </article>
+
+        <article class="showcase-card reveal" style="--d:120ms">
+          <div class="showcase-media">
+            ${img('termoboxKitchen', 'Endüstriyel Mutfak Hijyeni ve 70°C+ Termobox Sıcak Sevkiyatı', { sizes: '(max-width: 900px) 100vw, 50vw' })}
+            <span class="showcase-badge badge-hygiene">${icon('shield')} 2. Güven &amp; Kurumsallık Odaklı</span>
+          </div>
+          <div class="showcase-body">
+            <span class="showcase-label">Görsel 2: Endüstriyel Hijyen ve Termobox Sevkiyatı</span>
+            <h3>ISO Standartlarında Üretim &amp; Lojistik</h3>
+            <p class="showcase-desc">Paslanmaz çelik endüstriyel mutfak, ISO standartlarında bone/eldiven/önlük hijyeni, buharı üstünde tüten yemeklerin ısı yalıtımlı Termobox küvetlerine aktarılması.</p>
+            <div class="showcase-quote">
+              <span class="quote-icon">${icon('chat')}</span>
+              <blockquote>“Sultan Orhan Mahallesindeki merkez mutfağımızda her sabah aynı titizlikle üretiyoruz. Yemekleriniz fabrikasyon değil, %100 taze malzemelerle hazırlanıp özel Termobox taşıma sistemimizle masanıza ilk anki sıcaklığında ulaşıyor.”</blockquote>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="showcase-blog-cta reveal">
+        <div class="cta-blog-inner">
+          <div class="cta-blog-text">
+            <span class="blog-tag">📚 Yeni SEO Rehberimiz</span>
+            <h4>Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat</h4>
+            <p>GOSB, TOSB ve İMES sanayi bölgelerindeki fabrikalar için tabldot yemek seçiminde 5 altın kuralı ve fason yemekçilere karşı entegre mutfak farklarını inceleyin.</p>
+          </div>
+          <a class="btn btn-primary" href="/blog/gebze-fabrika-tabldot-yemek-rehberi/">Rehberi Oku ${icon('arrow')}</a>
         </div>
       </div>
     </div>
@@ -717,8 +716,8 @@ export function buildPages(version) {
     </div>
   </section>
 
-  <!-- SEKTÖRDE BİR İLK: NUMUNE TADIM SEFERİ -->
-  ${sampleTestSection()}
+  <!-- GÜNLÜK MUTFAK VE SEVKİYAT BÜLTENİ -->
+  ${dailyShowcaseSection()}
 
   <section class="section section-cream" aria-labelledby="neden-baslik">
     <div class="container split">
@@ -1095,6 +1094,295 @@ export function buildPages(version) {
   </section>
   ${certsSection()}
   ${clientsBand()}
+  ${ctaBand()}
+  `
+  );
+
+  /* ---------------- BLOG LİSTESİ ---------------- */
+  add(
+    {
+      path: '/blog/',
+      title: 'Blog & Sektörel Rehberler | Gebze Toplu Yemek – Topçular Yemek',
+      description:
+        'Gebze, GOSB, TOSB ve Kocaeli sanayisi için tabldot yemek rehberleri, kurumsal beslenme ipuçları ve güncel mutfak bültenlerimiz.',
+      breadcrumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Blog', path: '/blog/' }],
+    },
+    `
+  <section class="page-hero page-hero-simple">
+    <div class="container">
+      ${breadcrumbNav([{ name: 'Ana Sayfa', path: '/' }, { name: 'Blog', path: '/blog/' }])}
+      <span class="eyebrow">${icon('sparkles')} Güncel Makaleler &amp; Sektörel Rehberler</span>
+      <h1>Toplu Yemek &amp; Tabldot Rehberi</h1>
+      <p class="lead">Gebze sanayisindeki fabrikalar, OSB işletmeleri ve şantiyeler için doğru yemek seçimi, gıda güvenliği ve maliyet avantajları üzerine uzman içeriklerimiz.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        <article class="blog-card blog-card-featured reveal">
+          <a href="/blog/gebze-fabrika-tabldot-yemek-rehberi/" class="blog-media">
+            ${img('dailyMenu', 'Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat', { sizes: '(max-width: 900px) 100vw, 45vw' })}
+            <span class="blog-badge">${icon('fire')} Öne Çıkan Rehber</span>
+          </a>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>📅 21 Ekim 2026</span>
+              <span>⏱️ 6 Dk Okuma</span>
+              <span>🏷️ Fabrika &amp; OSB Yemek Rehberi</span>
+            </div>
+            <h2><a href="/blog/gebze-fabrika-tabldot-yemek-rehberi/">Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat</a></h2>
+            <p>GOSB, TOSB, Dilovası İMES ve Gebze sanayisindeki fabrikalar için tabldot yemek seçiminin çalışan motivasyonuna etkisi, termobox sıcaklık garantisi ve 5 altın kuralı inceleyin.</p>
+            <div class="blog-tags">
+              <span class="tag-pill">Gebze tabldot yemek</span>
+              <span class="tag-pill">GOSB catering</span>
+              <span class="tag-pill">Taşımalı yemek Gebze</span>
+            </div>
+            <a class="btn btn-primary btn-sm" href="/blog/gebze-fabrika-tabldot-yemek-rehberi/">Rehberi Okuyun ${icon('arrow')}</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  ${ctaBand('Fabrikanız için özel menü ve teklif hazırlayalım.')}
+  `
+  );
+
+  /* ---------------- BLOG DETAY: GEBZE FABRİKA TABLDOT YEMEK REHBERİ ---------------- */
+  add(
+    {
+      path: '/blog/gebze-fabrika-tabldot-yemek-rehberi/',
+      title: 'Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi | Topçular Yemek',
+      description:
+        'Gebze, GOSB, TOSB ve Dilovası İMES fabrikaları için tabldot yemek seçim rehberi: 70°C+ termobox sıcaklığı, 4 kap besin dengesi, ISO standartları ve doğru catering seçimi.',
+      keywords:
+        'gebze tabldot yemek, gebze toplu yemek firmaları, gebze fabrika yemek servisi, gosb catering, taşımalı yemek gebze, tosb yemek firması, dilovası imes yemek',
+      breadcrumbs: [
+        { name: 'Ana Sayfa', path: '/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: 'Gebze Fabrika Tabldot Yemek Rehberi', path: '/blog/gebze-fabrika-tabldot-yemek-rehberi/' },
+      ],
+      schema: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat',
+          description:
+            'Gebze fabrika ve işletmelerinde tabldot yemek seçiminde dikkat edilmesi gereken 5 altın kural, termobox sıcaklık garantisi ve menü besin dengesi analizi.',
+          image: [imgUrl('dailyMenu', 1200), imgUrl('termoboxKitchen', 1200)],
+          datePublished: '2026-10-21T08:00:00+03:00',
+          dateModified: '2026-10-21T08:00:00+03:00',
+          author: { '@type': 'Organization', name: 'Topçular Yemek', url: site.url },
+          publisher: { '@id': `${site.url}/#isletme` },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${site.url}/blog/gebze-fabrika-tabldot-yemek-rehberi/`,
+          },
+        },
+      ],
+    },
+    `
+  <section class="page-hero page-hero-article">
+    <div class="container">
+      ${breadcrumbNav([
+        { name: 'Ana Sayfa', path: '/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: 'Gebze Fabrika Tabldot Yemek Rehberi', path: '/blog/gebze-fabrika-tabldot-yemek-rehberi/' },
+      ])}
+      <span class="eyebrow eyebrow-saffron">${icon('sparkles')} Kapsamlı Sektörel Rehber</span>
+      <h1>Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat</h1>
+      <div class="article-meta">
+        <span>✍️ <strong>Topçular Yemek Editör Ekibi</strong></span>
+        <span>📅 21 Ekim 2026</span>
+        <span>⏱️ 6 Dakika Okuma</span>
+        <span>🏭 Gebze · GOSB · TOSB · Dilovası İMES</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="section article-content-wrap">
+    <div class="container article-grid">
+      <div class="article-body prose">
+        <p class="article-lead">Sanayi kenti Gebze’de yüzlerce fabrika, organize sanayi bölgesindeki tesisler ve şantiyeler için öğle yemeği yalnızca bir yemek molası değildir; <strong>çalışan memnuniyetini, iş güvenliğini ve öğleden sonraki vardiya verimliliğini doğrudan belirleyen en kritik operasyonel süreçtir</strong>.</p>
+        
+        <p>GOSB (Gebze Organize Sanayi Bölgesi), TOSB Otomotiv İhtisas, Dilovası İMES OSB, Güzeller OSB ve Çayırova sanayi kuşaklarında faaliyet gösteren sanayi kuruluşlarının İK yöneticileri ve satın alma sorumluları her gün aynı soruyla karşılaşır: <em>"Yemekler her gün taze, sıcak ve doyurucu mu gelecek, yoksa vardiya mola saatinde aksamalar mı yaşanacak?"</em></p>
+
+        <p>Bu rehberde, Gebze'deki fabrikalar için doğru <strong>tabldot yemek</strong> ve <strong>taşımalı kazan yemek servisi</strong> seçerken dikkat edilmesi gereken 5 altın kuralı, Termobox sıcaklık zincirinin önemini ve mutfak standartlarımızı detaylarıyla ele alıyoruz.</p>
+
+        <hr>
+
+        <h2>1. Çalışan Motivasyonu ve Vardiya Verimliliğinde Yemeğin Rolü</h2>
+        <p>Ağır sanayi, metal, otomotiv, plastik ve kimya sektörlerinde fiziksel ve zihinsel efor sarf eden personelin günlük 850 ila 1.100 kcal arasında temiz ve dengeli enerjiye ihtiyacı vardır. Yetersiz porsiyonlar, bayat malzemeler veya mikrodalgada ısıtılmış soğuk yemekler; personelde halsizlik, memnuniyetsizlik ve dolaylı olarak iş kazası riskini artırır.</p>
+        <p>Topçular Yemek olarak Sultan Orhan Mahallesi'ndeki merkez mutfağımızda her sabah erken saatlerde üretime başlarken temel felsefemiz; <strong>"Annenizin yemeği gibi ev lezzetinde, kurumsal fabrika disiplininde bol porsiyonlu servis"</strong> sunmaktır.</p>
+
+        <!-- GÖRSEL 1 KARTI: GÜNÜN 4 KAP SICAK MENÜSÜ -->
+        <div class="article-visual-card reveal">
+          <div class="article-visual-media">
+            ${img('dailyMenu', 'Günün 4 Kap Sıcak Menüsü: Süzme mercimek çorbası, sebzeli dana tas kebabı, pirinç pilavı, cacık ve somun ekmek', { sizes: '(max-width: 900px) 100vw, 760px' })}
+            <span class="visual-tag">${icon('fire')} Günün 4 Kap Sıcak Menüsü</span>
+          </div>
+          <div class="article-visual-caption">
+            <h3>Görsel 1: Günün 4 Kap Sıcak Menüsü (Lezzet ve Doyuruculuk Odaklı)</h3>
+            <p><strong>Görselin Öne Çıkardığı Değerler:</strong> Taze süzme mercimek çorbası, lokum kıvamında sebzeli dana tas kebabı, tereyağlı şehriyeli pirinç pilavı, taze ferahlatıcı cacık ve çıtır somun ekmek sunumu.</p>
+            <div class="quote-box">
+              <span class="quote-icon">${icon('chat')}</span>
+              <p><strong>Müşteriye Atılacak Örnek Mesaj:</strong> “Bugün Topçular Yemek mutfağından fabrikalarınıza ev sıcaklığı taşıyoruz! Usta ellerden çıkan sıcacık mercimek çorbamız, lokum kıvamında tas kebabımız ve dengeli menümüz vardiyanıza enerji katmaya hazır. Afiyet olsun!”</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>2. Tabldot Yemek Seçiminde 5 Altın Kural</h2>
+        <p>Fabrikanız için bir yemek şirketiyle anlaşmadan önce mutlaka şu 5 teknik ve operasyonel kriteri sorgulayın:</p>
+
+        <div class="rules-stack">
+          <div class="rule-box reveal">
+            <span class="rule-no">01</span>
+            <div>
+              <h3>Termobox Sıcaklık Garantisi (70°C+ Sabit Isı)</h3>
+              <p>Yemekler mutfaktan çıktığı anda çift cidarlı, poliüretan yalıtımlı gastronom küvetlere mühürlenmelidir. Termobox teknolojisi sayesinde yemekler mikrodalga veya benmaride tekrar ısıtılmaya gerek kalmadan, ilk piştiği sıcaklık ve buharıyla fabrikanızın masasında hazır olur.</p>
+            </div>
+          </div>
+
+          <div class="rule-box reveal">
+            <span class="rule-no">02</span>
+            <div>
+              <h3>4 Kap Besin ve Kalori Dengesi</h3>
+              <p>Gerçek bir tabldot menüsü rastgele yemeklerden oluşmaz. 1. Çeşit sıcak çorba ile sindirim hazırlanır; 2. Çeşit ana yemekle protein (et, tavuk, hindi) ihtiyacı karşılanır; 3. Çeşit pilav/makarna ile karbonhidrat dengelenir; 4. Çeşit salata/tatlı/meyve veya ayran ile vitamin-mineral dengesi tamamlanır.</p>
+            </div>
+          </div>
+
+          <div class="rule-box reveal">
+            <span class="rule-no">03</span>
+            <div>
+              <h3>Uluslararası Akredite ISO 22000, 9001 ve 45001 Standartları</h3>
+              <p>Merdiven altı, denetimsiz catering şirketleri yerine; T.C. Tarım ve Orman Bakanlığı üretim izinli ve uluslararası akredite ISO 22000 (Gıda Güvenliği), ISO 9001 (Kalite Yönetimi) ve ISO 45001 (İş Sağlığı) belgelerine sahip mutfakları tercih edin. Bu belgeler her lokmanın güvencesidir.</p>
+            </div>
+          </div>
+
+          <div class="rule-box reveal">
+            <span class="rule-no">04</span>
+            <div>
+              <h3>72 Saatlik Şahit Numune Saklama Disiplini</h3>
+              <p>Profesyonel endüstriyel mutfaklarda, o gün pişen her partiden steril cam kavanozlara şahit numune alınır ve özel numune buzdolabında 72 saat boyunca muhafaza edilir. Olası tüm sağlık kontrollerinde bu numuneler laboratuvar incelemesine hazırdır.</p>
+            </div>
+          </div>
+
+          <div class="rule-box reveal">
+            <span class="rule-no">05</span>
+            <div>
+              <h3>Sıfır Donuk Ürün Politikası</h3>
+              <p>Endüstriyel hazır donuk köfteler, toz soslar ve yapay bulyonlar mide yanması ve halsizlik yapar. Mutfağa giren et yerli kasap eti olmalı; sebzeler her sabah halden taze alınmalı ve yemekler doğal kemik suyu ve tereyağı ile tatlandırılmalıdır.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GÖRSEL 2 KARTI: ENDÜSTRİYEL HİJYEN VE TERMOBOX SEVKİYATI -->
+        <div class="article-visual-card reveal">
+          <div class="article-visual-media">
+            ${img('termoboxKitchen', 'Endüstriyel Hijyen ve Termobox Sevkiyatı: Paslanmaz çelik mutfakta aşçılar yemekleri termobox küvetlerine aktarıyor', { sizes: '(max-width: 900px) 100vw, 760px' })}
+            <span class="visual-tag tag-blue">${icon('shield')} Endüstriyel Hijyen &amp; Sevkiyat</span>
+          </div>
+          <div class="article-visual-caption">
+            <h3>Görsel 2: Endüstriyel Hijyen ve Termobox Sevkiyatı (Güven ve Kurumsallık Odaklı)</h3>
+            <p><strong>Görselin Öne Çıkardığı Değerler:</strong> Paslanmaz çelik endüstriyel mutfak ekipmanları, ISO standartlarında bone, eldiven, maske ve önlük hijyeni; buharı üstünde tüten taze yemeklerin ısı yalıtımlı Termobox küvetlerine aktarılması.</p>
+            <div class="quote-box">
+              <span class="quote-icon">${icon('chat')}</span>
+              <p><strong>Müşteriye Atılacak Örnek Mesaj:</strong> “Sultan Orhan Mahallesindeki merkez mutfağımızda her sabah aynı titizlikle üretiyoruz. Yemekleriniz fabrikasyon değil, %100 taze malzemelerle hazırlanıp özel Termobox taşıma sistemimizle masanıza ilk anki sıcaklığında ulaşıyor.”</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>3. Geleneksel Fason Yemekçiler ile Topçular Yemek Karşılaştırması</h2>
+        <p>Fabrikaların en sık yaşadığı operasyonel sorunlar ve Topçular Yemek yaklaşımı:</p>
+        
+        <div class="article-table-wrap reveal">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Hizmet Özelliği</th>
+                <th>Sıradan Fason Yemekçiler</th>
+                <th>Topçular Yemek Entegre Standartları</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Yemek Sıcaklığı</strong></td>
+                <td>Ilık / Soğuk teslimat, lezzet kaybı</td>
+                <td>70°C+ Termobox ile ilk piştiği sıcaklıkta</td>
+              </tr>
+              <tr>
+                <td><strong>Porsiyon Doyuruculuğu</strong></td>
+                <td>Gramajı kısılmış, aç bırakan menüler</td>
+                <td>Ağır sanayiye özel bol etli, doyurucu porsiyon</td>
+              </tr>
+              <tr>
+                <td><strong>Malzeme Kalitesi</strong></td>
+                <td>Donuk hazır köfte, bulyon ve hazır sos</td>
+                <td>Günlük hal sebzesi, yerli kasap eti, doğal et suyu</td>
+              </tr>
+              <tr>
+                <td><strong>Teslimat Dakikliği</strong></td>
+                <td>Vardiya saatini kaçıran gecikmeler</td>
+                <td>Mola sireninden 15 dakika önce masada hazır</td>
+              </tr>
+              <tr>
+                <td><strong>Resmi Belgeler</strong></td>
+                <td>Eksik veya denetimsiz merdiven altı</td>
+                <td>ISO 9001, ISO 22000, ISO 45001 akredite tesis</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>4. Gebze ve OSB Bölgelerine Hızlı Lojistik Hatlarımız</h2>
+        <p>Toplu yemekte mesafe ve lojistik, yemek kalitesinin en büyük belirleyicisidir. Sultan Orhan Mahallesi 1141. Sokak No: 10 Gebze adresindeki merkez mutfağımız; ana otoyol ve sanayi bağlantı yollarının tam kalbinde yer alır.</p>
+        <ul>
+          <li><a href="/bolgeler/gosb-toplu-yemek/"><strong>GOSB (Gebze Organize Sanayi Bölgesi):</strong></a> ~12 Dakika ring süresi ile sıfır ısı kaybı.</li>
+          <li><a href="/bolgeler/tosb-toplu-yemek/"><strong>TOSB (Otomotiv Yan Sanayi İhtisas OSB):</strong></a> ~18 Dakikada vardiya saatlerine özel dakik teslimat.</li>
+          <li><a href="/bolgeler/dilovasi-imes-yemek/"><strong>Dilovası İMES &amp; Makineciler OSB:</strong></a> ~22 Dakikada ağır sanayi doyurucu menüleri.</li>
+          <li><a href="/bolgeler/gebze-osb-yemek/"><strong>Güzeller OSB &amp; Plastikçiler OSB:</strong></a> ~10-15 Dakikada taze ve sıcak teslimat.</li>
+          <li><a href="/bolgeler/cayirova-toplu-yemek/"><strong>Çayırova, Darıca &amp; Tuzla Sanayi:</strong></a> Atölye, şantiye ve fabrikalara planlı ring seferi.</li>
+        </ul>
+
+        <div class="article-cta-box reveal">
+          <h3>Fabrikanız İçin Ücretsiz Teklif Alın</h3>
+          <p>Kişi sayınızı, vardiya saatlerinizi ve adresinizi iletin; işletmenize en uygun aylık menü planını ve avantajlı kurumsal fiyat teklifimizi aynı gün hazırlayalım.</p>
+          <div class="btn-row">
+            <a class="btn btn-wa btn-lg" href="${waHref('Merhaba Topçular Yemek, fabrikamız için tabldot yemek teklifi ve örnek menü almak istiyoruz.')}" target="_blank" rel="noopener">${waIcon()} WhatsApp ile Teklif İste</a>
+            <a class="btn btn-primary btn-lg" href="${telHref}">${icon('phone')} ${esc(site.phone)}</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card reveal">
+          <h3>Hızlı İletişim</h3>
+          <p>Gebze merkez mutfağımızdan işletmenize her gün taze ve sıcak yemek servisi.</p>
+          <ul class="sidebar-links">
+            <li><a href="${telHref}">${icon('phone')} ${esc(site.phone)}</a></li>
+            <li><a href="${waHref()}" target="_blank" rel="noopener">${waIcon()} WhatsApp Canlı Destek</a></li>
+            <li><a href="${esc(site.mapsUrl)}" target="_blank" rel="noopener">${icon('pin')} Sultan Orhan Mah. 1141. Sokak No: 10, Gebze</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h3>Hizmetlerimiz</h3>
+          <ul class="sidebar-menu">
+            <li><a href="/hizmetler/tabldot-yemek/">🍱 Tabldot Yemek Servisi</a></li>
+            <li><a href="/hizmetler/kazan-yemek-servisi/">🍲 Kazan Yemek (Taşımalı)</a></li>
+            <li><a href="/hizmetler/fabrika-yemek/">🏭 Fabrika Yemekhane Hizmeti</a></li>
+            <li><a href="/hizmetler/organizasyon-yemek/">🎉 Organizasyon &amp; Davet</a></li>
+            <li><a href="/menu/">📋 Örnek Haftalık Menü</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h3>Kalite Sertifikalarımız</h3>
+          <p>Topçular Yemek, ISO 22000 gıda güvenliği ve ISO 9001 kalite yönetim sistemleriyle akreditedir.</p>
+          <a class="link-arrow" href="/hakkimizda/#sertifikalar">Sertifikaları İnceleyin ${icon('arrow')}</a>
+        </div>
+      </aside>
+    </div>
+  </article>
   ${ctaBand()}
   `
   );

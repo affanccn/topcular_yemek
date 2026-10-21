@@ -15,5 +15,8 @@ export const images = {
   certIso22000: 'sertifika-iso-22000',
   certIso9001: 'sertifika-iso-9001',
   certIso45001: 'sertifika-iso-45001',
+  dailyMenu: 'gunun-4-cesit-sicak-menusu-gebze',
+  termoboxKitchen: 'gebze-endustriyel-mutfak-termobox-sevkiyat',
+  blogHero: 'gunun-4-cesit-sicak-menusu-gebze',
 };
 

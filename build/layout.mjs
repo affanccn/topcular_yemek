@@ -86,6 +86,7 @@ function header(page) {
           <ul class="sub">${regionLinks}</ul>
         </li>
         <li><a href="/hakkimizda/"${is('/hakkimizda/')}>Hakkımızda</a></li>
+        <li><a href="/blog/"${is('/blog/')}>Blog</a></li>
         <li><a href="/iletisim/"${is('/iletisim/')}>İletişim</a></li>
       </ul>
       <div class="nav-cta-mobile">
@@ -172,7 +173,8 @@ function footer() {
     <div>
       <h3>Hizmetler</h3>
       <ul>${services.map((s) => `<li><a href="/hizmetler/${s.slug}/">${esc(s.navTitle)}</a></li>`).join('')}
-        <li><a href="/menu/">Örnek Haftalık Menü</a></li></ul>
+        <li><a href="/menu/">Örnek Haftalık Menü</a></li>
+        <li><a href="/blog/">Blog &amp; Rehberler</a></li></ul>
     </div>
     <div>
       <h3>Hizmet Bölgeleri</h3>
