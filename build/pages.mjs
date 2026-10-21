@@ -207,8 +207,19 @@ const certsSection = () => `
     </div>
   </section>`;
 
-const menuTabs = (week, idPrefix = 'gun') => `
+const menuTabs = (week, idPrefix = 'gun') => {
+  const courseMeta = [
+    { type: '1. Çeşit: Çorba', tag: 'Sıcak Başlangıç', icon: '🍲' },
+    { type: '2. Çeşit: Ana Yemek', tag: 'Protein Dengesi', icon: '🥩' },
+    { type: '3. Çeşit: Yardımcı Yemek', tag: 'Geleneksel Lezzet', icon: '🍚' },
+    { type: '4. Çeşit: Salata / Tatlı / İçecek', tag: 'Taze Vitamin', icon: '🥗' },
+  ];
+  return `
   <div class="menu-tabs" data-tabs>
+    <div class="menu-card-topbar">
+      <span class="nutrition-badge">${icon('fire')} <strong>~850 Kcal</strong> · Ağır Sanayi Standardı Dengeli Menü</span>
+      <span class="fresh-badge">${icon('leaf')} Günlük Taze Pişirim</span>
+    </div>
     <div class="tab-list-wrap">
       <div class="tab-list" role="tablist" aria-label="${esc(week.title)} günleri">
         ${week.days
@@ -227,13 +238,266 @@ const menuTabs = (week, idPrefix = 'gun') => `
         ${d.items
           .map(
             (it, j) =>
-              `<li><span class="course-no">0${j + 1}</span><span class="course-name">${esc(it)}</span><span class="course-type">${['Çorba', 'Ana Yemek', 'Yardımcı', 'Salata / Tatlı / İçecek'][j] || ''}</span></li>`
+              `<li>
+                <span class="course-no">0${j + 1}</span>
+                <div class="course-body">
+                  <span class="course-name">${esc(it)}</span>
+                  <span class="course-subtag">${courseMeta[j]?.tag || ''}</span>
+                </div>
+                <span class="course-type">${courseMeta[j]?.type || ''}</span>
+              </li>`
           )
           .join('')}
       </ol>
     </div>`
       )
       .join('')}
+  </div>`;
+};
+
+/* ---------------- SEKTÖRDE BİR İLK: NUMUNE TADIM SEFERİ ---------------- */
+const sampleTestSection = () => `
+  <section class="section section-sample" id="tadim-seferi" aria-labelledby="sample-baslik">
+    <div class="container">
+      <div class="sample-card reveal">
+        <div class="sample-top-badge">
+          <span class="badge-glimmer"></span>
+          ${icon('award')} <strong>SEKTÖRDE BİR İLK: KURUMSAL TADIM DENEYİMİ</strong>
+        </div>
+        <div class="sample-grid">
+          <div class="sample-info">
+            <span class="eyebrow eyebrow-ember">Karar Vermeden Önce Fabrikanızda Test Edin</span>
+            <h2 id="sample-baslik">1 Günlük <em>Ücretsiz Sıcak Numune</em> Seferi</h2>
+            <p class="sample-lead">20 kişi ve üzeri çalışanınız varsa; sözleşme yapmadan önce mutfağımızın lezzetini, porsiyon doyuruculuğunu ve servis sıcaklığını kendi yemekhanenizde bizzat deneyimleyin. 4 çeşit sıcak tabldot numunemizi firmanıza özel ısı yalıtımlı termobox ile ücretsiz ulaştıralım.</p>
+            <ul class="sample-perks">
+              <li>${icon('check')} <span><strong>Hiçbir Taahhüt Yoktur:</strong> Tamamen ücretsizdir, sözleşme veya alım şartı aranmaz.</span></li>
+              <li>${icon('check')} <span><strong>75°C Termobox ile Canlı Teslim:</strong> Yemeğin fabrikanıza nasıl dumanı üstünde ulaştığını görün.</span></li>
+              <li>${icon('check')} <span><strong>Kararı Çalışanlarınız Versin:</strong> Ekibinize ve idari kadronuza tattırın, memnuniyeti yerinde ölçün.</span></li>
+            </ul>
+          </div>
+          <div class="sample-action-box">
+            <div class="sample-box-head">
+              <h3>Numune Tadım Talebi Oluşturun</h3>
+              <p>Bilgilerinizi iletin, aşçıbaşımız sizinle görüşüp tadım menüsünü fabrikanıza ulaştırsın.</p>
+            </div>
+            <form class="sample-form" id="sample-form" novalidate>
+              <div class="sample-field">
+                <label for="s-firma">Firma / Fabrika Adı *</label>
+                <input type="text" id="s-firma" name="firma" required placeholder="Örn: Aslan Otomotiv Ltd.">
+              </div>
+              <div class="sample-field">
+                <label for="s-yetkili">Yetkili Adı ve Telefon *</label>
+                <input type="text" id="s-yetkili" name="yetkili" required placeholder="Ad Soyad · 0 (5XX) XXX XX XX">
+              </div>
+              <div class="sample-field">
+                <label for="s-bolge">İşletme Lokasyonu / OSB *</label>
+                <select id="s-bolge" name="bolge">
+                  <option>GOSB (Gebze Organize Sanayi)</option>
+                  <option>TOSB Otomotiv İhtisas OSB</option>
+                  <option>Dilovası İMES OSB</option>
+                  <option>Güzeller OSB</option>
+                  <option>Gebze Merkez / Sultan Orhan</option>
+                  <option>Çayırova &amp; Darıca Sanayi</option>
+                  <option>Tuzla / Kocaeli</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-sample btn-lg btn-block" id="s-submit">
+                ${waIcon()} Ücretsiz Sıcak Numune Menü İste
+              </button>
+              <p class="sample-note" id="sample-note">🔒 Bilgileriniz yalnızca tadım koordinasyonu için aşçıbaşımıza iletilir.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+/* ---------------- 04:30'DAN MASANIZA 4 AŞAMALI SICAK ZİNCİR KRONOLOJİSİ ---------------- */
+const hotChainTimeline = () => `
+  <section class="section section-dark section-timeline" aria-labelledby="surec-baslik">
+    <div class="container">
+      <header class="section-head reveal center light-head">
+        <span class="eyebrow eyebrow-saffron">Mutfaktan Masaya Sıcak Zincir Güvencesi</span>
+        <h2 id="surec-baslik">04:30’dan Vardiyanıza <em>Kusursuz Lezzet Yolculuğu</em></h2>
+        <p>Toplu yemekte en büyük risk soğuma ve vardiya gecikmesidir. Topçular Yemek’te her dakika matematiksel hassasiyetle yönetilir.</p>
+      </header>
+      <div class="timeline-grid">
+        <div class="timeline-card reveal" style="--d:0ms">
+          <div class="timeline-time-badge">
+            <span class="t-pulse"></span>
+            <strong>04:30</strong>
+            <small>ŞAFAK KABUL</small>
+          </div>
+          <div class="timeline-body">
+            <span class="t-icon">${icon('leaf')}</span>
+            <h3>Taze Malzeme Kabulü</h3>
+            <p>Her sabah yerel halden günlük taze sebzeler ve veteriner onaylı yerli etler merkez mutfağımıza girer. Donuk hazır gıda oranı: %0.</p>
+            <div class="timeline-metric"><span>Tazelik Kriteri:</span> <strong>%100 Günlük</strong></div>
+          </div>
+        </div>
+        <div class="timeline-card reveal" style="--d:100ms">
+          <div class="timeline-time-badge">
+            <span class="t-pulse"></span>
+            <strong>06:00</strong>
+            <small>USTA ATEŞİ</small>
+          </div>
+          <div class="timeline-body">
+            <span class="t-icon">${icon('chef')}</span>
+            <h3>Kazanlarda Pişirim</h3>
+            <p>Usta aşçılarımızın gözetiminde dev sanayi kazanlarında anne eli lezzetiyle, katkısız sızma zeytinyağı ve tereyağı ile pişirme başlar.</p>
+            <div class="timeline-metric"><span>Reçete:</span> <strong>Geleneksel Ev Usulü</strong></div>
+          </div>
+        </div>
+        <div class="timeline-card reveal" style="--d:200ms">
+          <div class="timeline-time-badge">
+            <span class="t-pulse"></span>
+            <strong>09:30</strong>
+            <small>ISI MÜHRÜ</small>
+          </div>
+          <div class="timeline-body">
+            <span class="t-icon">${icon('pot')}</span>
+            <h3>75°C Termobox Kilitleme</h3>
+            <p>Yemekler kazandan çıktığı anda çift cidarlı ısı yalıtımlı gastronom küvetlere mühürlenir. Dumanı ve lezzeti hapsedilir.</p>
+            <div class="timeline-metric"><span>Sıcaklık:</span> <strong>75°C+ Sabit Isı</strong></div>
+          </div>
+        </div>
+        <div class="timeline-card reveal" style="--d:300ms">
+          <div class="timeline-time-badge">
+            <span class="t-pulse"></span>
+            <strong>11:30</strong>
+            <small>DAKİK SERVİS</small>
+          </div>
+          <div class="timeline-body">
+            <span class="t-icon">${icon('truck')}</span>
+            <h3>Vardiyadan 15 Dk Önce Masada</h3>
+            <p>Fabrikanızın öğle molası sireninden 15 dakika önce teslimat tamamlanır. Çalışanlarınız yemekhaneye girdiğinde yemek sıcacıktır.</p>
+            <div class="timeline-metric"><span>Zamanlama:</span> <strong>0 Dk Gecikme</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+/* ---------------- GELENEKSEL CATERING VS TOPÇULAR YEMEK KARŞILAŞTIRMA MATRİSİ ---------------- */
+const comparisonSection = () => `
+  <section class="section section-comparison" aria-labelledby="karsilastirma-baslik">
+    <div class="container">
+      <header class="section-head reveal center">
+        <span class="eyebrow">Fark Yaratan Standartlarımız</span>
+        <h2 id="karsilastirma-baslik">Sıradan Yemekçiler ile <em>Topçular Yemek</em> Arasındaki Fark</h2>
+        <p>Fabrika yöneticilerinin ve çalışanların en çok şikayet ettiği 5 temel yemek sorununu nasıl kökünden çözdüğümüzü inceleyin.</p>
+      </header>
+      <div class="comparison-card reveal">
+        <div class="comparison-row comparison-header">
+          <div class="col-criteria">Hizmet Kriteri</div>
+          <div class="col-bad">Piyasadaki Sıradan Yemekçiler</div>
+          <div class="col-good">🏆 Topçular Yemek Standartları</div>
+        </div>
+        <div class="comparison-row">
+          <div class="col-criteria"><strong>Servis Sıcaklığı</strong></div>
+          <div class="col-bad"><span class="bad-mark">✕</span> Ilık veya soğuk teslimat, personelin yemekhanede ısıtma derdi</div>
+          <div class="col-good"><span class="good-mark">✓</span> <strong>75°C Termobox Garantisi:</strong> İlk piştiği tazelikte ve sıcacık</div>
+        </div>
+        <div class="comparison-row">
+          <div class="col-criteria"><strong>Porsiyon Doyuruculuğu</strong></div>
+          <div class="col-bad"><span class="bad-mark">✕</span> Gramajı kısılmış az porsiyonlar, personeli aç bırakan menüler</div>
+          <div class="col-good"><span class="good-mark">✓</span> <strong>Ağır Sanayi Standardı:</strong> Bol etli, doyurucu ve yüksek besin dengeli</div>
+        </div>
+        <div class="comparison-row">
+          <div class="col-criteria"><strong>Hammadde &amp; Malzeme</strong></div>
+          <div class="col-bad"><span class="bad-mark">✕</span> Donuk hazır köfteler, bulyonlar ve ucuz endüstriyel katkılar</div>
+          <div class="col-good"><span class="good-mark">✓</span> <strong>%100 Taze &amp; Yerli:</strong> Her sabah hal sebzesi, yerli kasap eti, kemik suyu</div>
+        </div>
+        <div class="comparison-row">
+          <div class="col-criteria"><strong>Teslimat Disiplini</strong></div>
+          <div class="col-bad"><span class="bad-mark">✕</span> Trafiğe takılan, mola düdüğünü kaçıran gecikmeli servisler</div>
+          <div class="col-good"><span class="good-mark">✓</span> <strong>15 Dk Önce Masada:</strong> Mola sireninden önce eksiksiz hazır</div>
+        </div>
+        <div class="comparison-row">
+          <div class="col-criteria"><strong>Kalite &amp; Resmi Belgeler</strong></div>
+          <div class="col-bad"><span class="bad-mark">✕</span> Ruhsatsız merdiven altı üretim, eksik hijyen ve numune takipsizliği</div>
+          <div class="col-good"><span class="good-mark">✓</span> <strong>ISO 9001, 22000, 45001:</strong> Düzenli laboratuvar ve mikrobiyolojik testler</div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+/* ---------------- İNTERAKTİF OSB LOJİSTİK VE ROTA RADARI ---------------- */
+const osbRadarSection = () => `
+  <div class="osb-radar-wrap reveal">
+    <div class="osb-radar-head">
+      <span class="osb-radar-badge">${icon('truck')} CANLI LOJİSTİK VE VARIŞ SÜRELERİ</span>
+      <h3>Sultan Orhan Mutfağımızdan Sanayi Bölgelerine Transit Zamanları</h3>
+      <p>Isı yalıtımlı termobox filomuz ile Gebze ve çevresindeki tüm OSB'lere sıfır sıcaklık kaybıyla ulaşıyoruz.</p>
+    </div>
+    <div class="osb-radar-grid">
+      <div class="osb-node">
+        <div class="osb-node-top">
+          <span class="osb-node-pin">${icon('pin')}</span>
+          <h4>GOSB</h4>
+          <span class="osb-node-name">Gebze Organize Sanayi</span>
+        </div>
+        <div class="osb-node-metrics">
+          <span class="m-time">⏱️ ~12 Dakika</span>
+          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+        </div>
+      </div>
+      <div class="osb-node">
+        <div class="osb-node-top">
+          <span class="osb-node-pin">${icon('pin')}</span>
+          <h4>TOSB</h4>
+          <span class="osb-node-name">Otomotiv İhtisas OSB</span>
+        </div>
+        <div class="osb-node-metrics">
+          <span class="m-time">⏱️ ~18 Dakika</span>
+          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+        </div>
+      </div>
+      <div class="osb-node">
+        <div class="osb-node-top">
+          <span class="osb-node-pin">${icon('pin')}</span>
+          <h4>İMES OSB</h4>
+          <span class="osb-node-name">Dilovası Makineciler</span>
+        </div>
+        <div class="osb-node-metrics">
+          <span class="m-time">⏱️ ~22 Dakika</span>
+          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+        </div>
+      </div>
+      <div class="osb-node">
+        <div class="osb-node-top">
+          <span class="osb-node-pin">${icon('pin')}</span>
+          <h4>Güzeller OSB</h4>
+          <span class="osb-node-name">Gebze Güzeller OSB</span>
+        </div>
+        <div class="osb-node-metrics">
+          <span class="m-time">⏱️ ~10 Dakika</span>
+          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+        </div>
+      </div>
+      <div class="osb-node">
+        <div class="osb-node-top">
+          <span class="osb-node-pin">${icon('pin')}</span>
+          <h4>Çayırova &amp; Darıca</h4>
+          <span class="osb-node-name">Sanayi Siteleri &amp; Şantiyeler</span>
+        </div>
+        <div class="osb-node-metrics">
+          <span class="m-time">⏱️ ~14 Dakika</span>
+          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+        </div>
+      </div>
+      <div class="osb-node">
+        <div class="osb-node-top">
+          <span class="osb-node-pin">${icon('pin')}</span>
+          <h4>Tuzla &amp; Kocaeli</h4>
+          <span class="osb-node-name">Tersaneler &amp; Fabrikalar</span>
+        </div>
+        <div class="osb-node-metrics">
+          <span class="m-time">⏱️ ~20 Dakika</span>
+          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+        </div>
+      </div>
+    </div>
   </div>`;
 
 const pageHero = ({ crumbs, h1, lead, image, imageAlt, kicker }) => `
@@ -453,6 +717,9 @@ export function buildPages(version) {
     </div>
   </section>
 
+  <!-- SEKTÖRDE BİR İLK: NUMUNE TADIM SEFERİ -->
+  ${sampleTestSection()}
+
   <section class="section section-cream" aria-labelledby="neden-baslik">
     <div class="container split">
       <div class="split-media reveal">
@@ -471,6 +738,9 @@ export function buildPages(version) {
     </div>
   </section>
 
+  <!-- GELENEKSEL CATERING VS TOPÇULAR YEMEK KARŞILAŞTIRMA MATRİSİ -->
+  ${comparisonSection()}
+
   <!-- RESMİ KALİTE BELGELERİ VE ISO SERTİFİKALARI -->
   ${certsSection()}
 
@@ -484,22 +754,14 @@ export function buildPages(version) {
     </div>
   </section>
 
-  <section class="section section-dark" aria-labelledby="surec-baslik">
-    <div class="container">
-      ${sectionHead('Nasıl Çalışıyoruz?', '4 adımda <em>yemek derdine</em> son', '', 'surec-baslik')}
-      <ol class="steps">
-        <li class="step reveal" style="--d:0ms"><span class="step-no">01</span><h3>Bize ulaşın</h3><p>Telefon veya WhatsApp’tan kişi sayınızı ve adresinizi iletin.</p></li>
-        <li class="step reveal" style="--d:90ms"><span class="step-no">02</span><h3>Teklif & menü</h3><p>Size özel fiyat ve aylık menü planını birlikte hazırlayalım.</p></li>
-        <li class="step reveal" style="--d:180ms"><span class="step-no">03</span><h3>Taze üretim</h3><p>Yemekler her sabah mutfağımızda taze malzemeyle pişirilir.</p></li>
-        <li class="step reveal" style="--d:270ms"><span class="step-no">04</span><h3>Sıcak teslimat</h3><p>Isı yalıtımlı kaplarla tam servis saatinde kapınızdayız.</p></li>
-      </ol>
-    </div>
-  </section>
+  <!-- 04:30'DAN MASANIZA 4 AŞAMALI SICAK ZİNCİR KRONOLOJİSİ -->
+  ${hotChainTimeline()}
 
   <section class="section" aria-labelledby="bolge-baslik">
     <div class="container regions-block">
       ${sectionHead('Hizmet Bölgelerimiz', 'Gebze ve çevresine <em>her gün</em> servis', 'Mutfağımız Gebze Sultan Orhan Mahallesinde. Kısa mesafe = sıcak yemek, dakik teslimat.', 'bolge-baslik')}
       <div class="reveal">${regionChips()}</div>
+      ${osbRadarSection()}
     </div>
   </section>
 

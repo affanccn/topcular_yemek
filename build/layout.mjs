@@ -101,7 +101,31 @@ function header(page) {
       </button>
     </div>
   </div>
-</header>`;
+</header>
+<aside class="kitchen-command-bar" aria-label="Canlı Mutfak ve Operasyon Durumu">
+  <div class="container command-inner">
+    <div class="cmd-item">
+      <span class="cmd-beacon" aria-hidden="true"></span>
+      <span class="cmd-label">CANLI ÜRETİM:</span>
+      <span class="cmd-val">04:30 Şafak Pişirimi Aktif</span>
+    </div>
+    <div class="cmd-item">
+      <span class="cmd-icon">${icon('fire')}</span>
+      <span class="cmd-label">SICAK ZİNCİR:</span>
+      <span class="cmd-val">75°C+ Isı Yalıtımlı Termobox</span>
+    </div>
+    <div class="cmd-item">
+      <span class="cmd-icon">${icon('truck')}</span>
+      <span class="cmd-label">SEVKİYAT:</span>
+      <span class="cmd-val">GOSB · TOSB · Dilovası · Darıca Hatlarında</span>
+    </div>
+    <div class="cmd-item">
+      <span class="cmd-icon">${icon('shield')}</span>
+      <span class="cmd-label">GIDA GÜVENLİĞİ:</span>
+      <span class="cmd-val">ISO 22000 &amp; Bakanlık Onaylı</span>
+    </div>
+  </div>
+</aside>`;
 }
 
 /* ---------------- BREADCRUMB (görünür) ---------------- */

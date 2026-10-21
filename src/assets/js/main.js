@@ -203,5 +203,39 @@
       });
     });
   }
+
+  /* Ücretsiz Numune Tadım Seferi Formu -> WhatsApp */
+  const sampleForm = $('#sample-form');
+  if (sampleForm) {
+    const note = $('#sample-note');
+    sampleForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const firma = (sampleForm.elements['firma']?.value || '').trim();
+      const yetkili = (sampleForm.elements['yetkili']?.value || '').trim();
+      const bolge = sampleForm.elements['bolge']?.value || 'Gebze';
+      if (!firma || !yetkili) {
+        if (note) {
+          note.className = 'sample-note err';
+          note.textContent = 'Lütfen firma adınızı ve yetkili telefon bilginizi yazın.';
+        }
+        return;
+      }
+      const msg = [
+        'Merhaba Topçular Yemek, fabrikamız için 1 günlük 4 çeşit ÜCRETSİZ SICAK NUMUNE tadım menüsü talep ediyoruz.',
+        '',
+        `• Firma / Fabrika: ${firma}`,
+        `• Yetkili & İletişim: ${yetkili}`,
+        `• Lokasyon / OSB: ${bolge}`,
+        '',
+        'Tadım menüsü ve servis detayları için bilgi alabilir miyiz?',
+      ].join('\n');
+      if (note) {
+        note.className = 'sample-note ok';
+        note.textContent = 'Tadım talebiniz oluşturuldu, WhatsApp açılıyor…';
+      }
+      window.open(`https://wa.me/${window.SITE.wa}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+  }
 })();
+
 
