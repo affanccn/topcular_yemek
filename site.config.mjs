@@ -17,7 +17,7 @@ export const site = {
   slogan: 'Her Gün Taze, Her Gün Lezzetli – Gebze’nin Toplu Yemek Mutfağı',
 
   /** Canlı domain (sonunda / olmadan). Canonical, sitemap ve OG için kullanılır. */
-  url: process.env.SITE_URL || 'https://topcularyemek.vercel.app',
+  url: process.env.SITE_URL || 'https://www.topcularyemek.com',
 
   /** Telefon: görünen format + tel: linki için uluslararası format */
   phone: '0 (532) 499 92 41',
@@ -26,7 +26,7 @@ export const site = {
   altPhoneIntl: '+905337196911',
   /** WhatsApp numarası: başında + olmadan, ülke koduyla */
   whatsapp: '905324999241',
-  email: 'iletisim@topcularyemek.com',
+  email: 'info@topcularyemek.com',
 
   address: {
     street: 'Sultan Orhan Mahallesi, 1141. Sokak No: 10',

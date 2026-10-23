@@ -1584,7 +1584,7 @@ export function buildPages(version) {
       <div class="article-body prose">
         <p class="article-lead">Fabrika yemekhanelerinde çalışanların en sık dile getirdiği ve motivasyonu doğrudan düşüren şikayetlerin başında şüphesiz <strong>"yemeklerin soğuk gelmesi"</strong> gelir. Sanayi tipi taşımalı catering operasyonlarında lezzet ne kadar iyi olursa olsun, fabrikaya ulaşana kadar ısısını kaybetmiş bir yemek yağını dondurur, tadını yitirir ve bakteri üretme riskini (gıda güvenliği tehlikesini) artırır.</p>
 
-        <p>Kocaeli Gebze sanayi koridorunda (GOSB, TOSB, Güzeller OSB, Dilovası İMES OSB) hizmet veren <strong><a href="https://topcularyemek.vercel.app/">Topçular Yemek</a></strong> olarak, mutfağımızdan çıkan her porsiyonu fırından yeni çıkmışçasına sıcak tutan <strong>"Termobox Sıcak Zincir Standardı"</strong> ile teslim ediyoruz.</p>
+        <p>Kocaeli Gebze sanayi koridorunda (GOSB, TOSB, Güzeller OSB, Dilovası İMES OSB) hizmet veren <strong><a href="/">Topçular Yemek</a></strong> olarak, mutfağımızdan çıkan her porsiyonu fırından yeni çıkmışçasına sıcak tutan <strong>"Termobox Sıcak Zincir Standardı"</strong> ile teslim ediyoruz.</p>
 
         <!-- MÜŞTERİYE ATILACAK ÖRNEK MESAJ & TAAHHÜT KUTUSU -->
         <div class="quote-box" style="margin: 2rem 0; background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border-left: 4px solid var(--paprika); padding: 1.4rem 1.6rem; border-radius: var(--radius); box-shadow: var(--shadow-s);">
@@ -1644,7 +1644,7 @@ export function buildPages(version) {
 
         <h2>2. Termobox Teknolojisi Nedir ve Nasıl Çalışır?</h2>
         <p>Geleneksel yemekçilerin kullandığı ince cidarlı sac küvetler veya battaniyeye sarılı ilkel taşıma yöntemleri profesyonel sanayi mutfağında kesinlikle kabul edilemez.</p>
-        <p><strong><a href="https://topcularyemek.vercel.app/">Topçular Yemek</a></strong> mutfağında kullanılan çift cidarlı, gıdaya uygun EPP (Genleştirilmiş Polipropilen) veya yüksek yoğunluklu poliüretan gövdeli Termobox üniteleri şu teknik üstünlüklere sahiptir:</p>
+        <p><strong><a href="/">Topçular Yemek</a></strong> mutfağında kullanılan çift cidarlı, gıdaya uygun EPP (Genleştirilmiş Polipropilen) veya yüksek yoğunluklu poliüretan gövdeli Termobox üniteleri şu teknik üstünlüklere sahiptir:</p>
 
         <ul>
           <li><strong>Hareketsiz Hava Yalıtımı:</strong> Dış ortam hava sıcaklığı eksi derecelerde olsa dahi saatte yalnızca 0.8°C ile 1.2°C arasında minimum ısı kaybına izin verir. 3 saatlik bir sevkiyat rotasında dahi sıcaklık en fazla 3°C düşer.</li>
@@ -1708,7 +1708,8 @@ export function buildPages(version) {
         <div style="margin-top: 2.5rem; padding: 1.5rem; background: var(--cream); border-radius: var(--radius); border: 1px solid var(--cream-3);">
           <h4 style="margin: 0 0 0.8rem 0; font-size: 1.15rem; color: var(--ink);">Kurumsal İletişim &amp; Hizmet Modellerimiz:</h4>
           <ul style="margin: 0; padding-left: 1.2rem; line-height: 1.8; color: var(--ink-2); font-size: 0.95rem;">
-            <li><strong>Web Sitesi:</strong> <a href="https://topcularyemek.vercel.app/" target="_blank" rel="noopener">topcularyemek.vercel.app</a></li>
+            <li><strong>Web Sitesi:</strong> <a href="https://www.topcularyemek.com/" target="_blank" rel="noopener">www.topcularyemek.com</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:info@topcularyemek.com">info@topcularyemek.com</a></li>
             <li><strong>Telefon:</strong> <a href="tel:+905324999241">0 (532) 499 92 41</a> / <a href="tel:+905337196911">0 (533) 719 69 11</a></li>
             <li><strong>Adres:</strong> Sultan Orhan Mah., 1141. Sokak No: 10, Gebze / Kocaeli</li>
             <li><strong>Hizmet Modelleri:</strong> Termobox Taşımalı Tabldot, Yerinde Mutfak Yönetimi, Kurumsal Kokteyl &amp; Açılış Menüleri</li>
