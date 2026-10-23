@@ -100,26 +100,34 @@
   const todayIdx = Math.max(0, new Date().getDay() - 1); // Pazar → Pazartesi
   $$('[data-tabs]').forEach((wrap) => {
     const tabs = $$('[role="tab"]', wrap);
-    const select = (i, focus) => {
+    const select = (i, focus, shouldScroll = false) => {
       tabs.forEach((t, j) => {
         const on = i === j;
         t.setAttribute('aria-selected', on);
         t.tabIndex = on ? 0 : -1;
-        $('#' + t.getAttribute('aria-controls')).hidden = !on;
+        const panel = $('#' + t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !on;
       });
       if (focus) tabs[i].focus();
-      try {
-        tabs[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      } catch (_) {}
+      if (shouldScroll) {
+        try {
+          const list = wrap.querySelector('.tab-list');
+          if (list) {
+            const tabLeft = tabs[i].offsetLeft;
+            const tabWidth = tabs[i].offsetWidth;
+            list.scrollTo({ left: tabLeft - list.offsetWidth / 2 + tabWidth / 2, behavior: 'smooth' });
+          }
+        } catch (_) {}
+      }
     };
     tabs.forEach((t, i) => {
-      t.addEventListener('click', () => select(i));
+      t.addEventListener('click', () => select(i, false, true));
       t.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') select((i + 1) % tabs.length, true);
-        if (e.key === 'ArrowLeft') select((i - 1 + tabs.length) % tabs.length, true);
+        if (e.key === 'ArrowRight') select((i + 1) % tabs.length, true, true);
+        if (e.key === 'ArrowLeft') select((i - 1 + tabs.length) % tabs.length, true, true);
       });
     });
-    if (tabs[todayIdx]) select(todayIdx);
+    if (tabs[todayIdx]) select(todayIdx, false, false);
   });
 
   /* Hero: bugünün menüsü */

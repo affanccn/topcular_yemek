@@ -1,7 +1,7 @@
 import { site } from '../site.config.mjs';
 import { services } from '../content/services.mjs';
 import { regions } from '../content/regions.mjs';
-import { weeklyMenus, menuTypes } from '../content/menu.mjs';
+import { weeklyMenus, menuTypes, foodCatalog, clientSectors } from '../content/menu.mjs';
 import { faq } from '../content/faq.mjs';
 import { layout, breadcrumbNav, ctaBand } from './layout.mjs';
 import {
@@ -102,9 +102,88 @@ const clientsBand = () => `
           <span class="client-sector">Kolej &amp; Kampüs Yemekleri</span>
         </div>
         <div class="client-badge reveal">
-          <span class="client-name">İnşaat &amp; Altyapı Şantiyeleri</span>
-          <span class="client-sector">Öğle &amp; Akşam Vardiyaları</span>
+          <span class="client-name">Özel Sağlık Merkezleri</span>
+          <span class="client-sector">7/24 Kesintisiz Sıcak Servis</span>
         </div>
+        <div class="client-badge reveal">
+          <span class="client-name">Özel Davet &amp; Organizasyon</span>
+          <span class="client-sector">Düğün, Nişan &amp; Açılışlar</span>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+const sectorsSection = () => `
+  <section class="section" id="sektorler" aria-labelledby="sektorler-baslik">
+    <div class="container">
+      ${sectionHead(
+        'Hizmet Verdiğimiz Alanlar & Sektörler',
+        'KOBİ’lerden Sanayi Devlerine <em>Geniş Hizmet Ağı</em>',
+        'Gebze, Dilovası, Çayırova ve Kocaeli sanayisinde farklı sektörlerin çalışma tempolarına, vardiya saatlerine ve hijyen ihtiyaçlarına özel yemek çözümleri sunuyoruz.',
+        'sektorler-baslik'
+      )}
+      <div class="sectors-grid">
+        ${clientSectors
+          .map(
+            (sec, i) => `
+        <article class="sector-card reveal" style="--d:${i * 70}ms">
+          <div>
+            <div class="sector-card-top">
+              <span class="sector-icon-wrap">${icon(sec.icon)}</span>
+              <div>
+                <span class="sector-badge">${esc(sec.badge)}</span>
+                <h3>${esc(sec.title)}</h3>
+              </div>
+            </div>
+            <p>${esc(sec.desc)}</p>
+          </div>
+          <ul class="sector-features">
+            ${sec.features.map((f) => `<li>${icon('check')} <span>${esc(f)}</span></li>`).join('')}
+          </ul>
+        </article>`
+          )
+          .join('')}
+      </div>
+    </div>
+  </section>`;
+
+const foodCatalogSection = () => `
+  <section class="section section-food-catalog" id="lezzetler" aria-labelledby="lezzetler-baslik">
+    <div class="container">
+      ${sectionHead(
+        'Zengin Mutfak & Yemek Yelpazemiz',
+        'Her Gün Taze Pişen <em>Usta Lezzetler</em>',
+        'Ezogelin, mercimek, domates, mantar ve düğün çorbalarından; lokum gibi et sote, tas kebabı, sac kavurma ve köftelere; şehriyeli pilavdan taze makarna ve kurumsal kahvaltıya kadar zengin lezzetlerimiz:',
+        'lezzetler-baslik'
+      )}
+      <div class="catalog-categories">
+        ${Object.values(foodCatalog)
+          .map(
+            (cat, i) => `
+        <div class="catalog-category-block reveal" style="--d:${i * 80}ms">
+          <div class="category-header-wrap">
+            <span class="category-emoji" aria-hidden="true">${cat.icon}</span>
+            <h3>${esc(cat.title)}</h3>
+            <span class="category-tag">${esc(cat.tag)}</span>
+          </div>
+          <p class="category-desc">${esc(cat.desc)}</p>
+          <div class="catalog-grid">
+            ${cat.items
+              .map(
+                (dish) => `
+            <div class="dish-item-card">
+              <div class="dish-card-header">
+                <h4 class="dish-name">${esc(dish.name)}</h4>
+                <span class="dish-pill">${esc(dish.badge)}</span>
+              </div>
+              <p class="dish-desc">${esc(dish.desc)}</p>
+            </div>`
+              )
+              .join('')}
+          </div>
+        </div>`
+          )
+          .join('')}
       </div>
     </div>
   </section>`;
@@ -568,7 +647,7 @@ export function buildPages(version) {
           <span class="h1-kicker">Gebze Toplu Yemek &amp; Tabldot Mutfağı</span>
           Her gün taze, <em>ev lezzetinde</em> yemek fabrikanıza geliyor.
         </h1>
-        <p class="lead">Gebze’deki fabrikalara, sanayi sitelerine, atölyelere ve şantiyelere kazanda pişen, tabldot veya yemekhane servisi yapılan 4 çeşit doyurucu yemek. Mutfağımız Sultan Orhan Mahallesi'nde; yemeğiniz sıcacık ve tam vardiya saatinde.</p>
+        <p class="lead">KOBİ’lerden büyük sanayi fabrikalarına, okullardan hastane ve şantiyelere her gün 4 çeşit taze tabldot ve toplu yemek servisi. İster firmanıza termobox sıcak teslimat, ister Sultan Orhan merkez salonumuzda oturup yeme imkanı.</p>
         ${heroButtons()}
         <ul class="hero-trust">
           <li>${icon('leaf')} Günlük taze üretim</li>
@@ -610,46 +689,54 @@ export function buildPages(version) {
         <span class="dot"></span>
         <span>GEBZE ORGANİZE SANAYİ BÖLGESİ (GOSB)</span>
         <span class="dot"></span>
-        <span>GÜZELLER OSB</span>
-        <span class="dot"></span>
         <span>TOSB OTOMOTİV İHTİSAS</span>
         <span class="dot"></span>
         <span>DİLOVASI İMES OSB</span>
         <span class="dot"></span>
-        <span>GEPOSB</span>
+        <span class="highlight">🍱 4 ÇEŞİT TABLDOT YEMEK</span>
         <span class="dot"></span>
-        <span class="highlight">🍱 4 ÇEŞİT DENGELİ TABLDOT</span>
+        <span>🍲 TOPLU TAŞIMALI YEMEK</span>
         <span class="dot"></span>
-        <span>🍲 TAŞIMALI KAZAN SERVİSİ</span>
+        <span>🥐 KURUMSAL SABAH KAHVALTISI</span>
         <span class="dot"></span>
-        <span>🚚 ISITMALI TERMOBOX SEVKİYAT</span>
+        <span class="highlight">🍽️ SALONUMUZDA OTURUP YEME İMKANI</span>
+        <span class="dot"></span>
+        <span>🏢 KOBİ &amp; BÜYÜK SANAYİ</span>
+        <span class="dot"></span>
+        <span>🎓 OKULLAR &amp; YURTLAR</span>
+        <span class="dot"></span>
+        <span>🏥 HASTANELER &amp; SAĞLIK</span>
+        <span class="dot"></span>
+        <span>🎉 ÖZEL DAVET &amp; DÜĞÜN YEMEĞİ</span>
         <span class="dot"></span>
         <span class="highlight">🛡️ ISO 22000 GIDA GÜVENLİĞİ</span>
-        <span class="dot"></span>
-        <span>⏱️ VARDİYA SAATİNE DAKİK TESLİMAT</span>
       </div>
       <div class="marquee-content" aria-hidden="true">
         <span class="highlight">⚡ GÜNLÜK SICAK SEVKİYAT</span>
         <span class="dot"></span>
         <span>GEBZE ORGANİZE SANAYİ BÖLGESİ (GOSB)</span>
         <span class="dot"></span>
-        <span>GÜZELLER OSB</span>
-        <span class="dot"></span>
         <span>TOSB OTOMOTİV İHTİSAS</span>
         <span class="dot"></span>
         <span>DİLOVASI İMES OSB</span>
         <span class="dot"></span>
-        <span>GEPOSB</span>
+        <span class="highlight">🍱 4 ÇEŞİT TABLDOT YEMEK</span>
         <span class="dot"></span>
-        <span class="highlight">🍱 4 ÇEŞİT DENGELİ TABLDOT</span>
+        <span>🍲 TOPLU TAŞIMALI YEMEK</span>
         <span class="dot"></span>
-        <span>🍲 TAŞIMALI KAZAN SERVİSİ</span>
+        <span>🥐 KURUMSAL SABAH KAHVALTISI</span>
         <span class="dot"></span>
-        <span>🚚 ISITMALI TERMOBOX SEVKİYAT</span>
+        <span class="highlight">🍽️ SALONUMUZDA OTURUP YEME İMKANI</span>
+        <span class="dot"></span>
+        <span>🏢 KOBİ &amp; BÜYÜK SANAYİ</span>
+        <span class="dot"></span>
+        <span>🎓 OKULLAR &amp; YURTLAR</span>
+        <span class="dot"></span>
+        <span>🏥 HASTANELER &amp; SAĞLIK</span>
+        <span class="dot"></span>
+        <span>🎉 ÖZEL DAVET &amp; DÜĞÜN YEMEĞİ</span>
         <span class="dot"></span>
         <span class="highlight">🛡️ ISO 22000 GIDA GÜVENLİĞİ</span>
-        <span class="dot"></span>
-        <span>⏱️ VARDİYA SAATİNE DAKİK TESLİMAT</span>
       </div>
     </div>
   </div>
@@ -658,10 +745,13 @@ export function buildPages(version) {
 
   <section class="section" id="hizmetler" aria-labelledby="hizmetler-baslik">
     <div class="container">
-      ${sectionHead('Hizmetlerimiz', 'İşletmenize uygun <em>toplu yemek</em> çözümü', 'İster 20 kişilik bir atölye, ister yüzlerce çalışanı olan bir fabrika olsun; ihtiyacınıza göre servis modeli kuruyoruz.', 'hizmetler-baslik')}
+      ${sectionHead('Hizmetlerimiz', 'İşletmenize uygun <em>toplu yemek</em> çözümü', 'İster 20 kişilik bir atölye, ister yüzlerce çalışanı olan bir fabrika olsun; ihtiyacınıza göre esnek servis modeli kuruyoruz.', 'hizmetler-baslik')}
       ${serviceCards()}
     </div>
   </section>
+
+  <!-- HİZMET VERİLEN SEKTÖRLER VE KURUMLAR -->
+  ${sectorsSection()}
 
   <!-- CANLI TEKLİF VE SİPARİŞ HESAPLAYICI -->
   <section class="section section-calculator" id="hizli-teklif" aria-labelledby="calc-title">
@@ -685,10 +775,12 @@ export function buildPages(version) {
           <div class="calc-step">
             <span class="calc-label">2. İhtiyacınız Olan Hizmet Türü:</span>
             <div class="calc-options" data-group="hizmet">
-              <button type="button" class="calc-chip active" data-val="4 Çeşit Tabldot">🍱 4 Çeşit Tabldot Yemek</button>
-              <button type="button" class="calc-chip" data-val="Taşımalı Kazan Yemek">🍲 Kazan Yemek (Taşımalı)</button>
-              <button type="button" class="calc-chip" data-val="Fabrika Yerinde Yemekhane Servisi">🏭 Fabrika Yemekhane Servisi</button>
-              <button type="button" class="calc-chip" data-val="Davet &amp; Organizasyon Yemeği">🎉 Davet &amp; Organizasyon</button>
+              <button type="button" class="calc-chip active" data-val="4 Çeşit Tabldot">🍱 4 Çeşit Tabldot</button>
+              <button type="button" class="calc-chip" data-val="Toplu Taşımalı Yemek">🍲 Toplu Taşımalı Servis</button>
+              <button type="button" class="calc-chip" data-val="Fabrika &amp; Kurumsal Yemek">🏭 Fabrika &amp; Kurumsal Yemek</button>
+              <button type="button" class="calc-chip" data-val="Kurumsal Sabah Kahvaltısı">🥐 Sabah Kahvaltısı</button>
+              <button type="button" class="calc-chip" data-val="Salonumuzda Oturup Yeme">🍽️ Salonumuzda Oturup Yeme</button>
+              <button type="button" class="calc-chip" data-val="Davet, Düğün &amp; Nişan Yemeği">🎉 Düğün &amp; Davet Yemeği</button>
             </div>
           </div>
           <div class="calc-step">
@@ -753,6 +845,9 @@ export function buildPages(version) {
     </div>
   </section>
 
+  <!-- ZENGİN YEMEK YELPAZESİ (ÇORBA, ET, TAVUK, PİLAV, MAKARNA, KAHVALTI) -->
+  ${foodCatalogSection()}
+
   <!-- 04:30'DAN MASANIZA 4 AŞAMALI SICAK ZİNCİR KRONOLOJİSİ -->
   ${hotChainTimeline()}
 
@@ -769,7 +864,7 @@ export function buildPages(version) {
       <div class="prose reveal">
         <h2 id="seo-baslik">Gebze’de Güvenilir Bir Toplu Yemek &amp; Tabldot Firması Arıyorsanız</h2>
         <p><strong>Gebze toplu yemek</strong> ve <strong>tabldot yemek servisi</strong> denince sanayi kuruluşlarının aradığı en temel gereksinim; yemeğin her gün aynı yüksek lezzette, bol porsiyonlu ve mola düdüğü çaldığında masada hazır olmasıdır. Topçular Yemek olarak, Sultan Orhan Mahallesi 1141. Sokak’taki merkez mutfağımızda her sabah erken saatlerde üretime başlıyor, Gebze ve tüm organize sanayi bölgelerine (GOSB, TOSB, Dilovası İMES, GEPOSB) sıcak zinciri koruyarak ulaşıyoruz.</p>
-        <p><a href="/hizmetler/tabldot-yemek/">Gebze tabldot yemek</a>, <a href="/hizmetler/kazan-yemek-servisi/">kazan yemek servisi</a>, <a href="/hizmetler/fabrika-yemek/">fabrika yemek servisi</a> ve <a href="/hizmetler/organizasyon-yemek/">düğün/mevlit/davet yemeği</a> çözümlerimizle; <a href="/bolgeler/gebze-toplu-yemek/">Gebze</a>, <a href="/bolgeler/darica-toplu-yemek/">Darıca</a>, <a href="/bolgeler/cayirova-toplu-yemek/">Çayırova</a>, <a href="/bolgeler/dilovasi-toplu-yemek/">Dilovası</a> ve <a href="/bolgeler/tuzla-toplu-yemek/">Tuzla</a> sanayicilerinin 1 numaralı tercihiyiz. Dükkânımızda oturmalı lokanta düzeni bulunmaz; tüm kapasitemiz fabrikalara eksiksiz toplu yemek sağlamaya odaklıdır.</p>
+        <p><a href="/hizmetler/tabldot-yemek/">Gebze tabldot yemek</a>, <a href="/hizmetler/toplu-yemek/">toplu yemek ve taşımalı servis</a>, <a href="/hizmetler/fabrika-yemek/">fabrika yemek servisi</a>, <a href="/hizmetler/kahvalti-servisi/">kurumsal kahvaltı</a>, <a href="/hizmetler/yerinde-yemek-salonu/">salonumuzda oturup yeme imkanı</a> ve <a href="/hizmetler/organizasyon-yemek/">özel davet, düğün &amp; nişan yemeği</a> çözümlerimizle KOBİ'lerden sanayi devlerine, okullardan sağlık kurumlarına ve şantiyelere kadar Gebze ve çevre ilçelerin güvenilir mutfağıyız. Sultan Orhan Mahallesi'ndeki ferah merkez yemek salonumuzda misafirlerimize sabah kahvaltısı ve öğle yemeğinde yerinde oturup taze ev yemeği tüketme imkanı sunarken; donanımlı araç filomuzla organize sanayi bölgelerine dakik sıcak yemek ulaştırıyoruz.</p>
       </div>
     </div>
   </section>
@@ -833,7 +928,7 @@ export function buildPages(version) {
       path: '/hizmetler/',
       title: 'Toplu Yemek Hizmetleri | Gebze Tabldot, Kazan ve Fabrika Yemeği – Topçular Yemek',
       description:
-        'Topçular Yemek’in Gebze’deki toplu yemek hizmetleri: tabldot yemek, kazan (taşımalı) yemek, fabrika & kurumsal yemek ve organizasyon yemeği. İşletmenize uygun çözüm için teklif alın.',
+        'Topçular Yemek’in Gebze’deki toplu yemek hizmetleri: tabldot yemek, toplu taşımalı yemek, kurumsal kahvaltı, fabrika yemeği, restoran salonumuzda oturup yeme ve özel davet organizasyonları. Teklif alın.',
       breadcrumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Hizmetler', path: '/hizmetler/' }],
     },
     `
@@ -841,38 +936,39 @@ export function buildPages(version) {
     crumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Hizmetler', path: '/hizmetler/' }],
     kicker: 'Hizmetlerimiz',
     h1: 'Gebze Toplu Yemek Hizmetlerimiz',
-    lead: 'Tabldottan kazan servisine, fabrika yemeğinden organizasyonlara; işletmenizin ihtiyacına göre esnek toplu yemek çözümleri.',
-    image: 'kazan',
-    imageAlt: 'Gebze toplu yemek hizmetleri: kazanlarda pişen sıcak yemekler',
+    lead: 'Tabldottan toplu taşımalı servise, sabah kahvaltısından salonumuzda oturup yemeğe kadar işletmenize uygun esnek yemek çözümleri.',
+    image: 'tabldot',
+    imageAlt: 'Gebze toplu yemek hizmetleri: taze tabldot ve sıcak servis yemekleri',
   })}
   <section class="section">
     <div class="container">${serviceCards(services, 2)}</div>
   </section>
+  ${sectorsSection()}
   ${ctaBand()}
   `
   );
 
   /* ---------------- HİZMET DETAY ---------------- */
   for (const s of services) {
-    const path = `/hizmetler/${s.slug}/`;
-    const crumbs = [
-      { name: 'Ana Sayfa', path: '/' },
-      { name: 'Hizmetler', path: '/hizmetler/' },
-      { name: s.navTitle, path },
-    ];
-    add(
-      {
-        path,
-        title: s.metaTitle,
-        description: s.metaDesc,
-        breadcrumbs: crumbs,
-        ogImage: imgUrl(s.image, 1200),
-        schema: [
-          serviceSchema({ name: s.h1, description: s.metaDesc, path, image: imgUrl(s.image, 1200) }),
-          faqSchema(s.faq),
-        ],
-      },
-      `
+    const renderServicePage = (pagePath) => {
+      const crumbs = [
+        { name: 'Ana Sayfa', path: '/' },
+        { name: 'Hizmetler', path: '/hizmetler/' },
+        { name: s.navTitle, path: pagePath },
+      ];
+      add(
+        {
+          path: pagePath,
+          title: s.metaTitle,
+          description: s.metaDesc,
+          breadcrumbs: crumbs,
+          ogImage: imgUrl(s.image, 1200),
+          schema: [
+            serviceSchema({ name: s.h1, description: s.metaDesc, path: pagePath, image: imgUrl(s.image, 1200) }),
+            faqSchema(s.faq),
+          ],
+        },
+        `
   ${pageHero({ crumbs, kicker: s.navTitle, h1: s.h1, lead: s.lead, image: s.image, imageAlt: s.imageAlt })}
   <section class="section">
     <div class="container content-grid">
@@ -904,7 +1000,13 @@ export function buildPages(version) {
   </section>
   ${ctaBand()}
   `
-    );
+      );
+    };
+
+    renderServicePage(`/hizmetler/${s.slug}/`);
+    if (s.aliasSlug) {
+      renderServicePage(`/hizmetler/${s.aliasSlug}/`);
+    }
   }
 
   /* ---------------- BÖLGELER (liste) ---------------- */
@@ -1038,6 +1140,10 @@ export function buildPages(version) {
       </div>
     </div>
   </section>
+
+  <!-- ZENGİN YEMEK YELPAZESİ & LEZZET KATALOĞU -->
+  ${foodCatalogSection()}
+
   <section class="section section-cream">
     <div class="container week-grid">
       ${weeklyMenus
@@ -1060,9 +1166,9 @@ export function buildPages(version) {
   add(
     {
       path: '/hakkimizda/',
-      title: 'Hakkımızda | Gebze Toplu Yemek Firması – Topçular Yemek',
+      title: 'Hakkımızda | Gebze Toplu Yemek Firması & Restoran – Topçular Yemek',
       description:
-        'Topçular Yemek; Gebze merkezli, işletmelere toplu yemek, tabldot ve kazan yemek servisi yapan yerel yemek firmasıdır. Mutfağımızı, değerlerimizi ve çalışma şeklimizi tanıyın.',
+        'Topçular Yemek; Gebze merkezli, KOBİ, fabrika, okul ve hastanelere toplu yemek ve tabldot servisi sunan, aynı zamanda Sultan Orhan merkez salonunda oturup yeme imkanı sağlayan yerel yemek firmasıdır.',
       breadcrumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Hakkımızda', path: '/hakkimizda/' }],
     },
     `
@@ -1070,7 +1176,7 @@ export function buildPages(version) {
     crumbs: [{ name: 'Ana Sayfa', path: '/' }, { name: 'Hakkımızda', path: '/hakkimizda/' }],
     kicker: 'Hakkımızda',
     h1: 'Gebze’nin Toplu Yemek Mutfağı: Topçular Yemek',
-    lead: 'Biz bir restoran değiliz; tüm enerjimizi işletmelerin her gün güvenle yiyebileceği toplu yemeği üretmeye veriyoruz.',
+    lead: 'Gebze’nin güvenilir toplu yemek mutfağı: İşletmelere dakik tabldot ve sıcak toplu yemek sağlarken, Sultan Orhan merkezimizdeki ferah yemek salonumuzda oturup yeme imkanı sunuyoruz.',
     image: 'kalite',
     imageAlt: 'Topçular Yemek kurumsal standartları: Günlük taze üretim, hijyenik mutfak, termobox sıcak sevkiyat ve zamanında teslimat',
   })}
@@ -1078,8 +1184,8 @@ export function buildPages(version) {
     <div class="container content-grid">
       <article class="prose reveal">
         <h2>Hikâyemiz</h2>
-        <p>Topçular Yemek, Gebze’de işletmelere toplu yemek hizmeti vermek amacıyla kuruldu. Dükkânımızda yerinde yemek servisi bulunmuyor; çünkü odağımız tamamen fabrikalara, ofislere, şantiyelere ve organizasyonlara her gün sıcak, taze ve doyurucu yemek ulaştırmak.</p>
-        <p>Mutfağımızda her sabah erken saatlerde başlayan üretim, yemeklerin kazanlarda ev usulü pişirilmesi ve ısı yalıtımlı kaplarla zamanında yola çıkmasıyla devam ediyor. Yemeklerimizi tabakla servis ya da kazan servis olarak sunuyoruz.</p>
+        <p>Topçular Yemek, Gebze ve Kocaeli sanayisindeki KOBİ ve büyük ölçekli fabrikalara, organize sanayi bölgelerine, okullara, yurtlara, sağlık kurumlarına ve şantiyelere profesyonel tabldot ve toplu yemek sağlamak amacıyla kuruldu. Sultan Orhan Mahallesi 1141. Sokak No: 10 adresindeki merkez binamızda hem yüksek kapasiteli hijyenik endüstriyel mutfağımız hem de konuklarımızı ağırladığımız ferah bir yemek salonumuz bulunmaktadır.</p>
+        <p>Her sabah erken saatlerde başlayan taze üretimimiz; zengin çorbalar, lokum gibi et ve tavuk yemekleri, tane tane pilavlar ve taze makarnalarla donatılır. Dileyen misafirlerimiz merkez salonumuza gelerek sabah kahvaltısını ve öğle yemeğini yerinde oturup afiyetle tüketebilir; dileyen işletmelere ise özel termobox filomuzla 70°C+ sıcak teslimat sağlıyoruz.</p>
         <h2>Değerlerimiz</h2>
         ${checkList([
           'Lezzet: Ev yemeği tadından ödün vermeden toplu üretim',
@@ -1092,6 +1198,7 @@ export function buildPages(version) {
       ${quoteCard()}
     </div>
   </section>
+  ${sectorsSection()}
   ${certsSection()}
   ${clientsBand()}
   ${ctaBand()}

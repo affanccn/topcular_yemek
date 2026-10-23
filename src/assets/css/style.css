@@ -2160,10 +2160,225 @@ a.contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow); }
   .article-table-wrap { overflow-x: auto; }
   .article-table { font-size: 0.84rem; min-width: 500px; }
   .article-table th, .article-table td { padding: 0.75rem 0.7rem; }
+  .sectors-grid { grid-template-columns: 1fr; }
+  .catalog-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
+}
+
+/* ---------------- Footer CCN Teknoloji Linki ---------------- */
+.footer-credit-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.footer-credit {
+  color: #c9b6a4;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-credit:hover {
+  color: var(--saffron);
+  border-color: rgba(229, 142, 38, 0.5);
+  background: rgba(229, 142, 38, 0.12);
+  transform: translateY(-1px);
+}
+
+/* ---------------- Hizmet Verilen Sektörler & Kurumlar ---------------- */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.sector-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-s);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s;
+  position: relative;
+}
+.sector-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-m);
+  border-color: var(--paprika);
+}
+.sector-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.sector-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-m);
+  background: var(--paprika-soft);
+  color: var(--paprika);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.sector-icon-wrap .icon {
+  width: 24px;
+  height: 24px;
+}
+.sector-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--paprika);
+  background: var(--paper-warm);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.35rem;
+}
+.sector-card h3 {
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.sector-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0 0 1.25rem;
+}
+.sector-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  border-top: 1px dashed var(--line);
+  padding-top: 1rem;
+}
+.sector-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.sector-features .icon {
+  color: var(--paprika);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* ---------------- Zengin Yemek Yelpazesi & Kataloğu ---------------- */
+.section-food-catalog {
+  background: var(--paper-warm);
+}
+.catalog-category-block {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-s);
+}
+.category-header-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+.category-emoji {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.category-header-wrap h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+.category-header-wrap .category-tag {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--paprika);
+  background: var(--paprika-soft);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+.category-desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.dish-item-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.dish-item-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--paprika);
+  background: #fff;
+  box-shadow: var(--shadow-s);
+}
+.dish-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.dish-name {
+  font-family: var(--f-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+.dish-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--paprika);
+  white-space: nowrap;
+}
+.dish-desc {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
 }
 

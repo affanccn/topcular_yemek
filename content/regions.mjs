@@ -10,11 +10,11 @@ export const regions = [
     name: 'Gebze',
     featured: true,
     metaTitle: 'Gebze Toplu Yemek Siparişi | Gebze Yemek Firması – Topçular Yemek',
-    metaDesc: 'Gebze toplu yemek siparişi için yerel yemek firması Topçular Yemek. Fabrika, ofis, okul ve şantiyelere tabldot ve kazan yemek servisi. Gebze’nin her mahallesine teslimat.',
+    metaDesc: 'Gebze toplu yemek siparişi için yerel yemek firması Topçular Yemek. Fabrika, ofis, okul ve şantiyelere tabldot ve toplu yemek servisi. Gebze’nin her mahallesine teslimat.',
     h1: 'Gebze Toplu Yemek Siparişi',
     lead: 'Mutfağımız Gebze’de. Bu yüzden Gebze’nin her noktasına yemeklerimizi en kısa sürede, sıcak ve taze olarak ulaştırıyoruz.',
     body: [
-      'Topçular Yemek, Gebze merkezli bir toplu yemek firmasıdır. Gebze’deki fabrikalar, atölyeler, plazalar, okullar, hastaneler ve şantiyeler için günlük tabldot ve kazan yemek servisi yapıyoruz. Yerel bir firma olmanın avantajıyla teslimat sürelerimiz kısa, iletişimimiz hızlıdır.',
+      'Topçular Yemek, Gebze merkezli bir toplu yemek firmasıdır. Gebze’deki fabrikalar, atölyeler, plazalar, okullar, hastaneler ve şantiyeler için günlük tabldot ve toplu yemek servisi yapıyoruz. Yerel bir firma olmanın avantajıyla teslimat sürelerimiz kısa, iletişimimiz hızlıdır.',
       'Gebze’de toplu yemek siparişi verirken en önemli konular; yemeğin her gün aynı kalitede olması, zamanında gelmesi ve çalışanların doyması. Menülerimizi bu üç kurala göre hazırlıyor, her sabah taze malzemeyle pişiriyoruz.',
       'Güzeller, Sultan Orhan, Mustafapaşa, Hacıhalil, Osman Yılmaz, Beylikbağı, Mimar Sinan, Tatlıkuyu, Pelitli ve Muallimköy başta olmak üzere Gebze’nin tüm mahallelerine ve sanayi bölgelerine servis veriyoruz.',
     ],
@@ -22,7 +22,7 @@ export const regions = [
     faq: [
       {
         q: 'Gebze’de toplu yemek siparişi nasıl verilir?',
-        a: 'Telefon veya WhatsApp üzerinden bize ulaşıp kişi sayısını, teslimat adresini ve servis şeklini (tabldot/kazan) iletmeniz yeterli. Size özel teklifi hazırlayıp menüyü birlikte planlıyoruz.',
+        a: 'Telefon veya WhatsApp üzerinden bize ulaşıp kişi sayısını, teslimat adresini ve servis şeklini (tabldot/toplu taşımalı) iletmeniz yeterli. Size özel teklifi hazırlayıp menüyü birlikte planlıyoruz.',
       },
       {
         q: 'Gebze’de hangi mahallelere servis yapıyorsunuz?',
@@ -41,7 +41,7 @@ export const regions = [
     body: [
       'Gebze, onlarca organize sanayi bölgesi ve binlerce fabrikasıyla Türkiye’nin sanayi kalbidir. Bu bölgelerdeki işletmeler için düzenli, doyurucu ve uygun maliyetli fabrika yemeği hizmeti sunuyoruz.',
       'OSB’lerdeki fabrikaların çoğu vardiyalı çalışır. Bu nedenle teslimat planlamamızı vardiya giriş-çıkış saatlerine göre yapıyor, yemeklerin tam servis saatinde sıcak olarak yemekhanede olmasını sağlıyoruz.',
-      'Kendi yemekhanesi olan fabrikalara kazan (taşımalı) yemek, yemekhanesi olmayan küçük ve orta ölçekli işletmelere ise porsiyonlanmış tabldot servis öneriyoruz.',
+      'Kendi yemekhanesi olan fabrikalara toplu taşımalı yemek, yemekhanesi olmayan küçük ve orta ölçekli işletmelere ise porsiyonlanmış tabldot servis öneriyoruz.',
     ],
     places: ['GOSB – Gebze OSB', 'Gebze Güzeller OSB', 'GEPOSB – Plastikçiler OSB', 'TOSB – Taysad OSB', 'Dilovası OSB', 'İMES OSB', 'Kocaeli Bilişim Vadisi', 'TÜBİTAK MAM çevresi'],
     faq: [
@@ -64,7 +64,7 @@ export const regions = [
     lead: 'Gebze’deki mutfağımızdan Darıca’ya kısa sürede ulaşıyor; işletmenize her gün taze ve sıcak toplu yemek getiriyoruz.',
     body: [
       'Darıca’da faaliyet gösteren atölyeler, mağazalar, özel okullar, klinikler ve şantiyeler için tabldot ve toplu yemek servisi veriyoruz. Gebze’ye komşu olması sayesinde Darıca’ya yaptığımız teslimatlar hızlı ve dakiktir.',
-      'Küçük ekipler için porsiyonlanmış tabldot, daha kalabalık işletmeler için kazan yemek seçeneği sunuyoruz. Menüler her gün değişir; çalışanlarınız haftanın her günü farklı bir yemekle karşılaşır.',
+      'Küçük ekipler için porsiyonlanmış tabldot, daha kalabalık işletmeler için toplu taşımalı yemek seçeneği sunuyoruz. Menüler her gün değişir; çalışanlarınız haftanın her günü farklı bir yemekle karşılaşır.',
       'Bayramoğlu, Osmangazi, Nenehatun, Kazım Karabekir, Abdi İpekçi, Fevzi Çakmak ve Bağlarbaşı başta olmak üzere Darıca’nın tüm mahallelerine servis yapıyoruz.',
     ],
     places: ['Bayramoğlu', 'Osmangazi', 'Nenehatun', 'Kazım Karabekir', 'Abdi İpekçi', 'Fevzi Çakmak', 'Bağlarbaşı', 'Emek'],
@@ -83,11 +83,11 @@ export const regions = [
     slug: 'cayirova-toplu-yemek',
     name: 'Çayırova',
     metaTitle: 'Çayırova Toplu Yemek | Şekerpınar Fabrika Yemeği – Topçular Yemek',
-    metaDesc: 'Çayırova ve Şekerpınar toplu yemek siparişi. TOSB ve lojistik merkezlerindeki fabrikalara tabldot ve kazan yemek servisi. Günlük taze menüler, zamanında teslimat.',
+    metaDesc: 'Çayırova ve Şekerpınar toplu yemek siparişi. TOSB ve lojistik merkezlerindeki fabrikalara tabldot ve toplu yemek servisi. Günlük taze menüler, zamanında teslimat.',
     h1: 'Çayırova ve Şekerpınar Toplu Yemek Servisi',
     lead: 'Çayırova’daki fabrikalar, lojistik depoları ve ofisler için günlük, sıcak ve doyurucu toplu yemek servisi.',
     body: [
-      'Çayırova; Şekerpınar’daki TOSB (Taysad Organize Sanayi Bölgesi), büyük lojistik merkezleri ve çok sayıda üretim tesisiyle yoğun bir iş bölgesidir. Bu bölgedeki işletmelere tabldot ve kazan yemek servisi sunuyoruz.',
+      'Çayırova; Şekerpınar’daki TOSB (Taysad Organize Sanayi Bölgesi), büyük lojistik merkezleri ve çok sayıda üretim tesisiyle yoğun bir iş bölgesidir. Bu bölgedeki işletmelere tabldot ve toplu yemek servisi sunuyoruz.',
       'Lojistik ve depo çalışanları gibi yoğun tempoda çalışan ekipler için doyurucu, enerji veren menüler hazırlıyoruz. Teslimat saatlerini vardiya ve mola saatlerinize göre planlıyoruz.',
       'Şekerpınar, Akse, Özgürlük, Atatürk, İnönü, Emek ve Yeni Mahalle başta olmak üzere Çayırova’nın tüm bölgelerine servis veriyoruz.',
     ],
@@ -107,7 +107,7 @@ export const regions = [
     slug: 'dilovasi-toplu-yemek',
     name: 'Dilovası',
     metaTitle: 'Dilovası Toplu Yemek | Dilovası OSB Fabrika Yemeği – Topçular Yemek',
-    metaDesc: 'Dilovası toplu yemek ve fabrika yemeği servisi. Dilovası OSB, İMES OSB ve Diliskelesi’ndeki işletmelere tabldot ve kazan yemek. Taze, doyurucu menüler için teklif alın.',
+    metaDesc: 'Dilovası toplu yemek ve fabrika yemeği servisi. Dilovası OSB, İMES OSB ve Diliskelesi’ndeki işletmelere tabldot ve toplu yemek. Taze, doyurucu menüler için teklif alın.',
     h1: 'Dilovası Toplu Yemek ve Fabrika Yemeği',
     lead: 'Dilovası’ndaki ağır sanayi ve üretim tesisleri için doyurucu, sıcak ve düzenli fabrika yemeği.',
     body: [
@@ -131,11 +131,11 @@ export const regions = [
     slug: 'tuzla-toplu-yemek',
     name: 'Tuzla',
     metaTitle: 'Tuzla Toplu Yemek Siparişi | Tuzla Fabrika Yemeği – Topçular Yemek',
-    metaDesc: 'Tuzla toplu yemek ve fabrika yemeği servisi. Tuzla OSB, İDOSB, Aydınlı ve tersaneler bölgesindeki işletmelere tabldot ve kazan yemek servisi. Teklif alın.',
+    metaDesc: 'Tuzla toplu yemek ve fabrika yemeği servisi. Tuzla OSB, İDOSB, Aydınlı ve tersaneler bölgesindeki işletmelere tabldot ve toplu yemek servisi. Teklif alın.',
     h1: 'Tuzla Toplu Yemek ve Fabrika Yemeği',
     lead: 'Gebze sınırındaki Tuzla’ya; organize sanayi bölgeleri ve tersaneler başta olmak üzere düzenli toplu yemek servisi.',
     body: [
-      'Gebze’ye komşu olan Tuzla; organize sanayi bölgeleri, deri sanayi bölgesi ve tersaneleriyle İstanbul’un en büyük üretim merkezlerinden biridir. Tuzla’daki işletmelere de günlük tabldot ve kazan yemek servisi sunuyoruz.',
+      'Gebze’ye komşu olan Tuzla; organize sanayi bölgeleri, deri sanayi bölgesi ve tersaneleriyle İstanbul’un en büyük üretim merkezlerinden biridir. Tuzla’daki işletmelere de günlük tabldot ve toplu yemek servisi sunuyoruz.',
       'Tersane ve fabrika çalışanları için doyurucu, sıcak ve her gün değişen menüler hazırlıyoruz. Teslimat planlamamızı Gebze-Tuzla arasındaki kısa mesafe sayesinde dakik şekilde yapıyoruz.',
       'Tuzla OSB, İDOSB (Deri OSB), Aydınlı, Orhanlı, Şifa ve tersaneler bölgesindeki işletmeler hizmet verdiğimiz başlıca noktalardır.',
     ],
@@ -147,7 +147,7 @@ export const regions = [
       },
       {
         q: 'Tuzla tersaneler bölgesine yemek getiriyor musunuz?',
-        a: 'Evet, tersaneler bölgesindeki işletmelere de tabldot ve kazan yemek servisi sunuyoruz.',
+        a: 'Evet, tersaneler bölgesindeki işletmelere de tabldot ve toplu yemek servisi sunuyoruz.',
       },
     ],
   },
@@ -156,7 +156,7 @@ export const regions = [
     name: 'GOSB (Gebze OSB)',
     featured: true,
     metaTitle: 'GOSB Toplu Yemek Siparişi | Gebze OSB Fabrika Yemeği – Topçular Yemek',
-    metaDesc: 'GOSB (Gebze Organize Sanayi Bölgesi) fabrikalarına günlük 4 çeşit sıcak tabldot ve kazan yemek servisi. ISO 22000 belgeli, vardiyalı dakik teslimat. Teklif alın.',
+    metaDesc: 'GOSB (Gebze Organize Sanayi Bölgesi) fabrikalarına günlük 4 çeşit sıcak tabldot ve toplu taşımalı yemek servisi. ISO 22000 belgeli, vardiyalı dakik teslimat. Teklif alın.',
     h1: 'GOSB Toplu Yemek & Fabrika Yemeği Servisi',
     lead: 'Gebze Organize Sanayi Bölgesi’ndeki (GOSB) ulusal ve uluslararası fabrikalara her gün dakik, hijyenik ve sıcak kurumsal yemek servisi sunuyoruz.',
     body: [
@@ -187,13 +187,13 @@ export const regions = [
     body: [
       'TOSB (Otomotiv Tedarik Sanayi İhtisas Organize Sanayi Bölgesi) ve Şekerpınar aksındaki fabrikalar, yüksek tempolu ve titiz üretim süreçlerine sahiptir. Çalışanların motivasyonu ve iş verimliliği doğrudan doğruya öğle yemeğinin kalitesine bağlıdır.',
       'Topçular Yemek olarak, otomotiv yan sanayisi ve lojistik merkezlerinde çalışan teknik personelin kalori ve protein ihtiyacını karşılayan 4 kap zengin tabldot menüleri hazırlıyoruz. Etli ana yemekler, taze mevsim sebzeleri ve dengeli garnitürlerle zenginleştirilmiş menüler sunuyoruz.',
-      'Şekerpınar ve TOSB bölgesine her gün düzenli servis araçlarımızla kesintisiz ulaşıyor; hem tabldot hem de yemekhanenizde porsiyonlanacak kazan servisi çözümleri sağlıyoruz.',
+      'Şekerpınar ve TOSB bölgesine her gün düzenli servis araçlarımızla kesintisiz ulaşıyor; hem tabldot hem de yemekhanenizde porsiyonlanacak toplu taşımalı servis çözümleri sağlıyoruz.',
     ],
     places: ['TOSB 1. Cadde', 'TOSB 2. Cadde', 'Şekerpınar Sanayi Bölgesi', 'Çayırova Lojistik Tesisleri', 'Marmara Geri Dönüşümcüler Sanayi'],
     faq: [
       {
         q: 'TOSB bölgesine minimum kaç kişilik servis yapıyorsunuz?',
-        a: 'TOSB ve Şekerpınar bölgesindeki işletmeler için 20 kişiden itibaren tabldot ve kazan yemek servisi sağlıyoruz.',
+        a: 'TOSB ve Şekerpınar bölgesindeki işletmeler için 20 kişiden itibaren tabldot ve toplu yemek servisi sağlıyoruz.',
       },
       {
         q: 'Gece vardiyasında çalışan personele yemek veriyor musunuz?',

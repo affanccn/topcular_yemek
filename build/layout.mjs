@@ -200,7 +200,7 @@ function footer() {
   </div>
   <div class="container footer-bottom">
     <p>© ${year} ${esc(site.legalName)}. Tüm hakları saklıdır.</p>
-    <p>Gebze toplu yemek · Gebze tabldot yemek · Gebze fabrika yemeği · GOSB &amp; TOSB Catering</p>
+    <p class="footer-credit-wrap"><a href="https://affanccn.com" target="_blank" rel="noopener" class="footer-credit" title="CCN Teknoloji">CCN Teknoloji</a></p>
   </div>
 </footer>
 <div class="float-actions" aria-label="Hızlı iletişim">
