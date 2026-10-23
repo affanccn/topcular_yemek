@@ -380,11 +380,11 @@ const dailyShowcaseSection = () => `
       <div class="showcase-blog-cta reveal">
         <div class="cta-blog-inner">
           <div class="cta-blog-text">
-            <span class="blog-tag">📚 Yeni SEO Rehberimiz</span>
-            <h4>Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat</h4>
-            <p>GOSB, TOSB ve İMES sanayi bölgelerindeki fabrikalar için tabldot yemek seçiminde 5 altın kuralı ve fason yemekçilere karşı entegre mutfak farklarını inceleyin.</p>
+            <span class="blog-tag">🔥 Yeni Rehber · Sıcak Zincir</span>
+            <h4>Taşımalı Yemekte Sıcak Zincir ve Termobox Teknolojisi: Gebze Fabrikalarına 70°C+ Sıcak Teslimat</h4>
+            <p>Fabrika yemekhanelerinde soğuk yemek şikayetine son: Çift cidarlı Termobox, WHO kritik sıcaklık eşiği ve Sultan Orhan tesisimizden dakik sevkiyatın sırrı.</p>
           </div>
-          <a class="btn btn-primary" href="/blog/gebze-fabrika-tabldot-yemek-rehberi/">Rehberi Oku ${icon('arrow')}</a>
+          <a class="btn btn-primary" href="/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/">Rehberi Oku ${icon('arrow')}</a>
         </div>
       </div>
     </div>
@@ -1227,9 +1227,32 @@ export function buildPages(version) {
     <div class="container">
       <div class="blog-grid">
         <article class="blog-card blog-card-featured reveal">
+          <a href="/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/" class="blog-media">
+            ${img('termoboxSicakZincir', 'Taşımalı Yemekte Sıcak Zincir ve Termobox Teknolojisi: Gebze Fabrikalarına 70°C+ Sıcak Teslimatın Sırrı', { sizes: '(max-width: 900px) 100vw, 45vw' })}
+            <span class="blog-badge">${icon('fire')} Yeni Rehber · Sıcak Zincir</span>
+          </a>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>📅 23 Ekim 2026</span>
+              <span>⏱️ 4 Dk Okuma</span>
+              <span>🏷️ Gıda Güvenliği &amp; Termobox</span>
+            </div>
+            <h2><a href="/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/">Taşımalı Yemekte Sıcak Zincir ve Termobox Teknolojisi: Gebze Fabrikalarına 70°C+ Sıcak Teslimatın Sırrı</a></h2>
+            <p>Fabrika yemekhanelerinde soğuk yemek derdine son. Gebze, GOSB ve TOSB sanayi bölgelerine çift cidarlı Termobox teknolojisi, WHO kritik sıcaklık kuralları ve dijital ısı kontrolüyle 70°C+ sıcak yemek sevkiyatı rehberi.</p>
+            <div class="blog-tags">
+              <span class="tag-pill">Taşımalı yemek Gebze</span>
+              <span class="tag-pill">Termobox yemek servisi</span>
+              <span class="tag-pill">Gebze fabrika sıcak tabldot</span>
+              <span class="tag-pill">GOSB catering</span>
+            </div>
+            <a class="btn btn-primary btn-sm" href="/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/">Rehberi Okuyun ${icon('arrow')}</a>
+          </div>
+        </article>
+
+        <article class="blog-card blog-card-featured reveal">
           <a href="/blog/gebze-fabrika-tabldot-yemek-rehberi/" class="blog-media">
             ${img('dailyMenu', 'Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi: Lezzet, Hijyen ve Zamanında Teslimat', { sizes: '(max-width: 900px) 100vw, 45vw' })}
-            <span class="blog-badge">${icon('fire')} Öne Çıkan Rehber</span>
+            <span class="blog-badge">${icon('sparkles')} Fabrika &amp; OSB Rehberi</span>
           </a>
           <div class="blog-body">
             <div class="blog-meta">
@@ -1482,15 +1505,255 @@ export function buildPages(version) {
           </ul>
         </div>
 
+          <div class="sidebar-card reveal">
+            <h3>Yeni Rehberimiz</h3>
+            <p><strong><a href="/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/">Taşımalı Yemekte Sıcak Zincir ve Termobox Teknolojisi</a></strong></p>
+            <p style="font-size:0.86rem;color:var(--ink-2);margin-top:0.4rem;">Gebze fabrikalarına 70°C+ dumanı tüten sıcak teslimatın operasyonel sırrı.</p>
+            <a class="link-arrow" href="/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/">Rehberi İnceleyin ${icon('arrow')}</a>
+          </div>
+
+          <div class="sidebar-card reveal">
+            <h3>Kalite Sertifikalarımız</h3>
+            <p>Topçular Yemek, ISO 22000 gıda güvenliği ve ISO 9001 kalite yönetim sistemleriyle akreditedir.</p>
+            <a class="link-arrow" href="/hakkimizda/#sertifikalar">Sertifikaları İnceleyin ${icon('arrow')}</a>
+          </div>
+        </aside>
+      </div>
+    </article>
+    ${ctaBand()}
+    `
+  );
+
+  /* ---------------- BLOG DETAY: TAŞIMALI YEMEKTE SICAK ZİNCİR VE TERMOBOX TEKNOLOJİSİ ---------------- */
+  add(
+    {
+      path: '/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/',
+      title: 'Taşımalı Yemekte Termobox ve Sıcak Zincir | Topçular Yemek Gebze',
+      description:
+        'Fabrika yemekhanelerinde soğuk yemek derdine son. Gebze, GOSB ve TOSB sanayi bölgelerine Termobox teknolojisiyle 70°C+ garantili sıcak yemek sevkiyatı rehberi.',
+      keywords:
+        'taşımalı yemek Gebze, termobox yemek servisi, Gebze fabrika sıcak tabldot, GOSB catering firmaları, sıcak zincir yemek, tosb taşımalı yemek, dilovası imes yemek',
+      breadcrumbs: [
+        { name: 'Ana Sayfa', path: '/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: 'Taşımalı Yemekte Termobox ve Sıcak Zincir', path: '/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/' },
+      ],
+      schema: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: 'Taşımalı Yemekte Sıcak Zincir ve Termobox Teknolojisi: Gebze Fabrikalarına 70°C+ Sıcak Teslimatın Sırrı',
+          description:
+            'Fabrika yemekhanelerinde soğuk yemek derdine son. Gebze, GOSB ve TOSB sanayi bölgelerine Termobox teknolojisiyle 70°C+ garantili sıcak yemek sevkiyatı rehberi.',
+          image: [imgUrl('termoboxSicakZincir', 1200), imgUrl('termoboxKitchen', 1200)],
+          datePublished: '2026-10-23T08:00:00+03:00',
+          dateModified: '2026-10-23T08:00:00+03:00',
+          author: { '@type': 'Organization', name: 'Topçular Yemek', url: site.url },
+          publisher: { '@id': `${site.url}/#isletme` },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${site.url}/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/`,
+          },
+          keywords: 'taşımalı yemek Gebze, termobox yemek servisi, Gebze fabrika sıcak tabldot, GOSB catering firmaları, sıcak zincir yemek',
+          articleSection: 'Gıda Güvenliği, Sıcak Zincir ve Taşımalı Yemek',
+        },
+      ],
+    },
+    `
+  <section class="page-hero page-hero-article">
+    <div class="container">
+      ${breadcrumbNav([
+        { name: 'Ana Sayfa', path: '/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: 'Taşımalı Yemekte Termobox ve Sıcak Zincir', path: '/blog/tasimali-yemekte-sicak-zincir-ve-termobox-teknolojisi/' },
+      ])}
+      <span class="eyebrow eyebrow-saffron">${icon('sparkles')} Termobox &amp; Gıda Güvenliği Standartları</span>
+      <h1>Taşımalı Yemekte Sıcak Zincir ve Termobox Teknolojisi: Gebze Fabrikalarına 70°C+ Sıcak Teslimatın Sırrı</h1>
+      <div class="article-meta">
+        <span>✍️ <strong>Topçular Yemek Kalite &amp; Gıda Mühendisliği Ekibi</strong></span>
+        <span>📅 23 Ekim 2026</span>
+        <span>⏱️ 4 Dakika Okuma</span>
+        <span>🎯 Hedef Kitle: Satın Alma Yöneticileri, İdari İşler Şefleri, Fabrika Müdürleri</span>
+        <span>🏭 Gebze · GOSB · TOSB · Dilovası İMES</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="section article-content-wrap">
+    <div class="container article-grid">
+      <div class="article-body prose">
+        <p class="article-lead">Fabrika yemekhanelerinde çalışanların en sık dile getirdiği ve motivasyonu doğrudan düşüren şikayetlerin başında şüphesiz <strong>"yemeklerin soğuk gelmesi"</strong> gelir. Sanayi tipi taşımalı catering operasyonlarında lezzet ne kadar iyi olursa olsun, fabrikaya ulaşana kadar ısısını kaybetmiş bir yemek yağını dondurur, tadını yitirir ve bakteri üretme riskini (gıda güvenliği tehlikesini) artırır.</p>
+
+        <p>Kocaeli Gebze sanayi koridorunda (GOSB, TOSB, Güzeller OSB, Dilovası İMES OSB) hizmet veren <strong><a href="https://topcularyemek.vercel.app/">Topçular Yemek</a></strong> olarak, mutfağımızdan çıkan her porsiyonu fırından yeni çıkmışçasına sıcak tutan <strong>"Termobox Sıcak Zincir Standardı"</strong> ile teslim ediyoruz.</p>
+
+        <!-- MÜŞTERİYE ATILACAK ÖRNEK MESAJ & TAAHHÜT KUTUSU -->
+        <div class="quote-box" style="margin: 2rem 0; background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border-left: 4px solid var(--paprika); padding: 1.4rem 1.6rem; border-radius: var(--radius); box-shadow: var(--shadow-s);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
+            <span class="badge" style="background: var(--paprika); color: #fff; font-size: 0.76rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 6px; letter-spacing: 0.04em;">MÜŞTERİLERİMİZE VERDİĞİMİZ SICAKLIK TAAHHÜDÜ</span>
+            <span style="font-size: 0.82rem; font-weight: 700; color: var(--paprika-dark);">Örnek Bilgilendirme Mesajı</span>
+          </div>
+          <p style="font-size: 1.08rem; font-style: normal; color: var(--ink); line-height: 1.65; margin: 0 0 0.8rem 0;">
+            <strong>“Bizde soğuk yemek sürprizi yok! Mutfağımızdan çıkan her yemek, ısı kaybını sıfıra indiren özel Termobox kaplarımıza girmeden önce dijital kontrollerden geçer. Yemekhanenizde dumanı tüten sıcak yemek garantisi sunuyoruz.”</strong>
+          </p>
+          <div style="font-size: 0.84rem; color: var(--ink-3); display: flex; align-items: center; gap: 0.5rem;">
+            <span>🛡️ Topçular Yemek Sultan Orhan Merkez Mutfağı Dijital Sıcaklık Güvencesi</span>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF KARTI: GIDA MÜHENDİSİ DİJİTAL ISI KONTROLÜ -->
+        <div class="article-visual-card reveal">
+          <div class="article-visual-media">
+            ${img('termoboxSicakZincir', 'Topçular Yemek gıda mühendisi dijital prob ile Termobox içindeki yemeğin çekirdek ısısını ölçüyor (85°C+ sıcak zincir denetimi)', { sizes: '(max-width: 900px) 100vw, 760px' })}
+            <span class="visual-tag">${icon('fire')} 85°C+ Dijital Çekirdek Isı Kontrolü</span>
+          </div>
+          <div class="article-visual-caption">
+            <h3>Tesis Çıkışında Prob Termometre ile Kesintisiz Sıcaklık Teyidi</h3>
+            <p>Sultan Orhan tesisimizdeki endüstriyel kazanlardan çıkan yemekler, mühürlü Termobox ünitelerine girmeden önce sorumlu gıda mühendisimiz tarafından kalibre edilmiş dijital prob ile anlık olarak ölçülür. Çekirdek sıcaklığı en az 85°C olarak onaylanmayan hiçbir gastronorm küvet araçlara yüklenmez.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2>1. Gıda Güvenliğinde "Kritik Sıcaklık Eşiği" (70°C Kuralı)</h2>
+        <p>Toplu yemek sektöründe mikrobiyolojik üremeyi engelleyen ve <strong>Dünya Sağlık Örgütü (WHO)</strong> ile <strong>HACCP standartlarınca</strong> belirlenen altın bir kural vardır: <em>Tehlike Bölgesi (Danger Zone: 10°C - 60°C)</em>.</p>
+        <p>Yemekler 60°C'nin altına düştüğünde dakikalar ve saatler içinde patojen bakteri üretmeye başlar. Bu biyolojik riskin önüne geçmek ve yemeklerin lezzet ile besin değerini korumak için Topçular Yemek operasyonunda 3 katı kural tavizsiz uygulanır:</p>
+
+        <div class="rules-stack">
+          <div class="rule-box reveal">
+            <div class="rule-no">85°C</div>
+            <div>
+              <h3>Pişirme Sonrası Gastronom Aktarımı</h3>
+              <p>Pişirme işlemi tamamlandığında ana yemekler en az 85°C – 90°C sıcaklıkta paslanmaz çelik gastronorm küvetlere aktarılır.</p>
+            </div>
+          </div>
+          <div class="rule-box reveal">
+            <div class="rule-no">70°C</div>
+            <div>
+              <h3>Sevkiyat Boyunca Çekirdek Sıcaklık Eşiği</h3>
+              <p>Özel yalıtımlı Termobox içinde araç transit halindeyken yemek çekirdek sıcaklığı kesinlikle 65°C – 70°C altına inmez.</p>
+            </div>
+          </div>
+          <div class="rule-box reveal">
+            <div class="rule-no">70°C+</div>
+            <div>
+              <h3>Tabldot Tabağına Sıcak Servis Kuralı</h3>
+              <p>Vardiya molasında çalışanın tabldot tabağına dökülen ana yemeğin servis sıcaklığı dumanı tüten en az 70°C seviyesindedir.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>2. Termobox Teknolojisi Nedir ve Nasıl Çalışır?</h2>
+        <p>Geleneksel yemekçilerin kullandığı ince cidarlı sac küvetler veya battaniyeye sarılı ilkel taşıma yöntemleri profesyonel sanayi mutfağında kesinlikle kabul edilemez.</p>
+        <p><strong><a href="https://topcularyemek.vercel.app/">Topçular Yemek</a></strong> mutfağında kullanılan çift cidarlı, gıdaya uygun EPP (Genleştirilmiş Polipropilen) veya yüksek yoğunluklu poliüretan gövdeli Termobox üniteleri şu teknik üstünlüklere sahiptir:</p>
+
+        <ul>
+          <li><strong>Hareketsiz Hava Yalıtımı:</strong> Dış ortam hava sıcaklığı eksi derecelerde olsa dahi saatte yalnızca 0.8°C ile 1.2°C arasında minimum ısı kaybına izin verir. 3 saatlik bir sevkiyat rotasında dahi sıcaklık en fazla 3°C düşer.</li>
+          <li><strong>Hermetik Sızdırmaz Conta:</strong> Çorba ve sulu tencere yemeklerinin dökülmesini, çalkalanmasını ve içerideki doymuş buhar basıncının kaybolmasını tamamen engeller.</li>
+          <li><strong>Isı Köprüsü Bulunmayan Monoblok Gövde:</strong> İçerideki buharı hapsederek yemeklerin kurumasını önler, soslu etlerin ve sebzelerin tazeliğini ve ilk piştiği andaki kıvamını korur.</li>
+        </ul>
+
+        <h2>3. Gebze Trafiğinde Milimetrik Lojistik Planlama</h2>
+        <p>Termobox yalıtımı tek başına yeterli değildir; doğru ve disiplinli lojistikle desteklenmelidir. Gebze sanayi bölgesindeki vardiya çıkış saatleri, D-100 karayolu ve OSB giriş trafiği dikkatle hesaplanmalıdır.</p>
+        
+        <p>Aşağıdaki operasyonel çizelge, Topçular Yemek'in Gebze Sultan Orhan tesisinden çıkan günlük sıcak zincir akışını göstermektedir:</p>
+
+        <div class="article-table-wrap reveal">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th style="width: 28%;">Aşama</th>
+                <th style="width: 22%;">Saat Dilimi</th>
+                <th>Operasyonel Standart ve Kalite Kontrol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Kazan Boşaltma &amp; Isı Kontrolü</strong></td>
+                <td><span class="badge" style="background:#25160e;color:#fff;font-weight:700;">10:30 – 11:00</span></td>
+                <td>Şef ve Gıda Mühendisi dijital prob ile çekirdek ısıyı ölçer (≥85°C şartı aranır).</td>
+              </tr>
+              <tr>
+                <td><strong>2. Termobox Kilitleme</strong></td>
+                <td><span class="badge" style="background:#25160e;color:#fff;font-weight:700;">11:00 – 11:15</span></td>
+                <td>Mühürlü contalı kapaklar sıkıca kilitlenir, dış ortamla ısı transferi tamamen kesilir.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Bölgesel Sevkiyat</strong></td>
+                <td><span class="badge" style="background:#25160e;color:#fff;font-weight:700;">11:15 – 11:45</span></td>
+                <td>Sultan Orhan tesisimizden GOSB, TOSB veya Dilovası İMES servis rotalarına çıkış yapılır.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Yemekhane Teslimatı</strong></td>
+                <td><span class="badge" style="background:#15803d;color:#fff;font-weight:700;">11:45 – 12:00</span></td>
+                <td>Vardiya mola düdüğünden tam 15 dakika önce fabrika yemekhanesine teslimat ve 70°C+ dumanı tüten sıcak servis.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>4. Fabrikanız İçin Sıcak Yemek Deneyimi ve Ücretsiz Tadım</h2>
+        <p>Çalışanlarınıza soğuk, yağı donmuş, lezzetini yitirmiş tabldotlar yerine; her öğle molasında sıcacık ev yemeği kalitesi sunmak personel bağlılığını ve vardiya enerjisini doğrudan güçlendirir.</p>
+        <p>Topçular Yemek Sultan Orhan tesislerinde üretilen <strong>günlük 2.500+ porsiyon sıcak menümüzü</strong>, Gebze'deki fabrikanızda personelinize ve satın alma heyetinize <strong>ücretsiz olarak tattırabilirsiniz</strong>. İşletmenize özel deneme menümüzü getirip dumanı tüten sıcaklığımızı yerinde gösterelim.</p>
+
+        <div class="article-cta-box reveal">
+          <span class="eyebrow eyebrow-saffron">Dumanı Tüten Sıcak Tabldot Garantisi</span>
+          <h3>Fabrikanız İçin Sıcak Yemek Deneme Menüsü İsteyin</h3>
+          <p>Personel sayınızı ve fabrikanızın bulunduğu OSB bölgesini bildirin; Termobox ile 70°C+ garantili sıcak menümüzü fabrikanıza ücretsiz demo olarak ulaştıralım.</p>
+          <div class="btn-row" style="justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+            <a class="btn btn-wa btn-lg" href="${waHref('Merhaba Topçular Yemek, Termobox sıcak zincir blog yazınızı okudum. Fabrikamız için 70°C sıcak teslimat tabldot teklifi ve ücretsiz tadım menüsü talep ediyoruz.')}" target="_blank" rel="noopener">${waIcon()} WhatsApp ile Ücretsiz Tadım İste</a>
+            <a class="btn btn-primary btn-lg" href="${telHref}">${icon('phone')} ${esc(site.phone)}</a>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding: 1.5rem; background: var(--cream); border-radius: var(--radius); border: 1px solid var(--cream-3);">
+          <h4 style="margin: 0 0 0.8rem 0; font-size: 1.15rem; color: var(--ink);">Kurumsal İletişim &amp; Hizmet Modellerimiz:</h4>
+          <ul style="margin: 0; padding-left: 1.2rem; line-height: 1.8; color: var(--ink-2); font-size: 0.95rem;">
+            <li><strong>Web Sitesi:</strong> <a href="https://topcularyemek.vercel.app/" target="_blank" rel="noopener">topcularyemek.vercel.app</a></li>
+            <li><strong>Telefon:</strong> <a href="tel:+905324999241">0 (532) 499 92 41</a> / <a href="tel:+905337196911">0 (533) 719 69 11</a></li>
+            <li><strong>Adres:</strong> Sultan Orhan Mah., 1141. Sokak No: 10, Gebze / Kocaeli</li>
+            <li><strong>Hizmet Modelleri:</strong> Termobox Taşımalı Tabldot, Yerinde Mutfak Yönetimi, Kurumsal Kokteyl &amp; Açılış Menüleri</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card reveal">
+          <h3>Hızlı İletişim</h3>
+          <p>Gebze merkez mutfağımızdan işletmenize her gün 70°C+ garantili taze ve sıcak yemek servisi.</p>
+          <ul class="sidebar-links">
+            <li><a href="${telHref}">${icon('phone')} ${esc(site.phone)}</a></li>
+            <li><a href="${waHref('Merhaba Topçular Yemek, fabrikamız için sıcak yemek ve tabldot teklifi almak istiyoruz.')}" target="_blank" rel="noopener">${waIcon()} WhatsApp Canlı Destek</a></li>
+            <li><a href="${esc(site.mapsUrl)}" target="_blank" rel="noopener">${icon('pin')} Sultan Orhan Mah. 1141. Sokak No: 10, Gebze</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h3>İlgili Rehberimiz</h3>
+          <p><strong><a href="/blog/gebze-fabrika-tabldot-yemek-rehberi/">Gebze Fabrika ve İşletmeleri İçin Tabldot Yemek Rehberi</a></strong></p>
+          <p style="font-size:0.88rem;color:var(--ink-2);margin-top:0.4rem;">GOSB ve TOSB fabrikalarında tabldot yemek seçiminde 5 altın kural ve maliyet analizleri.</p>
+          <a class="link-arrow" href="/blog/gebze-fabrika-tabldot-yemek-rehberi/">Rehberi İnceleyin ${icon('arrow')}</a>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h3>Hizmetlerimiz</h3>
+          <ul class="sidebar-menu">
+            <li><a href="/hizmetler/tabldot-yemek/">🍱 Tabldot Yemek Servisi</a></li>
+            <li><a href="/hizmetler/kazan-yemek-servisi/">🍲 Kazan Yemek (Taşımalı)</a></li>
+            <li><a href="/hizmetler/fabrika-yemek/">🏭 Fabrika Yemekhane Hizmeti</a></li>
+            <li><a href="/hizmetler/organizasyon-yemek/">🎉 Organizasyon &amp; Davet</a></li>
+            <li><a href="/menu/">📋 Örnek Haftalık Menü</a></li>
+          </ul>
+        </div>
+
         <div class="sidebar-card reveal">
           <h3>Kalite Sertifikalarımız</h3>
-          <p>Topçular Yemek, ISO 22000 gıda güvenliği ve ISO 9001 kalite yönetim sistemleriyle akreditedir.</p>
+          <p>Topçular Yemek; ISO 22000 Gıda Güvenliği, ISO 9001 ve ISO 45001 akredite tesisinde üretim yapar.</p>
           <a class="link-arrow" href="/hakkimizda/#sertifikalar">Sertifikaları İnceleyin ${icon('arrow')}</a>
         </div>
       </aside>
     </div>
   </article>
-  ${ctaBand()}
+  ${ctaBand('Fabrikanız için 70°C sıcaklık garantili menümüzü ücretsiz test edin.')}
   `
   );
 

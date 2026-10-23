@@ -18,5 +18,6 @@ export const images = {
   dailyMenu: 'gunun-4-cesit-sicak-menusu-gebze',
   termoboxKitchen: 'gebze-endustriyel-mutfak-termobox-sevkiyat',
   blogHero: 'gunun-4-cesit-sicak-menusu-gebze',
+  termoboxSicakZincir: 'tasimali-yemek-termobox-sicak-zincir-gebze',
 };
 
