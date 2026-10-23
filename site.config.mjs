@@ -20,12 +20,12 @@ export const site = {
   url: process.env.SITE_URL || 'https://www.topcularyemek.com',
 
   /** Telefon: görünen format + tel: linki için uluslararası format */
-  phone: '0 (532) 499 92 41',
-  phoneIntl: '+905324999241',
-  altPhone: '0 (533) 719 69 11',
-  altPhoneIntl: '+905337196911',
+  phone: '0 (544) 730 36 49',
+  phoneIntl: '+905447303649',
+  altPhone: '0 (507) 216 59 57',
+  altPhoneIntl: '+905072165957',
   /** WhatsApp numarası: başında + olmadan, ülke koduyla */
-  whatsapp: '905324999241',
+  whatsapp: '905447303649',
   email: 'info@topcularyemek.com',
 
   address: {

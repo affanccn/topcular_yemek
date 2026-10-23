@@ -1710,7 +1710,7 @@ export function buildPages(version) {
           <ul style="margin: 0; padding-left: 1.2rem; line-height: 1.8; color: var(--ink-2); font-size: 0.95rem;">
             <li><strong>Web Sitesi:</strong> <a href="https://www.topcularyemek.com/" target="_blank" rel="noopener">www.topcularyemek.com</a></li>
             <li><strong>E-posta:</strong> <a href="mailto:info@topcularyemek.com">info@topcularyemek.com</a></li>
-            <li><strong>Telefon:</strong> <a href="tel:+905324999241">0 (532) 499 92 41</a> / <a href="tel:+905337196911">0 (533) 719 69 11</a></li>
+            <li><strong>Telefon:</strong> <a href="tel:${site.phoneIntl}">${esc(site.phone)}</a> / <a href="tel:${site.altPhoneIntl}">${esc(site.altPhone)}</a></li>
             <li><strong>Adres:</strong> Sultan Orhan Mah., 1141. Sokak No: 10, Gebze / Kocaeli</li>
             <li><strong>Hizmet Modelleri:</strong> Termobox Taşımalı Tabldot, Yerinde Mutfak Yönetimi, Kurumsal Kokteyl &amp; Açılış Menüleri</li>
           </ul>
