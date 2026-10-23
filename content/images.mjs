@@ -11,7 +11,7 @@ export const images = {
   bufe: 'sicak-yemek-bufe-cesitleri-gebze',
   kalite: 'topcular-yemek-kurumsal-kalite',
   mutfak: 'topcular-yemek-endustriyel-mutfak-sef',
-  og: 'gebze-organizasyon-davet-yemegi', // Sosyal medya paylaşım görseli (1200x630)
+  og: 'topcular-yemek-og-banner', // Sosyal medya paylaşım görseli (1200x630)
   certIso22000: 'sertifika-iso-22000',
   certIso9001: 'sertifika-iso-9001',
   certIso45001: 'sertifika-iso-45001',
