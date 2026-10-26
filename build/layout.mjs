@@ -15,7 +15,16 @@ function head(page) {
   return `<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>document.documentElement.classList.add('js')</script>
+${site.gaMeasurementId ? `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(site.gaMeasurementId)}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${esc(site.gaMeasurementId)}');
+</script>
+` : ''}<script>document.documentElement.classList.add('js')</script>
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
 <link rel="canonical" href="${canonical}">
@@ -27,14 +36,6 @@ function head(page) {
 <meta name="geo.position" content="${site.geo.lat};${site.geo.lng}">
 <meta name="ICBM" content="${site.geo.lat}, ${site.geo.lng}">
 ${site.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(site.googleSiteVerification)}">` : ''}
-${site.gaMeasurementId ? `<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(site.gaMeasurementId)}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${esc(site.gaMeasurementId)}');
-</script>` : ''}
 <meta property="og:type" content="${page.path === '/' ? 'website' : 'article'}">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:site_name" content="${esc(site.name)}">

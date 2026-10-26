@@ -75,6 +75,6 @@ export const site = {
   googleSiteVerification: '',
 
   /** Google Analytics 4 Ölçüm Kimliği (örn: G-XXXXXXXXXX) */
-  gaMeasurementId: '',
+  gaMeasurementId: 'G-PEQDV1Q46Q',
 };
 
