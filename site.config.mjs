@@ -71,6 +71,10 @@ export const site = {
     linkedin: '',
   },
 
-  /** Google Search Console doğrulama kodu (meta etiketi içeriği) */
+  /** Google Search Console doğrulama kodu (meta etiketi içeriği - örn: google-site-verification) */
   googleSiteVerification: '',
+
+  /** Google Analytics 4 Ölçüm Kimliği (örn: G-XXXXXXXXXX) */
+  gaMeasurementId: '',
 };
+

@@ -213,7 +213,7 @@ const certsSection = () => `
           <div class="cert-card-body">
             <div class="cert-code-tag">ISO 22000:2018</div>
             <h3>Gıda Güvenliği Yönetim Sistemi</h3>
-            <p class="cert-desc">Hammadde kabulünden hijyenik pişirme ve termobox sıcak sevkiyata kadar her aşamada uluslararası standartlarda sıfır risk gıda güvenliği güvencesi.</p>
+            <p class="cert-desc">Hammadde kabulünden hijyenik pişirme ve termobox sıcak sevkiyata kadar her aşamada uluslararası standartlarda tavizsiz gıda güvenliği güvencesi.</p>
             <div class="cert-meta">
               <span class="meta-label">Tescilli Firma:</span>
               <strong>Topçular Emlak İnşaat Spor Tesisleri Otopark Lokanta San. Tic. Ltd. Şti.</strong>
@@ -371,7 +371,7 @@ const dailyShowcaseSection = () => `
             <p class="showcase-desc">Paslanmaz çelik endüstriyel mutfak, ISO standartlarında bone/eldiven/önlük hijyeni, buharı üstünde tüten yemeklerin ısı yalıtımlı Termobox küvetlerine aktarılması.</p>
             <div class="showcase-quote">
               <span class="quote-icon">${icon('chat')}</span>
-              <blockquote>“Sultan Orhan Mahallesindeki merkez mutfağımızda her sabah aynı titizlikle üretiyoruz. Yemekleriniz fabrikasyon değil, %100 taze malzemelerle hazırlanıp özel Termobox taşıma sistemimizle masanıza ilk anki sıcaklığında ulaşıyor.”</blockquote>
+              <blockquote>“Sultan Orhan Mahallesindeki merkez mutfağımızda her sabah aynı titizlikle üretiyoruz. Yemekleriniz fabrikasyon değil, günlük taze malzemelerle hazırlanıp özel Termobox taşıma sistemimizle masanıza ilk anki sıcaklığında ulaşıyor.”</blockquote>
             </div>
           </div>
         </article>
@@ -409,8 +409,8 @@ const hotChainTimeline = () => `
           <div class="timeline-body">
             <span class="t-icon">${icon('leaf')}</span>
             <h3>Taze Malzeme Kabulü</h3>
-            <p>Her sabah yerel halden günlük taze sebzeler ve veteriner onaylı yerli etler merkez mutfağımıza girer. Donuk hazır gıda oranı: %0.</p>
-            <div class="timeline-metric"><span>Tazelik Kriteri:</span> <strong>%100 Günlük</strong></div>
+            <p>Her sabah yerel halden günlük taze sebzeler ve veteriner onaylı yerli etler merkez mutfağımıza girer. Katkısız ve doğal gıda önceliği.</p>
+            <div class="timeline-metric"><span>Tazelik Kriteri:</span> <strong>Her Sabah Taze</strong></div>
           </div>
         </div>
         <div class="timeline-card reveal" style="--d:100ms">
@@ -484,7 +484,7 @@ const comparisonSection = () => `
         <div class="comparison-row">
           <div class="col-criteria"><strong>Hammadde &amp; Malzeme</strong></div>
           <div class="col-bad"><span class="bad-mark">✕</span> Donuk hazır köfteler, bulyonlar ve ucuz endüstriyel katkılar</div>
-          <div class="col-good"><span class="good-mark">✓</span> <strong>%100 Taze &amp; Yerli:</strong> Her sabah hal sebzesi, yerli kasap eti, kemik suyu</div>
+          <div class="col-good"><span class="good-mark">✓</span> <strong>Günlük Taze &amp; Yerli:</strong> Her sabah hal sebzesi, yerli kasap eti, kemik suyu</div>
         </div>
         <div class="comparison-row">
           <div class="col-criteria"><strong>Teslimat Disiplini</strong></div>
@@ -506,7 +506,7 @@ const osbRadarSection = () => `
     <div class="osb-radar-head">
       <span class="osb-radar-badge">${icon('truck')} CANLI LOJİSTİK VE VARIŞ SÜRELERİ</span>
       <h3>Sultan Orhan Mutfağımızdan Sanayi Bölgelerine Transit Zamanları</h3>
-      <p>Isı yalıtımlı termobox filomuz ile Gebze ve çevresindeki tüm OSB'lere sıfır sıcaklık kaybıyla ulaşıyoruz.</p>
+      <p>Isı yalıtımlı termobox filomuz ile Gebze ve çevresindeki tüm OSB'lere 70°C+ ideal servis sıcaklığında ulaşıyoruz.</p>
     </div>
     <div class="osb-radar-grid">
       <div class="osb-node">
@@ -517,7 +517,7 @@ const osbRadarSection = () => `
         </div>
         <div class="osb-node-metrics">
           <span class="m-time">⏱️ ~12 Dakika</span>
-          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+          <span class="m-heat">🔥 70°C+ Sıcak Teslimat</span>
         </div>
       </div>
       <div class="osb-node">
@@ -528,7 +528,7 @@ const osbRadarSection = () => `
         </div>
         <div class="osb-node-metrics">
           <span class="m-time">⏱️ ~18 Dakika</span>
-          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+          <span class="m-heat">🔥 70°C+ Sıcak Teslimat</span>
         </div>
       </div>
       <div class="osb-node">
@@ -539,7 +539,7 @@ const osbRadarSection = () => `
         </div>
         <div class="osb-node-metrics">
           <span class="m-time">⏱️ ~22 Dakika</span>
-          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+          <span class="m-heat">🔥 70°C+ Sıcak Teslimat</span>
         </div>
       </div>
       <div class="osb-node">
@@ -550,7 +550,7 @@ const osbRadarSection = () => `
         </div>
         <div class="osb-node-metrics">
           <span class="m-time">⏱️ ~10 Dakika</span>
-          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+          <span class="m-heat">🔥 70°C+ Sıcak Teslimat</span>
         </div>
       </div>
       <div class="osb-node">
@@ -561,7 +561,7 @@ const osbRadarSection = () => `
         </div>
         <div class="osb-node-metrics">
           <span class="m-time">⏱️ ~14 Dakika</span>
-          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+          <span class="m-heat">🔥 70°C+ Sıcak Teslimat</span>
         </div>
       </div>
       <div class="osb-node">
@@ -572,7 +572,7 @@ const osbRadarSection = () => `
         </div>
         <div class="osb-node-metrics">
           <span class="m-time">⏱️ ~20 Dakika</span>
-          <span class="m-heat">🔥 Isı Kaybı: 0°C</span>
+          <span class="m-heat">🔥 70°C+ Sıcak Teslimat</span>
         </div>
       </div>
     </div>
@@ -1416,7 +1416,7 @@ export function buildPages(version) {
             <p><strong>Görselin Öne Çıkardığı Değerler:</strong> Paslanmaz çelik endüstriyel mutfak ekipmanları, ISO standartlarında bone, eldiven, maske ve önlük hijyeni; buharı üstünde tüten taze yemeklerin ısı yalıtımlı Termobox küvetlerine aktarılması.</p>
             <div class="quote-box">
               <span class="quote-icon">${icon('chat')}</span>
-              <p><strong>Müşteriye Atılacak Örnek Mesaj:</strong> “Sultan Orhan Mahallesindeki merkez mutfağımızda her sabah aynı titizlikle üretiyoruz. Yemekleriniz fabrikasyon değil, %100 taze malzemelerle hazırlanıp özel Termobox taşıma sistemimizle masanıza ilk anki sıcaklığında ulaşıyor.”</p>
+              <p><strong>Müşteriye Atılacak Örnek Mesaj:</strong> “Sultan Orhan Mahallesindeki merkez mutfağımızda her sabah aynı titizlikle üretiyoruz. Yemekleriniz fabrikasyon değil, günlük taze malzemelerle hazırlanıp özel Termobox taşıma sistemimizle masanıza ilk anki sıcaklığında ulaşıyor.”</p>
             </div>
           </div>
         </div>
@@ -1466,7 +1466,7 @@ export function buildPages(version) {
         <h2>4. Gebze ve OSB Bölgelerine Hızlı Lojistik Hatlarımız</h2>
         <p>Toplu yemekte mesafe ve lojistik, yemek kalitesinin en büyük belirleyicisidir. Sultan Orhan Mahallesi 1141. Sokak No: 10 Gebze adresindeki merkez mutfağımız; ana otoyol ve sanayi bağlantı yollarının tam kalbinde yer alır.</p>
         <ul>
-          <li><a href="/bolgeler/gosb-toplu-yemek/"><strong>GOSB (Gebze Organize Sanayi Bölgesi):</strong></a> ~12 Dakika ring süresi ile sıfır ısı kaybı.</li>
+          <li><a href="/bolgeler/gosb-toplu-yemek/"><strong>GOSB (Gebze Organize Sanayi Bölgesi):</strong></a> ~12 Dakika ring süresi ile 70°C+ termobox sıcaklığı.</li>
           <li><a href="/bolgeler/tosb-toplu-yemek/"><strong>TOSB (Otomotiv Yan Sanayi İhtisas OSB):</strong></a> ~18 Dakikada vardiya saatlerine özel dakik teslimat.</li>
           <li><a href="/bolgeler/dilovasi-imes-yemek/"><strong>Dilovası İMES &amp; Makineciler OSB:</strong></a> ~22 Dakikada ağır sanayi doyurucu menüleri.</li>
           <li><a href="/bolgeler/gebze-osb-yemek/"><strong>Güzeller OSB &amp; Plastikçiler OSB:</strong></a> ~10-15 Dakikada taze ve sıcak teslimat.</li>
@@ -1593,7 +1593,7 @@ export function buildPages(version) {
             <span style="font-size: 0.82rem; font-weight: 700; color: var(--paprika-dark);">Örnek Bilgilendirme Mesajı</span>
           </div>
           <p style="font-size: 1.08rem; font-style: normal; color: var(--ink); line-height: 1.65; margin: 0 0 0.8rem 0;">
-            <strong>“Bizde soğuk yemek sürprizi yok! Mutfağımızdan çıkan her yemek, ısı kaybını sıfıra indiren özel Termobox kaplarımıza girmeden önce dijital kontrollerden geçer. Yemekhanenizde dumanı tüten sıcak yemek garantisi sunuyoruz.”</strong>
+            <strong>“Bizde soğuk yemek sürprizi yok! Mutfağımızdan çıkan her yemek, ısı kaybını minimuma indiren özel Termobox kaplarımıza girmeden önce dijital kontrollerden geçer. Yemekhanenizde dumanı tüten sıcak yemek garantisi sunuyoruz.”</strong>
           </p>
           <div style="font-size: 0.84rem; color: var(--ink-3); display: flex; align-items: center; gap: 0.5rem;">
             <span>🛡️ Topçular Yemek Sultan Orhan Merkez Mutfağı Dijital Sıcaklık Güvencesi</span>
@@ -1712,7 +1712,7 @@ export function buildPages(version) {
             <li><strong>E-posta:</strong> <a href="mailto:info@topcularyemek.com">info@topcularyemek.com</a></li>
             <li><strong>Telefon:</strong> <a href="tel:${site.phoneIntl}">${esc(site.phone)}</a> / <a href="tel:${site.altPhoneIntl}">${esc(site.altPhone)}</a></li>
             <li><strong>Adres:</strong> Sultan Orhan Mah., 1141. Sokak No: 10, Gebze / Kocaeli</li>
-            <li><strong>Hizmet Modelleri:</strong> Termobox Taşımalı Tabldot, Yerinde Mutfak Yönetimi, Kurumsal Kokteyl &amp; Açılış Menüleri</li>
+            <li><strong>Hizmet Modellerimiz:</strong> <a href="/hizmetler/tabldot-yemek/">Gebze Tabldot Yemek</a>, <a href="/hizmetler/toplu-yemek/">Taşımalı Toplu Yemek</a>, <a href="/hizmetler/fabrika-yemek/">Fabrika &amp; Kurumsal Yemek Servisi</a>, <a href="/hizmetler/organizasyon-yemek/">Düğün &amp; Davet Yemeği</a></li>
           </ul>
         </div>
       </div>

@@ -143,13 +143,6 @@ export function businessSchema(areaNames = []) {
       closes: h.closes,
     })),
     areaServed: areaNames.map((n) => ({ '@type': 'Place', name: n })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '48',
-      bestRating: '5',
-      worstRating: '1',
-    },
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',

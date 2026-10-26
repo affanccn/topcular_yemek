@@ -59,7 +59,7 @@ export const services = [
     lead: 'Kendi yemekhanesi olan ya da kalabalık çalışan kadrosuna sahip işletmeler için yemekleri merkez mutfağımızda pişirip sıcaklığını koruyarak kapınıza getiriyoruz.',
     body: [
       'Toplu yemek (taşımalı servis), yemeklerin Sultan Orhan Mahallesi\'ndeki hijyenik merkez mutfağımızda usta aşçılarımız tarafından hazırlanıp, çift cidarlı ısı yalıtımlı termobox ve gastronom küvetlerle doğrudan işletmenizin yemekhanesine sevk edilmesi esasına dayanır.',
-      'Özellikle çalışan sayısı 50 ve üzerinde olan fabrikalar, büyük sanayi kuruluşları, şantiyeler, hastaneler ve eğitim kurumları için en ekonomik ve verimli toplu yemek çözümüdür. Yemekler yerinde sıcak sıcak porsiyonlandığı için israf sıfırlanır, çalışan memnuniyeti yükselir.',
+      'Özellikle çalışan sayısı 50 ve üzerinde olan fabrikalar, büyük sanayi kuruluşları, şantiyeler, hastaneler ve eğitim kurumları için en ekonomik ve verimli toplu yemek çözümüdür. Yemekler yerinde sıcak sıcak porsiyonlandığı için israf en aza iner, çalışan memnuniyeti yükselir.',
       'Gıda taşımacılığına uygun özel araçlarımız, ISO 22000 gıda güvenliği standartlarımız ve zamanında teslimat disiplinimiz ile Gebze, Dilovası, Çayırova, Darıca ve organize sanayi bölgelerine (GOSB, TOSB, İMES) kesintisiz hizmet sunuyoruz.',
     ],
     features: [

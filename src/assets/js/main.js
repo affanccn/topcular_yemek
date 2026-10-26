@@ -174,6 +174,7 @@
       ].filter(Boolean).join('\n');
       msg.className = 'form-msg ok';
       msg.textContent = 'WhatsApp açılıyor… Mesajı göndermeyi unutmayın.';
+      trackConversion('submit_quote_form', `${d.kisi} - ${d.hizmet} - ${d.bolge}`);
       window.open(`https://wa.me/${window.SITE.wa}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
   }
@@ -199,6 +200,12 @@
       }
     };
 
+    if (waBtn) {
+      waBtn.addEventListener('click', () => {
+        trackConversion('calculator_quote_whatsapp', `${state.kisi} - ${state.hizmet} - ${state.bolge}`);
+      });
+    }
+
     chips.forEach((btn) => {
       btn.addEventListener('click', () => {
         const groupEl = btn.closest('[data-group]');
@@ -211,6 +218,35 @@
       });
     });
   }
+
+  /* GA4 Dönüşüm ve Etkinlik Takibi */
+  function trackConversion(action, label = '') {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', {
+        event_category: 'B2B_Conversion',
+        event_label: label,
+        lead_channel: action,
+      });
+      window.gtag('event', action, {
+        event_label: label,
+      });
+    }
+  }
+
+  // Telefon tıklamaları
+  $$('a[href^="tel:"]').forEach((a) => {
+    a.addEventListener('click', () => {
+      trackConversion('click_to_call', a.getAttribute('href') || '');
+    });
+  });
+
+  // WhatsApp tıklamaları (harici linkler ve butonlar)
+  $$('a[href*="wa.me"]').forEach((a) => {
+    a.addEventListener('click', () => {
+      trackConversion('click_to_whatsapp', a.textContent.trim() || 'WhatsApp');
+    });
+  });
 })();
+
 
 

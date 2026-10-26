@@ -118,10 +118,19 @@ await writeFile(
     2
   )
 );
-// Apache (cPanel) için: 404 sayfası, sıkıştırma ve önbellek
+// Apache (cPanel) için: 404 sayfası, 301 www ve HTTPS yönlendirmesi, sıkıştırma ve önbellek
 await writeFile(
   join(DIST, '.htaccess'),
   `ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # HTTP -> HTTPS veya non-www -> www için 301 Kalıcı Yönlendirme
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^topcularyemek\\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.topcularyemek.com/$1 [L,R=301]
+</IfModule>
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
 </IfModule>

@@ -18,7 +18,6 @@ function head(page) {
 <script>document.documentElement.classList.add('js')</script>
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
-<meta name="keywords" content="${esc(page.keywords || 'gebze toplu yemek, gebze tabldot yemek, gebze catering, gebze fabrika yemek servisi, gebze yemek şirketleri, gebze yemek firmaları, gosb toplu yemek, tosb yemek, dilovası imes yemek, gebze taşıma yemek, sultan orhan tabldot')}">
 <link rel="canonical" href="${canonical}">
 <meta name="robots" content="${page.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}">
 <meta name="theme-color" content="#B5401B">
@@ -28,6 +27,14 @@ function head(page) {
 <meta name="geo.position" content="${site.geo.lat};${site.geo.lng}">
 <meta name="ICBM" content="${site.geo.lat}, ${site.geo.lng}">
 ${site.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(site.googleSiteVerification)}">` : ''}
+${site.gaMeasurementId ? `<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(site.gaMeasurementId)}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${esc(site.gaMeasurementId)}');
+</script>` : ''}
 <meta property="og:type" content="${page.path === '/' ? 'website' : 'article'}">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:site_name" content="${esc(site.name)}">
